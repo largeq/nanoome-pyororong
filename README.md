@@ -2,8 +2,6 @@
 
 한글 for Mac에서 복사한 표를 네이버 카페 에디터에 붙여넣을 수 있도록 HTML을 변환하는 macOS 메뉴바 앱입니다.
 
-이 폴더는 **Swift 기반의 독립 프로젝트**입니다. 기존 Python 버전은 `/Users/jeonggeungyu/PythonProjects/phronesis_pyo/`에 별도로 보존되어 있습니다. 이 프로젝트의 빌드·테스트·실행은 해당 Python 폴더에 의존하지 않습니다.
-
 ## 실행
 
 1. `프네 표변환.app`을 실행합니다.
