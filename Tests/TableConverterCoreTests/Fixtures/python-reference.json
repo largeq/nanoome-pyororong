@@ -1,0 +1,2942 @@
+{
+  "sourceSHA256": "9ce2b03dfa14138d30d0cca4a79844e2676ac355cb44a6cb67f7fb5da0115e26",
+  "fixtures": [
+    {
+      "name": "clipboard_20251014_154741_com_hancom_office_XHTML032Format.html",
+      "hasDiagonal": false,
+      "plainText": "라면햄버거치킨피자",
+      "rows": [
+        [
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "73px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "라면",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "73px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "햄버거",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "73px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "치킨",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "73px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "피자",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "clipboard_20251014_160150_com_hancom_office_XHTML032Format.html",
+      "hasDiagonal": false,
+      "plainText": "평가기준표점수점수평가기준0점1점2점비고영역별 점수 기재 (0~3)교육 소외 여부주변 교육 여건이 잘 갖추어져 있으며 대학 실적도 우수함지방에 위치하여 상대적으로 교육 여건이 미비하나, 과학 중점/특성화 학교인 경우. 또는 대학 실적이 타 신청학교에 비해 비교적 우수한 경우.지방에 위치하여 교육 여건이 미비하고 대학실적도 타신청학교에 비해 비교적 저조농어촌 전형 해당여부 확인하여 점수 매김1신청 학생 수40명 미만일시/60명 이상일시 1점 감점2담당선생님협조력거의 없음그저 그럼적당함매우 높음·3시설필요 시설 중 이용이 불가능한 시설 개수당 1점씩 감점강당, 각 교실2종합 의견(샘플) 매우 기대됨. 우려되는 점 없음.",
+      "rows": [
+        [
+          {
+            "colspan": "5",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "30px",
+              "background-color": "rgb(202, 202, 202)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "평가기준표",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "30px",
+              "background-color": "rgb(202, 202, 202)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "점수",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "46px",
+              "background-color": "rgb(202, 202, 202)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "점수",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "평가기준",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "46px",
+              "background-color": "rgb(221, 221, 221)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "0",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  },
+                  {
+                    "text": "점",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "46px",
+              "background-color": "rgb(221, 221, 221)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "1",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  },
+                  {
+                    "text": "점",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "46px",
+              "background-color": "rgb(221, 221, 221)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "2",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  },
+                  {
+                    "text": "점",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "46px",
+              "background-color": "rgb(221, 221, 221)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "비고",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "46px",
+              "background-color": "rgb(239, 239, 239)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "영역별 점수 ",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "기재 ",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "(0~3)",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "307px",
+              "background-color": "rgb(202, 202, 202)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "교육 소외 여부",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "307px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "주변 교육 여건이 잘 갖추어져 있으며 ",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "대학 실적도 우수함",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "307px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "지방에 위치하여 상대적으로 교육 여건이 미비하나",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  },
+                  {
+                    "text": ", ",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "과학 중점",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  },
+                  {
+                    "text": "/",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  },
+                  {
+                    "text": "특성화 학교인 경우",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  },
+                  {
+                    "text": ". ",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  },
+                  {
+                    "text": "또는 대학 실적이 ",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "타 신청학교에 비해 비교적 우수한 경우",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  },
+                  {
+                    "text": ".",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "307px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "지방에 위치하여 교육 여건이 미비하고 ",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "대학실적도 타신청학교에 비해 비교적 저조",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "307px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "농어촌 전형 해당여부 확인하여 점수 매김",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "307px",
+              "background-color": "rgb(239, 239, 239)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "1",
+                    "color": "rgb(255, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "53px",
+              "background-color": "rgb(202, 202, 202)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "신청 학생 수",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "4",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "53px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "40",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  },
+                  {
+                    "text": "명 미만일시",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  },
+                  {
+                    "text": "/60",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  },
+                  {
+                    "text": "명 이상일시 ",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  },
+                  {
+                    "text": "1",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  },
+                  {
+                    "text": "점 감점",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "53px",
+              "background-color": "rgb(239, 239, 239)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "2",
+                    "color": "rgb(255, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "53px",
+              "background-color": "rgb(202, 202, 202)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "담당선생님",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "협조력",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "53px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "거의 없음",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "53px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "그저 그럼",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "53px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "적당함",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "매우 높음",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "53px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "·",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "53px",
+              "background-color": "rgb(239, 239, 239)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "3",
+                    "color": "rgb(255, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "61px",
+              "background-color": "rgb(202, 202, 202)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "시설",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "3",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "61px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "필요 시설 중 이용이 불가능한 시설 개수당 ",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  },
+                  {
+                    "text": "1",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  },
+                  {
+                    "text": "점씩 감점",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "61px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "강당",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  },
+                  {
+                    "text": ", ",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  },
+                  {
+                    "text": "각 교실",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "61px",
+              "background-color": "rgb(239, 239, 239)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "2",
+                    "color": "rgb(255, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "151px",
+              "background-color": "rgb(202, 202, 202)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "종합 의견",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "5",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "151px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "(",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  },
+                  {
+                    "text": "샘플",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  },
+                  {
+                    "text": ") ",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  },
+                  {
+                    "text": "매우 기대됨",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  },
+                  {
+                    "text": ". ",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  },
+                  {
+                    "text": "우려되는 점 없음",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  },
+                  {
+                    "text": ".",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "clipboard_20251014_162955_com_hancom_office_XHTML032Format.html",
+      "hasDiagonal": true,
+      "plainText": "일차교시1일차(월)2일차(화)3일차(수)4일차(목)5일차(금)6일차(토)조례(8:30~8:50)   조례      1교시(9:00~9:50)국어 수학  영어 조례(9:00~9:10)사탐/과탐(9:20~11:50)2교시(10:00~10:50)3교시(11:00~11:50)OT기타1시간관리반별시간진로3점심시간(11:50~1:30)점심시간점심시간(11:50~12:50)점심시간면접(1:00~4:20)4교시(1:30~2:50)아브(반별)(50분)진로1운동회비교과수료식아브(강당)(80분)5교시(3:00~3:50)학과박람회6교시(4:00~4:50)진로2기타2종례(4:30~4:40)종례(4:50~5:00)종례저녁시간(4:50~5:50)   방과후상담(5:10~5:40)레크레이션(6:00~)야간   ",
+      "rows": [
+        [
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "right",
+                "spans": [
+                  {
+                    "text": "일차",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "left",
+                "spans": [
+                  {
+                    "text": "교시",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "background-color": "rgb(227, 244, 227)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "1",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "일차",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "(",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "월",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": ")",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "background-color": "rgb(227, 244, 227)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "2",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "일차",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "(",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "화",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": ")",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "background-color": "rgb(227, 244, 227)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "3",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "일차",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "(",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "수",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": ")",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "background-color": "rgb(227, 244, 227)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "4",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "일차",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "(",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "목",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": ")",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "background-color": "rgb(227, 244, 227)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "5",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "일차",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "(",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "금",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": ")",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "background-color": "rgb(227, 244, 227)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "6",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "일차",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "(",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "토",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": ")",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "background-color": "rgb(227, 244, 227)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "조례",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "(8:30~8:50)",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "4",
+            "styles": {
+              "width": "50%",
+              "height": "89px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "   ",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "3",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "조례",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "   ",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "4",
+            "styles": {
+              "width": "50%",
+              "height": "89px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "   ",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "colspan": "1",
+            "rowspan": "2",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "background-color": "rgb(227, 244, 227)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "1",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "교시",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "(9:00~9:50)",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "3",
+            "styles": {
+              "width": "50%",
+              "height": "59px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "국어 ",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "3",
+            "styles": {
+              "width": "50%",
+              "height": "59px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "수학  ",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "3",
+            "styles": {
+              "width": "50%",
+              "height": "59px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "영어 ",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "18px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "조례",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "(9:00~9:10)",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "colspan": "1",
+            "rowspan": "3",
+            "styles": {
+              "width": "50%",
+              "height": "70px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "사탐",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "/",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "과탐",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "(9:20~11:50)",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "background-color": "rgb(227, 244, 227)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "2",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "교시",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "(10:00~10:50)",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "background-color": "rgb(227, 244, 227)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "3",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "교시",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "(11:00~11:50)",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "OT",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "기타",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "1",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "시간관리",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "반별시간",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "진로",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "3",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "colspan": "1",
+            "rowspan": "2",
+            "styles": {
+              "width": "50%",
+              "height": "38px",
+              "background-color": "rgb(227, 244, 227)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "점심시간",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "(11:50~1:30)",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "4",
+            "rowspan": "2",
+            "styles": {
+              "width": "50%",
+              "height": "38px",
+              "background-color": "rgb(255, 225, 225)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "점심시간",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "27px",
+              "background-color": "rgb(255, 225, 225)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "점심시간",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "(11:50~12:50)",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "2",
+            "styles": {
+              "width": "50%",
+              "height": "38px",
+              "background-color": "rgb(255, 225, 225)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "점심시간",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "colspan": "1",
+            "rowspan": "5",
+            "styles": {
+              "width": "50%",
+              "height": "86px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "면접",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "(1:00~4:20)",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "colspan": "1",
+            "rowspan": "2",
+            "styles": {
+              "width": "50%",
+              "height": "38px",
+              "background-color": "rgb(227, 244, 227)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "4",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "교시",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "(1:30~2:50)",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "아브",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "(",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "반별",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": ")",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "(50",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "분",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": ")",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "2",
+            "styles": {
+              "width": "50%",
+              "height": "38px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "진로",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "1",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "5",
+            "styles": {
+              "width": "50%",
+              "height": "97px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "운동회",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "3",
+            "styles": {
+              "width": "50%",
+              "height": "68px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "비교과",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "5",
+            "styles": {
+              "width": "50%",
+              "height": "97px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "수료식",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "colspan": "1",
+            "rowspan": "2",
+            "styles": {
+              "width": "50%",
+              "height": "38px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "아브",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "(",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "강당",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": ")",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "(80",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "분",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": ")",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "background-color": "rgb(227, 244, 227)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "5",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "교시",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "(3:00~3:50)",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "3",
+            "styles": {
+              "width": "50%",
+              "height": "59px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "학과박람회",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "colspan": "1",
+            "rowspan": "2",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "background-color": "rgb(227, 244, 227)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "6",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "교시",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "(4:00~4:50)",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "2",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "진로",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "2",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "2",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "기타",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "2",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "22px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "종례",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "(4:30~4:40)",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "background-color": "rgb(227, 244, 227)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "종례",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "(4:50~5:00)",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "4",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "종례",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "2",
+            "styles": {
+              "width": "50%",
+              "height": "44px",
+              "background-color": "rgb(255, 225, 225)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "저녁시간",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "(4:50~5:50)",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "4",
+            "styles": {
+              "width": "50%",
+              "height": "89px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "   ",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "colspan": "1",
+            "rowspan": "2",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "background-color": "rgb(227, 244, 227)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "방과후",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "4",
+            "rowspan": "2",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "상담",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  },
+                  {
+                    "text": "(5:10~5:40)",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "colspan": "1",
+            "rowspan": "2",
+            "styles": {
+              "width": "50%",
+              "height": "44px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "레크레이션",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "(6:00~)",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "background-color": "rgb(227, 244, 227)",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "야간",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": true,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "4",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "29px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "   ",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "clipboard_20251014_171242_com_hancom_office_XHTML032Format.html",
+      "hasDiagonal": false,
+      "plainText": "줄바꿈을 해보자이렇게 저렇게이것은 줄바꿈 안 한 것라면 라면 라면여기는 줄바꿈을두 번이나 해보자영차",
+      "rows": [
+        [
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "3px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "left",
+                "spans": [
+                  {
+                    "text": "줄바꿈을 해보자",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "left",
+                "spans": [
+                  {
+                    "text": "이렇게 저렇게",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "3px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "left",
+                "spans": [
+                  {
+                    "text": "이것은 줄바꿈 안 한 것",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "3px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "left",
+                "spans": [
+                  {
+                    "text": "라면 라면 라면",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "3px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "left",
+                "spans": [
+                  {
+                    "text": "여기는 줄바꿈을",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "left",
+                "spans": [
+                  {
+                    "text": "두 번이나 해보자",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              },
+              {
+                "alignment": "left",
+                "spans": [
+                  {
+                    "text": "영차",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "clipboard_20251014_175036_com_hancom_office_XHTML032Format.html",
+      "hasDiagonal": false,
+      "plainText": "이건 한글에서 양쪽 정렬이건 한글에서 왼쪽 정렬이건 한글에서 가운데 정렬이건 한글에서 오른쪽 정렬",
+      "rows": [
+        [
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "28px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "left",
+                "spans": [
+                  {
+                    "text": "이건 한글에서 양쪽 정렬",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "28px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "left",
+                "spans": [
+                  {
+                    "text": "이건 한글에서 왼쪽 정렬",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "28px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "center",
+                "spans": [
+                  {
+                    "text": "이건 한글에서 가운데 정렬",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": "1",
+            "rowspan": "1",
+            "styles": {
+              "width": "50%",
+              "height": "28px",
+              "border": "1px solid #000000"
+            },
+            "paragraphs": [
+              {
+                "alignment": "right",
+                "spans": [
+                  {
+                    "text": "이건 한글에서 오른쪽 정렬",
+                    "color": "rgb(0, 0, 0)",
+                    "bold": false,
+                    "underline": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      ]
+    }
+  ]
+}
