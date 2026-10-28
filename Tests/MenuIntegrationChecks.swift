@@ -41,7 +41,7 @@ struct MenuIntegrationChecks {
         defer { pasteboard.releaseGlobally() }
         let converter = ClipboardTableConverter(pasteboard: pasteboard)
         var supportURLs: [URL] = []
-        let support = SupportController(pasteboard: pasteboard,
+        let support = SupportController(emailAddress: "support@example.com", pasteboard: pasteboard,
                                         openURL: { supportURLs.append($0); return true })
         let delegate = AppDelegate(converter: converter, shortcutDefaults: defaults, supportController: support)
         let oldMainMenu = NSApp.mainMenu
@@ -63,7 +63,7 @@ struct MenuIntegrationChecks {
         let notifier: ConversionNotifier = try property("notifier", of: delegate)
         try require(menu.items.map { $0.isSeparatorItem ? "|" : $0.title } == [
             "변환할 표가 있습니다", "|", "표 변환하기", "|", "단축키 설정…", "|",
-            "사용법 보기", "피드백 및 지원…", "표로롱에 관하여", "|", "표로롱 종료"
+            "사용법 보기", "피드백 및 지원", "표로롱에 관하여", "|", "표로롱 종료"
         ], "Menu commands must be grouped by task")
         try require(!menu.items[0].isEnabled && menu.items[0].action == nil, "The state explanation must not be actionable")
         if #available(macOS 14.0, *) {
@@ -71,8 +71,9 @@ struct MenuIntegrationChecks {
         }
         try await wait { menu.items[0].title == "한글에서 표를 복사하세요" }
         try require(!primary.isEnabled, "Empty clipboard must disable conversion")
-        try require(menu.items[7].isEnabled && menu.items[7].submenu == nil, "Support must open directly even with no convertible table")
-        menu.performActionForItem(at: 7)
+        try require(menu.items[7].isEnabled && menu.items[7].submenu?.items[0].isEnabled == true,
+                    "Email and GitHub support must remain available even with no convertible table")
+        menu.items[7].submenu!.performActionForItem(at: 1)
         try await wait { supportURLs.count == 1 }
         try require(supportURLs[0].scheme == "https" && supportURLs[0].host == "github.com",
                     "The real status menu must open GitHub support")

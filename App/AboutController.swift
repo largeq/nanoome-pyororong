@@ -48,8 +48,10 @@ final class AboutController: NSWindowController {
         license.frame = NSRect(x: buttonsX + githubWidth + 12, y: 228, width: licenseWidth, height: 32)
         content.addSubview(github)
         content.addSubview(license)
-        let supportButton = NSButton(title: SupportController.commandTitle, target: self.support,
-                                     action: #selector(SupportController.showSupport(_:)))
+        let supportButton = NSPopUpButton(frame: .zero, pullsDown: true)
+        let supportMenu = self.support.makeMenu()
+        supportMenu.insertItem(withTitle: SupportController.commandTitle, action: nil, keyEquivalent: "", at: 0)
+        supportButton.menu = supportMenu
         supportButton.isBordered = false
         supportButton.setAccessibilityLabel("피드백 및 지원")
         supportButton.setAccessibilityHelp(SupportController.commandHelp)
