@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "PhronesisPyo",
+    name: "Pyororong",
     platforms: [.macOS(.v12)],
     products: [
         .library(name: "TableConverterCore", targets: ["TableConverterCore"]),

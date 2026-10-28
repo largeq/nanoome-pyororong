@@ -1,0 +1,70 @@
+{
+  "alignmentAnchor": "table body center, excluding badges",
+  "appliedToApp": true,
+  "checkClearancePt": 1.412987012987013,
+  "checkInnerRuleClipping": "checkmark clearance outline",
+  "checkInnerRulePreserved": true,
+  "checkInnerRuleSourceBoundsTopLeft": [
+    263,
+    170,
+    300,
+    191
+  ],
+  "checkMarkSizePt": [
+    9.714285714285714,
+    9.267184698147041
+  ],
+  "checkSymbol": "checkmark / heavy",
+  "checkTableRulesRetainOriginalWeight": true,
+  "completionAnimationLayers": [
+    "table-paste-ready-base",
+    "table-paste-ready-mark"
+  ],
+  "errorClearancePt": 1.412987012987013,
+  "errorGlyphCenterSourceX": 319,
+  "errorShiftLeftPt": 0.9419913419913419,
+  "errorSymbol": "exclamationmark / bold",
+  "exclamationMarkSizePt": [
+    2.2613704287344456,
+    10.597402597402597
+  ],
+  "horizontalCropPtPerSide": 4,
+  "logicalSize": [
+    24,
+    22
+  ],
+  "rasterDimensions": [
+    [
+      24,
+      22
+    ],
+    [
+      48,
+      44
+    ],
+    [
+      192,
+      176
+    ]
+  ],
+  "referenceHeightRatio": 0.8,
+  "referenceSymbolHeightPt": 17,
+  "sameTablePlacementAcrossStates": true,
+  "scaleFromPrevious": 1,
+  "tableCenterInCanvas": [
+    12,
+    11
+  ],
+  "tableSizePt": [
+    17.36796536796537,
+    13.6
+  ],
+  "tableSourceBoundsTopLeft": [
+    40,
+    30,
+    335,
+    261
+  ],
+  "tableSymbol": "tablecells",
+  "transparentBackground": true
+}

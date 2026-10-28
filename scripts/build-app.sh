@@ -7,8 +7,8 @@ cd "$PROJECT_DIR"
 # Build both Mac architectures. This produces a local, ad-hoc-signed app.
 # Developer ID signing and notarization are separate release steps.
 xcodebuild \
-    -project PhronesisPyo.xcodeproj \
-    -scheme PhronesisPyo \
+    -project Pyororong.xcodeproj \
+    -scheme Pyororong \
     -configuration Release \
     -destination 'generic/platform=macOS' \
     -derivedDataPath "$PROJECT_DIR/.build/xcode" \
@@ -17,4 +17,4 @@ xcodebuild \
     ONLY_ACTIVE_ARCH=NO \
     build
 
-echo "앱 생성 완료: $PROJECT_DIR/.build/xcode/Build/Products/Release/프네 표변환.app"
+echo "앱 생성 완료: $PROJECT_DIR/.build/xcode/Build/Products/Release/표로롱.app"
