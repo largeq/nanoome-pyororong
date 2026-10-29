@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>표로롱</title>
+        <item>
+            <title>2.0.0</title>
+            <pubDate>Thu, 29 Oct 2026 21:26:43 +0900</pubDate>
+            <link>https://github.com/largeq/nanoome-pyororong</link>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>2.0.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="markdown"><![CDATA[# 표로롱 2.0
+
+한글 for Mac에서 복사한 표와 본문을 네이버 카페·블로그에 붙여넣기 좋게 변환하는 메뉴바 앱입니다. 첫 공개 배포용 버전은 **2.0.0(빌드 1)**입니다.
+
+## 설치
+
+macOS 12 이상에서 사용할 수 있으며 Apple Silicon·Intel Mac을 함께 지원합니다. Developer ID 서명과 Apple 공증을 마친 앱이며, Python이나 Xcode는 필요하지 않습니다.
+
+1. 이 Release의 `Pyororong-2.0.0-1.zip`을 내려받아 압축을 풉니다.
+2. `표로롱.app`을 **응용 프로그램** 폴더로 복사해 실행합니다.
+3. 한글에서 표를 복사한 뒤 **⌘⌥⇧P**를 누르거나 메뉴바의 **표 변환하기**를 선택합니다.
+4. 완료 안내가 나오면 네이버 카페·블로그 글쓰기 화면에 **⌘V**로 붙여넣습니다.
+
+## 주요 기능
+
+- 표 하나부터 여러 표가 들어 있는 문서까지 순서대로 변환합니다. 셀 병합, 글자 서식과 형광펜, 열 너비 비율을 보존합니다.
+- 메뉴바 아이콘으로 복사·변환·완료 상태를 안내하고, 변환 결과창에서 확인이 필요한 항목을 보여줍니다.
+- 처음 실행하면 실제 사용법 영상을 제공합니다. 정식 앱 아이콘과 앱 정보 창도 새로 정리했습니다.
+- **설정…**에서 변환 단축키와 자동 업데이트 확인 여부를 함께 관리합니다. **업데이트 확인…**으로 직접 새 버전을 확인할 수도 있습니다. 자동 다운로드·자동 설치는 하지 않으며 사용자가 설치를 선택해야 진행합니다.
+- **피드백 및 지원**에서 **이메일로 문의…**와 **GitHub에 의견 남기기…**를 제공합니다. 문의 내용은 사용자가 직접 보내며, 메일 앱을 열지 못하면 주소를 복사할 수 있습니다.
+
+## 사용 시 참고
+
+표 변환은 이 Mac에서 처리하며 문서 내용을 서버로 보내지 않습니다. 한글의 로컬 그림은 별도로 추가해야 하고 대각선 등 일부 서식은 전달되지 않습니다. 확인이 필요한 내용은 변환 결과창에서 안내합니다. 실제 글꼴과 배치는 네이버 편집기와 읽는 사람의 환경에 따라 달라질 수 있습니다.
+]]></description>
+            <enclosure url="https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1.zip" length="19219338" type="application/octet-stream" sparkle:edSignature="YcK6OpI/xaaHUewImQYfjpKhFZn0ZRFoIeSmzarec2Oav8WP3GCvepMBC6YxNg+zlPWv87ZSvTIgWkiWoMtXCA=="/>
+        </item>
+    </channel>
+</rss>
