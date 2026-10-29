@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Pyororong-2.0.0-1.zip",
+    "url": "https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1.zip",
+    "httpStatus": 200,
+    "authenticated": false,
+    "bytes": 19219338,
+    "sha256": "47f6a07e44bda8499040ad78f7bbcf57ebff37c5b6201574050080cd50d57274",
+    "attemptStatuses": [
+      200
+    ]
+  },
+  {
+    "name": "SHA256SUMS",
+    "url": "https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/SHA256SUMS",
+    "httpStatus": 200,
+    "authenticated": false,
+    "bytes": 88,
+    "sha256": "d739ba3fb04ddafc6ba6aab7113d3f9ffaf554976548e298ddbcbb0bf666832c",
+    "attemptStatuses": [
+      200
+    ]
+  }
+]

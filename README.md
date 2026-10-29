@@ -12,7 +12,7 @@ GitHub 배포를 위한 지원 범위, 완료 기준, 진행 상태는 [배포 �
 
 ## 설치
 
-**2.0.0(빌드 1)**의 첫 GitHub Release 게시를 준비하고 있습니다. 배포용 Universal 앱의 Developer ID 서명, Apple 공증과 티켓 스테이플, Gatekeeper 검증을 마쳤습니다. 게시 상태는 [업데이트 배포 안내](docs/updates.md)에 기록합니다.
+**2.0.0(빌드 1)**의 [첫 GitHub Release](https://github.com/largeq/nanoome-pyororong/releases/tag/v2.0.0)를 게시했습니다. 배포용 Universal 앱의 Developer ID 서명, Apple 공증과 티켓 스테이플, Gatekeeper 검증을 마쳤고, 공개 ZIP·체크섬과 운영 업데이트 안내 파일도 확인했습니다. 자세한 결과는 [배포 검증 기록](docs/validation/release-2.0.0/README.md)에 있습니다.
 
 macOS 12 이상, Apple Silicon·Intel Mac용입니다. [GitHub Releases](https://github.com/largeq/nanoome-pyororong/releases)에서 `Pyororong-2.0.0-1.zip`을 내려받아 압축을 풀고, `표로롱.app`을 **응용 프로그램** 폴더로 복사해 실행합니다. Python이나 Xcode는 필요하지 않습니다. 주요 기능과 사용 시 참고 사항은 [2.0 릴리스 안내](docs/releases/2.0.0.md)에 있습니다.
 
@@ -169,7 +169,7 @@ Ponytail 리뷰의 확인 사항을 수정한 뒤 패키지 검사 **89개**와 
 
 2026년 10월 29일 최종 소스와 정식 에셋으로 패키지 검사 **98개**(코어 47개·Mac 모듈 51개), 업데이트를 포함한 AppKit 통합 검사 **6개**, Apple Silicon·Intel Universal Release 빌드와 로컬 ad-hoc 서명 검증을 통과했습니다. 앱 아이콘·정보창·사용법 영상·통합 설정·Sparkle 업데이트 확인·지원 메뉴와 60Hz 갱신 및 약 0.16초 마무리를 확인했습니다. 실제 실행 로그·대표 화면·미확인 범위는 [이번 최종 검사 기록](docs/validation/2026-10-29/README.md)에 있습니다. 실제 한글·네이버 붙여넣기, 다른 Mac·구형 macOS 실행과 서명·공증된 앱의 운영 업데이트 교체는 이번에 확인하지 않았습니다.
 
-이후 첫 배포 준비에서는 사용자가 실제 한글·네이버 붙여넣기를 완료한 것으로 확인했고, 2.0.0(빌드 1) 배포 앱의 Universal 구조·Developer ID 서명·hardened runtime·공증 티켓·Gatekeeper 검증을 통과했습니다. 다른 Mac·구형 macOS 실행, VoiceOver 음성 읽기와 지속 60fps 실측은 별도 확인 범위입니다. 첫 배포에는 이전 공증 버전이 없으므로 실제 업데이트 교체는 다음 업데이트 때 확인합니다.
+이후 첫 정식 배포에서는 사용자가 실제 한글·네이버 붙여넣기를 완료한 것으로 확인했고, 2.0.0(빌드 1) 배포 앱의 Universal 구조·Developer ID 서명·hardened runtime·공증 티켓·Gatekeeper 검증을 통과했습니다. 공개 설치 파일과 체크섬의 원본 일치, 운영 업데이트 안내 파일의 HTTP 200 응답과 실제 Sparkle의 최신 버전 판정도 확인했습니다. 다른 Mac·구형 macOS 실행, VoiceOver 음성 읽기와 지속 60fps 실측은 사용자 선택으로 이번 배포 검증에서 제외했습니다. 첫 배포에는 이전 공증 버전이 없으므로 실제 업데이트 교체는 다음 업데이트 때 확인합니다.
 
 ## 현재 변환 범위
 

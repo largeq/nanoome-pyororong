@@ -1,8 +1,12 @@
 # 표로롱 업데이트 확인과 배포
 
-## 첫 배포 준비 상태
+## 첫 배포 상태
 
-2026년 10월 29일 기준 **2.0.0(빌드 1)**의 첫 GitHub Release 게시를 준비하고 있다. 배포용 앱은 Apple Silicon·Intel Universal 구조, Developer ID Application 서명, hardened runtime, Apple 공증과 티켓 스테이플, Gatekeeper 검증을 통과했다. 설치 파일과 운영용 업데이트 안내 파일의 게시 완료 여부는 별도로 확인한다. 첫 배포에는 이전 공증 버전이 없으므로 다운로드·교체·재실행을 거치는 실제 업데이트 검증은 다음 업데이트 때 수행한다.
+2026년 10월 29일 **2.0.0(빌드 1)**의 [첫 GitHub Release](https://github.com/largeq/nanoome-pyororong/releases/tag/v2.0.0)를 게시했다. 배포용 앱은 Apple Silicon·Intel Universal 구조, Developer ID Application 서명, hardened runtime, Apple 공증과 티켓 스테이플, Gatekeeper 검증을 통과했다. 공개 ZIP과 `SHA256SUMS`는 로그인 없이 HTTP 200으로 내려받을 수 있고 원본과 일치한다.
+
+운영용 `updates/appcast.xml`을 기본 브랜치 `main`에 게시했다. 공개 주소의 HTTP 200 응답과 생성본 일치를 확인했으며, 실제 앱의 `UpdateController`와 Sparkle이 2.0.0(빌드 1)을 최신 버전으로 판정했다. 자세한 결과와 배포 파일 해시는 [배포 검증 기록](validation/release-2.0.0/README.md)에 있다.
+
+다른 Mac·구형 macOS 실행, VoiceOver 음성 읽기와 지속 60fps 실측은 사용자 선택으로 이번 배포 검증에서 제외했다. 첫 배포에는 이전 공증 버전이 없으므로 다운로드·교체·재실행을 거치는 실제 업데이트 검증은 다음 업데이트 때 수행한다.
 
 ## 앱에서 보이는 동작
 
@@ -26,12 +30,12 @@
 
 `scripts/build-app.sh`는 개발 중 실행을 위한 **로컬 개발 빌드**다. 서명은 Xcode 설정에 따라 개발용 또는 ad-hoc이며, Sparkle을 로컬에서 불러올 수 있도록 이 명령에서만 hardened runtime을 끈다. Xcode 프로젝트의 배포 설정은 hardened runtime을 유지한다. GitHub 배포용 앱은 별도로 Developer ID 서명과 Apple 공증을 거쳐 준비한다.
 
-정식 업데이트에는 Apple Silicon·Intel을 모두 포함한 Universal 앱, Developer ID Application 서명, Apple 공증과 스테이플된 공증 티켓이 필요하다. 첫 배포용 2.0.0(빌드 1) 앱은 이 검증을 마쳤다. 설치 파일을 먼저 게시하고 실제 파일을 가리키는 운영용 안내 파일을 이어서 게시한다. 공개된 공증 앱 사이의 실제 버전 교체는 다음 업데이트 때 검증하며, 존재하지 않는 배포 파일을 가리키는 가상 안내를 만들지 않는다.
+정식 업데이트에는 Apple Silicon·Intel을 모두 포함한 Universal 앱, Developer ID Application 서명, Apple 공증과 스테이플된 공증 티켓이 필요하다. 첫 배포용 2.0.0(빌드 1) 앱은 이 검증을 마쳤으며, 설치 파일을 먼저 게시한 뒤 실제 파일을 가리키는 운영용 안내 파일도 게시했다. 공개된 공증 앱 사이의 실제 버전 교체는 다음 업데이트 때 검증하며, 존재하지 않는 배포 파일을 가리키는 가상 안내를 만들지 않는다.
 
 ## 배포 파일 준비
 
 1. 새 버전과 빌드 번호를 정한다. 이 프로젝트의 준비 스크립트는 숫자와 점으로 된 번호를 사용하며, 이전 안내 파일에 있는 모든 버전과 빌드 번호보다 각각 커야 한다. 예를 들어 `2.0.0 (1)` 다음에는 `2.1.0 (2)`를 사용할 수 있다.
-2. `scripts/build-app.sh` 대신 Xcode의 **Product → Archive → Distribute App → Developer ID** 절차로 배포용 앱을 만든다. 배포용 인증서와 팀을 선택하고 hardened runtime을 유지한다. 명령으로 Archive를 만들 때도 로컬 스크립트의 `ENABLE_HARDENED_RUNTIME=NO`를 사용하지 않는다.
+2. Xcode의 **Product → Archive → Distribute App → Direct Distribution** 절차로 배포용 앱을 만든다. 배포용 Developer ID 인증서와 팀을 선택하고 hardened runtime을 유지한다. 명령으로 Archive를 만들 때도 로컬 스크립트의 `ENABLE_HARDENED_RUNTIME=NO`를 사용하지 않는다.
 3. Apple 공증을 완료하고 내보낸 `.app`에 티켓을 스테이플한다. `xcrun stapler validate`와 `spctl --assess --type execute`가 통과하는 앱을 사용한다.
 4. 한국어 변경 사항을 Markdown 파일로 준비한다.
 5. 이전 배포가 있으면 현재 공개 안내 파일의 최신 사본을 준비한다. 저장소의 `updates/appcast.xml`이 최신임을 확인하거나 네 번째 인자로 최신 파일을 지정한다.

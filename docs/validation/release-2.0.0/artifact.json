@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "build": "1",
+  "archive": "Pyororong-2.0.0-1.zip",
+  "size": 19219338,
+  "sha256": "47f6a07e44bda8499040ad78f7bbcf57ebff37c5b6201574050080cd50d57274",
+  "url": "https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1.zip",
+  "edSignature": "YcK6OpI/xaaHUewImQYfjpKhFZn0ZRFoIeSmzarec2Oav8WP3GCvepMBC6YxNg+zlPWv87ZSvTIgWkiWoMtXCA==",
+  "bundleIdentifier": "com.phronesis.pyororong",
+  "executableName": "Pyororong",
+  "minimumSystemVersion": "12.0",
+  "architectures": [
+    "arm64",
+    "x86_64"
+  ],
+  "signing": "Developer ID Application",
+  "hardenedRuntime": true,
+  "stapledNotarizationTicket": true,
+  "gatekeeperAssessment": "Notarized Developer ID",
+  "executableSHA256": "fd1c5ac82c6e2b51555d51aed3ecdc0d6da93a4c8df089709e30b737c574c950",
+  "releaseSourceCommit": "d8d3e4d9a3c97e4fd90781fdb9aa58b4b5b03108",
+  "ed25519VerifiedAgainstEmbeddedPublicKey": true,
+  "zipRoundTripVerified": true
+}

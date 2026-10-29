@@ -1,0 +1,167 @@
+
+=== release-2.0.0-export-check.log ===
+
+$ codesign --verify --deep --strict --verbose=2 <EXPORTED_APP>
+--prepared:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/.
+--prepared:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/Autoupdate
+--validated:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/Autoupdate
+--prepared:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/Updater.app
+--prepared:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Downloader.xpc
+--validated:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/Updater.app
+--validated:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Downloader.xpc
+--prepared:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Installer.xpc
+--validated:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Installer.xpc
+--validated:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/.
+<EXPORTED_APP>: valid on disk
+<EXPORTED_APP>: satisfies its Designated Requirement
+
+exit=0
+$ xcrun stapler validate <EXPORTED_APP>
+Processing: <EXPORTED_APP>
+The validate action worked!
+
+exit=0
+$ spctl --assess --type execute --verbose=2 <EXPORTED_APP>
+<EXPORTED_APP>: accepted
+source=Notarized Developer ID
+
+exit=0
+$ lipo -archs <EXPORTED_APP>/Contents/MacOS/Pyororong
+x86_64 arm64
+
+exit=0
+
+
+=== release-2.0.0-zip-roundtrip.log ===
+
+$ codesign --verify --deep --strict --verbose=2 <PROJECT_DIR>/.build/release-2.0.0-unpacked-48t8odkt/표로롱.app
+--prepared:<PROJECT_DIR>/.build/release-2.0.0-unpacked-48t8odkt/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/.
+--prepared:<PROJECT_DIR>/.build/release-2.0.0-unpacked-48t8odkt/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/Autoupdate
+--validated:<PROJECT_DIR>/.build/release-2.0.0-unpacked-48t8odkt/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/Autoupdate
+--prepared:<PROJECT_DIR>/.build/release-2.0.0-unpacked-48t8odkt/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/Updater.app
+--validated:<PROJECT_DIR>/.build/release-2.0.0-unpacked-48t8odkt/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/Updater.app
+--prepared:<PROJECT_DIR>/.build/release-2.0.0-unpacked-48t8odkt/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Installer.xpc
+--validated:<PROJECT_DIR>/.build/release-2.0.0-unpacked-48t8odkt/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Installer.xpc
+--prepared:<PROJECT_DIR>/.build/release-2.0.0-unpacked-48t8odkt/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Downloader.xpc
+--validated:<PROJECT_DIR>/.build/release-2.0.0-unpacked-48t8odkt/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Downloader.xpc
+--validated:<PROJECT_DIR>/.build/release-2.0.0-unpacked-48t8odkt/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/.
+<PROJECT_DIR>/.build/release-2.0.0-unpacked-48t8odkt/표로롱.app: valid on disk
+<PROJECT_DIR>/.build/release-2.0.0-unpacked-48t8odkt/표로롱.app: satisfies its Designated Requirement
+
+exit=0
+$ xcrun stapler validate <PROJECT_DIR>/.build/release-2.0.0-unpacked-48t8odkt/표로롱.app
+Processing: <PROJECT_DIR>/.build/release-2.0.0-unpacked-48t8odkt/표로롱.app
+The validate action worked!
+
+exit=0
+$ spctl --assess --type execute --verbose=2 <PROJECT_DIR>/.build/release-2.0.0-unpacked-48t8odkt/표로롱.app
+<PROJECT_DIR>/.build/release-2.0.0-unpacked-48t8odkt/표로롱.app: accepted
+source=Notarized Developer ID
+
+exit=0
+$ lipo -archs <PROJECT_DIR>/.build/release-2.0.0-unpacked-48t8odkt/표로롱.app/Contents/MacOS/Pyororong
+x86_64 arm64
+
+exit=0
+
+
+=== release-2.0.0-public-key-verification.log ===
+
+PASS: Archive Ed25519 signature matches the public key embedded in the exported app.
+
+
+=== release-2.0.0-production-feed-check.log ===
+
+Isolated cleanup: fixtureExists=false, preferencesNil=false, remainingPreferenceKeys=0
+Production feed check passed; no update installation was requested.
+
+
+=== Exported signature metadata and both architectures ===
+$ codesign --verify --deep --strict --verbose=4 <EXPORTED_APP>
+--prepared:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/.
+--prepared:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/Autoupdate
+--validated:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/Autoupdate
+--prepared:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Downloader.xpc
+--validated:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Downloader.xpc
+--prepared:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/Updater.app
+--prepared:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Installer.xpc
+--validated:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/Updater.app
+--validated:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Installer.xpc
+--validated:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/.
+<EXPORTED_APP>: valid on disk
+<EXPORTED_APP>: satisfies its Designated Requirement
+
+exit=0
+
+$ codesign -dv --verbose=4 <EXPORTED_APP>
+Executable=<EXPORTED_APP>/Contents/MacOS/Pyororong
+Identifier=com.phronesis.pyororong
+Format=app bundle with Mach-O universal (x86_64 arm64)
+CodeDirectory v=20500 size=7171 flags=0x10000(runtime) hashes=213+7 location=embedded
+VersionPlatform=1
+VersionMin=786432
+VersionSDK=1769472
+Hash type=sha256 size=32
+CandidateCDHash sha256=0368fc17e8bc9624b2fe86fd2c8fadbd89f2ec70
+CandidateCDHashFull sha256=0368fc17e8bc9624b2fe86fd2c8fadbd89f2ec7085b7b0cf2a25e4cfd921a1da
+Hash choices=sha256
+CMSDigest=0368fc17e8bc9624b2fe86fd2c8fadbd89f2ec7085b7b0cf2a25e4cfd921a1da
+CMSDigestType=2
+Executable Segment base=0
+Executable Segment limit=3063808
+Executable Segment flags=0x1
+Page size=16384
+CDHash=0368fc17e8bc9624b2fe86fd2c8fadbd89f2ec70
+Signature size=8976
+Authority=Developer ID Application: GEUNGYU JEONG (TTUPQ94VL8)
+Authority=Developer ID Certification Authority
+Authority=Apple Root CA
+Timestamp=Oct 29, 2026 at 8:44:05 PM
+Notarization Ticket=stapled
+Info.plist entries=33
+TeamIdentifier=TTUPQ94VL8
+Runtime Version=27.0.0
+Sealed Resources version=2 rules=13 files=15
+Internal requirements count=1 size=216
+Total signatures=1
+Chosen signature=1
+
+exit=0
+
+$ lipo -archs <EXPORTED_APP>/Contents/MacOS/Pyororong
+x86_64 arm64
+
+exit=0
+
+$ lipo -archs <EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/Sparkle
+x86_64 arm64
+
+exit=0
+
+$ xcrun vtool -show-build -arch arm64 <EXPORTED_APP>/Contents/MacOS/Pyororong
+<EXPORTED_APP>/Contents/MacOS/Pyororong (architecture arm64):
+Load command 11
+      cmd LC_BUILD_VERSION
+  cmdsize 32
+ platform MACOS
+    minos 12.0
+      sdk 27.0
+   ntools 1
+     tool LD
+  version 27037.1
+
+exit=0
+
+$ xcrun vtool -show-build -arch x86_64 <EXPORTED_APP>/Contents/MacOS/Pyororong
+<EXPORTED_APP>/Contents/MacOS/Pyororong (architecture x86_64):
+Load command 10
+      cmd LC_BUILD_VERSION
+  cmdsize 32
+ platform MACOS
+    minos 12.0
+      sdk 27.0
+   ntools 1
+     tool LD
+  version 27037.1
+
+exit=0
