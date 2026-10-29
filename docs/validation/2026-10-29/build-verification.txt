@@ -1,0 +1,106 @@
+Verified at 2026-10-29T20:15:21.322675+09:00
+Environment: macOS 27.0 (26A428), arm64; Xcode 27.1 (27A9275), Swift 6.4
+
+$ codesign --verify --deep --strict --verbose=2 <PROJECT_DIR>/.build/xcode/Build/Products/Release/표로롱.app
+--prepared:<PROJECT_DIR>/.build/xcode/Build/Products/Release/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/.
+--prepared:<PROJECT_DIR>/.build/xcode/Build/Products/Release/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/Autoupdate
+--prepared:<PROJECT_DIR>/.build/xcode/Build/Products/Release/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Downloader.xpc
+--validated:<PROJECT_DIR>/.build/xcode/Build/Products/Release/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/Autoupdate
+--prepared:<PROJECT_DIR>/.build/xcode/Build/Products/Release/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Installer.xpc
+--prepared:<PROJECT_DIR>/.build/xcode/Build/Products/Release/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/Updater.app
+--validated:<PROJECT_DIR>/.build/xcode/Build/Products/Release/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Downloader.xpc
+--validated:<PROJECT_DIR>/.build/xcode/Build/Products/Release/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Installer.xpc
+--validated:<PROJECT_DIR>/.build/xcode/Build/Products/Release/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/Updater.app
+--validated:<PROJECT_DIR>/.build/xcode/Build/Products/Release/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/.
+<PROJECT_DIR>/.build/xcode/Build/Products/Release/표로롱.app: valid on disk
+<PROJECT_DIR>/.build/xcode/Build/Products/Release/표로롱.app: satisfies its Designated Requirement
+
+exit=0
+
+$ codesign -dv --verbose=4 <PROJECT_DIR>/.build/xcode/Build/Products/Release/표로롱.app
+Executable=<PROJECT_DIR>/.build/xcode/Build/Products/Release/표로롱.app/Contents/MacOS/Pyororong
+Identifier=com.phronesis.pyororong
+Format=app bundle with Mach-O universal (x86_64 arm64)
+CodeDirectory v=20400 size=10480 flags=0x2(adhoc) hashes=317+7 location=embedded
+VersionPlatform=1
+VersionMin=786432
+VersionSDK=1769472
+Hash type=sha256 size=32
+CandidateCDHash sha256=9af73db32342d463e60730b6f7f4254da1b7de28
+CandidateCDHashFull sha256=9af73db32342d463e60730b6f7f4254da1b7de28518227d283fb4566fb72ad6b
+Hash choices=sha256
+CMSDigest=9af73db32342d463e60730b6f7f4254da1b7de28518227d283fb4566fb72ad6b
+CMSDigestType=2
+Executable Segment base=0
+Executable Segment limit=3063808
+Executable Segment flags=0x1
+Page size=16384
+CDHash=9af73db32342d463e60730b6f7f4254da1b7de28
+Signature=adhoc
+Info.plist entries=33
+TeamIdentifier=not set
+Sealed Resources version=2 rules=13 files=15
+Internal requirements count=0 size=12
+Total signatures=1
+Chosen signature=1
+
+exit=0
+
+$ lipo -archs <PROJECT_DIR>/.build/xcode/Build/Products/Release/표로롱.app/Contents/MacOS/Pyororong
+x86_64 arm64
+
+exit=0
+
+$ lipo -archs <PROJECT_DIR>/.build/xcode/Build/Products/Release/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/B/Sparkle
+x86_64 arm64
+
+exit=0
+
+$ xcrun vtool -show-build -arch arm64 <PROJECT_DIR>/.build/xcode/Build/Products/Release/표로롱.app/Contents/MacOS/Pyororong
+<PROJECT_DIR>/.build/xcode/Build/Products/Release/표로롱.app/Contents/MacOS/Pyororong (architecture arm64):
+Load command 11
+      cmd LC_BUILD_VERSION
+  cmdsize 32
+ platform MACOS
+    minos 12.0
+      sdk 27.0
+   ntools 1
+     tool LD
+  version 27037.1
+
+exit=0
+
+$ xcrun vtool -show-build -arch x86_64 <PROJECT_DIR>/.build/xcode/Build/Products/Release/표로롱.app/Contents/MacOS/Pyororong
+<PROJECT_DIR>/.build/xcode/Build/Products/Release/표로롱.app/Contents/MacOS/Pyororong (architecture x86_64):
+Load command 10
+      cmd LC_BUILD_VERSION
+  cmdsize 32
+ platform MACOS
+    minos 12.0
+      sdk 27.0
+   ntools 1
+     tool LD
+  version 27037.1
+
+exit=0
+
+$ bash -n scripts/build-app.sh
+exit=0
+
+$ bash -n scripts/export-about-icons.sh
+exit=0
+
+$ bash -n scripts/prepare-update.sh
+exit=0
+
+$ bash -n scripts/run-app.sh
+exit=0
+
+$ bash -n scripts/test-app.sh
+exit=0
+
+$ git diff --check
+
+exit=0
+
+PASS: prepare-update.sh rejected local ad-hoc input with exit=1 before archive, output directory or keychain signing.

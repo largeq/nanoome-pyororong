@@ -1,0 +1,36 @@
+통합 검사 자료: <PROJECT_DIR>/.build/diagnostics/app-20261029-201250
+** BUILD SUCCEEDED **
+App integration checks passed: approved copy, details, recovery actions, stale-result history, light/dark layout, and clipboard preservation.
+Support integration checks passed: email and GitHub menus, encoded drafts, missing recipients, explicit clipboard writes, open failures, About layout, and the ten-click Easter egg.
+default-light: (440.0, 357.0), Save bottom 20.0
+mouse-restored-light: (440.0, 357.0), Save bottom 20.0
+recording-light: (440.0, 336.0), Save bottom 20.0
+invalid-light: (440.0, 461.0), Save bottom 20.0
+invalid-dark: (440.0, 461.0), Save bottom 20.0
+invalid-contrast-light: (440.0, 461.0), Save bottom 20.0
+invalid-contrast-dark: (440.0, 461.0), Save bottom 20.0
+conflict-light: (440.0, 378.0), Save bottom 20.0
+disabled-light: (440.0, 357.0), Save bottom 20.0
+disabled-dark: (440.0, 357.0), Save bottom 20.0
+keyboard-focused-light: (440.0, 357.0), Save bottom 20.0
+mouse-after-keyboard-light: (440.0, 357.0), Save bottom 20.0
+Settings integration checks passed: automatic update checking preferences, recording, validation, conflict recovery, save/cancel, disabled restore, keyboard, mouse tracking, layout, and appearances.
+Menu integration checks passed: update checking commands and settings, conversion protection, native left/right clicks, accessibility activation, transient menu cleanup, reentry protection, noninteractive status header, stable updates, clipboard states, action routing, grouping, Command-comma, and clicks during/after utility windows.
+Update integration checks passed: isolated Sparkle preferences, default automatic checks, disabled automatic installation, real appcast discovery/current/unsupported/preview/error cases, gentle reminders, conversion protection, and configuration fallback.
+Verified guide-light: 840×453
+Verified step-1-light: 840×453
+Verified step-2-light: 840×453
+Verified step-3-light: 840×453
+Verified step-1-dark: 840×453
+Verified step-2-dark: 840×453
+Verified step-3-dark: 840×453
+Verified step-1-contrast-light: 840×453
+Verified step-2-contrast-light: 840×453
+Verified step-3-contrast-light: 840×453
+Verified step-1-contrast-dark: 840×453
+Verified step-2-contrast-dark: 840×453
+Verified step-3-contrast-dark: 840×453
+Verified reduced-transparency: 840×453
+Verified long-text: 969×467
+Usage guide integration checks passed: compact layout, approved copy, hover and keyboard controls, five-second seeking, repeat playback, accessibility, launch policy, and appearances.
+exit=0

@@ -1,0 +1,257 @@
+Building for debugging...
+[Computing dependencies]
+[1 / 1]
+[2 / 12] TableConverterMac
+[5 / 15] TableConverterMac
+[9 / 19] TableConverterMac
+[13 / 18] TableConverterMacTests-product
+[16 / 21] TableConverterMacTests-product
+[20 / 23] TableConverterMacTests-product
+[22 / 26] TableConverterMacTests-product
+Build complete! (4.03초)
+Test Suite 'All tests' started at 2026-10-29 20:10:40.362.
+Test Suite 'TableConverterMacTests.xctest' started at 2026-10-29 20:10:40.364.
+Test Suite 'AppPreferencesMigrationTests' started at 2026-10-29 20:10:40.364.
+Test Case '-[TableConverterMacTests.AppPreferencesMigrationTests testExistingNewAppChoicesTakePrecedenceIncludingFalseValues]' started.
+Test Case '-[TableConverterMacTests.AppPreferencesMigrationTests testExistingNewAppChoicesTakePrecedenceIncludingFalseValues]' passed (0.005 seconds).
+Test Case '-[TableConverterMacTests.AppPreferencesMigrationTests testLegacyShortcutAndGuideSettingsSurviveReloadWithoutImportingOtherKeys]' started.
+Test Case '-[TableConverterMacTests.AppPreferencesMigrationTests testLegacyShortcutAndGuideSettingsSurviveReloadWithoutImportingOtherKeys]' passed (0.002 seconds).
+Test Case '-[TableConverterMacTests.AppPreferencesMigrationTests testMigrationRunsOnlyOnceAndDoesNotRestoreADeletedNewPreference]' started.
+Test Case '-[TableConverterMacTests.AppPreferencesMigrationTests testMigrationRunsOnlyOnceAndDoesNotRestoreADeletedNewPreference]' passed (0.002 seconds).
+Test Case '-[TableConverterMacTests.AppPreferencesMigrationTests testNoLegacySettingsPreservesFirstRunBehavior]' started.
+Test Case '-[TableConverterMacTests.AppPreferencesMigrationTests testNoLegacySettingsPreservesFirstRunBehavior]' passed (0.002 seconds).
+Test Suite 'AppPreferencesMigrationTests' passed at 2026-10-29 20:10:40.376.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.011 (0.012) seconds
+Test Suite 'ClipboardTableConverterTests' started at 2026-10-29 20:10:40.376.
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testAddingNativeFormatInvalidatesPreparedHTML]' started.
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testAddingNativeFormatInvalidatesPreparedHTML]' passed (0.452 seconds).
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testAsyncConversionLetsMainQueueRunAndDoesNotOverwriteNewClipboard]' started.
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testAsyncConversionLetsMainQueueRunAndDoesNotOverwriteNewClipboard]' passed (0.372 seconds).
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testAsyncConversionPreservesNativeHighlightsAndWritesPasteableResult]' started.
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testAsyncConversionPreservesNativeHighlightsAndWritesPasteableResult]' passed (0.228 seconds).
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testAsyncFailureShowsErrorAndNewCopyClearsIt]' started.
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testAsyncFailureShowsErrorAndNewCopyClearsIt]' passed (0.003 seconds).
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testCancelledAsyncConversionDoesNotWriteClipboard]' started.
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testCancelledAsyncConversionDoesNotWriteClipboard]' passed (0.002 seconds).
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testClipboardStateTracksConversionAndNewClipboardContents]' started.
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testClipboardStateTracksConversionAndNewClipboardContents]' passed (0.004 seconds).
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testConvertedClipboardIsRecognizedAfterRecreatingConverter]' started.
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testConvertedClipboardIsRecognizedAfterRecreatingConverter]' passed (0.002 seconds).
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testEmptyClipboardIsHandled]' started.
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testEmptyClipboardIsHandled]' passed (0.001 seconds).
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testFailurePersistsUntilClipboardChangesAndRetryCanSucceed]' started.
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testFailurePersistsUntilClipboardChangesAndRetryCanSucceed]' passed (0.002 seconds).
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testForeignTableClipboardIsNotChangedOnFailure]' started.
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testForeignTableClipboardIsNotChangedOnFailure]' passed (0.001 seconds).
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testHancomClipboardBecomesHTMLAndPlainTextInOneItem]' started.
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testHancomClipboardBecomesHTMLAndPlainTextInOneItem]' passed (0.002 seconds).
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testInvalidHangulTableIsNotReportedAsReadyToConvert]' started.
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testInvalidHangulTableIsNotReportedAsReadyToConvert]' passed (0.001 seconds).
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testLegacyConvertedClipboardRemainsReadyWithoutRewritingIt]' started.
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testLegacyConvertedClipboardRemainsReadyWithoutRewritingIt]' passed (0.001 seconds).
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testLegacyMarkerWithoutATableDoesNotReportACompletedConversion]' started.
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testLegacyMarkerWithoutATableDoesNotReportACompletedConversion]' passed (0.001 seconds).
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testNativeHighlighterDataIsReadAlongsideHTMLAndWrittenAsPasteableColors]' started.
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testNativeHighlighterDataIsReadAlongsideHTMLAndWrittenAsPasteableColors]' passed (0.216 seconds).
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testNewCopyDuringStateValidationDoesNotLeaveAStalePreparedResult]' started.
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testNewCopyDuringStateValidationDoesNotLeaveAStalePreparedResult]' passed (0.198 seconds).
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testPlainTextClipboardIsNotChangedOnFailure]' started.
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testPlainTextClipboardIsNotChangedOnFailure]' passed (0.001 seconds).
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testPublicHTMLIsSupported]' started.
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testPublicHTMLIsSupported]' passed (0.002 seconds).
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testStateValidationLetsMainQueueRunAndConversionReusesPreparedHTML]' started.
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testStateValidationLetsMainQueueRunAndConversionReusesPreparedHTML]' passed (0.373 seconds).
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testUnmarkedConvertedHTMLIsNotReportedAsOurConversion]' started.
+Test Case '-[TableConverterMacTests.ClipboardTableConverterTests testUnmarkedConvertedHTMLIsNotReportedAsOurConversion]' passed (0.004 seconds).
+Test Suite 'ClipboardTableConverterTests' passed at 2026-10-29 20:10:42.242.
+	 Executed 20 tests, with 0 failures (0 unexpected) in 1.864 (1.867) seconds
+Test Suite 'ConversionFeedbackTests' started at 2026-10-29 20:10:42.243.
+Test Case '-[TableConverterMacTests.ConversionFeedbackTests testAllSevenLimitationCombinationsShareCopyAndKeepOnlyTheirDetails]' started.
+Test Case '-[TableConverterMacTests.ConversionFeedbackTests testAllSevenLimitationCombinationsShareCopyAndKeepOnlyTheirDetails]' passed (0.000 seconds).
+Test Case '-[TableConverterMacTests.ConversionFeedbackTests testCleanConversionIsSuccessWithShortDismissTime]' started.
+Test Case '-[TableConverterMacTests.ConversionFeedbackTests testCleanConversionIsSuccessWithShortDismissTime]' passed (0.000 seconds).
+Test Case '-[TableConverterMacTests.ConversionFeedbackTests testCombinedLimitationsKeepActualImageCountAndAllDetails]' started.
+Test Case '-[TableConverterMacTests.ConversionFeedbackTests testCombinedLimitationsKeepActualImageCountAndAllDetails]' passed (0.000 seconds).
+Test Case '-[TableConverterMacTests.ConversionFeedbackTests testFailuresShareTitleAndOfferRecoveryForTheirCause]' started.
+Test Case '-[TableConverterMacTests.ConversionFeedbackTests testFailuresShareTitleAndOfferRecoveryForTheirCause]' passed (0.000 seconds).
+Test Case '-[TableConverterMacTests.ConversionFeedbackTests testSettingsErrorDoesNotOfferConversionRetry]' started.
+Test Case '-[TableConverterMacTests.ConversionFeedbackTests testSettingsErrorDoesNotOfferConversionRetry]' passed (0.000 seconds).
+Test Case '-[TableConverterMacTests.ConversionFeedbackTests testUnexpectedFailureKeepsDiagnosticDetailsAlongsideRetry]' started.
+Test Case '-[TableConverterMacTests.ConversionFeedbackTests testUnexpectedFailureKeepsDiagnosticDetailsAlongsideRetry]' passed (0.000 seconds).
+Test Suite 'ConversionFeedbackTests' passed at 2026-10-29 20:10:42.244.
+	 Executed 6 tests, with 0 failures (0 unexpected) in 0.001 (0.002) seconds
+Test Suite 'ConversionShortcutTests' started at 2026-10-29 20:10:42.244.
+Test Case '-[TableConverterMacTests.ConversionShortcutTests testChangedAndDisabledShortcutSurvivesReload]' started.
+Test Case '-[TableConverterMacTests.ConversionShortcutTests testChangedAndDisabledShortcutSurvivesReload]' passed (0.003 seconds).
+Test Case '-[TableConverterMacTests.ConversionShortcutTests testCorruptOrUnsupportedSavedShortcutFallsBackToDefault]' started.
+Test Case '-[TableConverterMacTests.ConversionShortcutTests testCorruptOrUnsupportedSavedShortcutFallsBackToDefault]' passed (0.002 seconds).
+Test Case '-[TableConverterMacTests.ConversionShortcutTests testDefaultShortcutUsesPhysicalPAndCommandOptionShift]' started.
+Test Case '-[TableConverterMacTests.ConversionShortcutTests testDefaultShortcutUsesPhysicalPAndCommandOptionShift]' passed (0.000 seconds).
+Test Case '-[TableConverterMacTests.ConversionShortcutTests testFailedReplacementKeepsOldShortcutAndSuccessfulReplacementReleasesIt]' started.
+Test Case '-[TableConverterMacTests.ConversionShortcutTests testFailedReplacementKeepsOldShortcutAndSuccessfulReplacementReleasesIt]' passed (0.070 seconds).
+Test Case '-[TableConverterMacTests.ConversionShortcutTests testRecordedShortcutUsesPhysicalKeyAndIgnoresCapsLock]' started.
+Test Case '-[TableConverterMacTests.ConversionShortcutTests testRecordedShortcutUsesPhysicalKeyAndIgnoresCapsLock]' passed (0.000 seconds).
+Test Case '-[TableConverterMacTests.ConversionShortcutTests testRecorderRejectsPlainKeysUnsupportedKeysAndFunctionModifier]' started.
+Test Case '-[TableConverterMacTests.ConversionShortcutTests testRecorderRejectsPlainKeysUnsupportedKeysAndFunctionModifier]' passed (0.000 seconds).
+Test Case '-[TableConverterMacTests.ConversionShortcutTests testRecorderSupportsControlShiftAndAllFourModifiers]' started.
+Test Case '-[TableConverterMacTests.ConversionShortcutTests testRecorderSupportsControlShiftAndAllFourModifiers]' passed (0.000 seconds).
+Test Case '-[TableConverterMacTests.ConversionShortcutTests testRegisteredCarbonEventConvertsNamedClipboardAndIgnoresHeldKeyRepeat]' started.
+Test Case '-[TableConverterMacTests.ConversionShortcutTests testRegisteredCarbonEventConvertsNamedClipboardAndIgnoresHeldKeyRepeat]' passed (0.007 seconds).
+Test Case '-[TableConverterMacTests.ConversionShortcutTests testUnregisterStopsCallbacksAndReleasesShortcut]' started.
+Test Case '-[TableConverterMacTests.ConversionShortcutTests testUnregisterStopsCallbacksAndReleasesShortcut]' passed (0.000 seconds).
+Test Suite 'ConversionShortcutTests' passed at 2026-10-29 20:10:42.328.
+	 Executed 9 tests, with 0 failures (0 unexpected) in 0.083 (0.084) seconds
+Test Suite 'MenuBarAnimationTimingTests' started at 2026-10-29 20:10:42.328.
+Test Case '-[TableConverterMacTests.MenuBarAnimationTimingTests testCancellationStopsFinishingFrames]' started.
+Test Case '-[TableConverterMacTests.MenuBarAnimationTimingTests testCancellationStopsFinishingFrames]' passed (0.382 seconds).
+Test Case '-[TableConverterMacTests.MenuBarAnimationTimingTests testFinishingIsBoundedWhileDrawingErasingOrBetweenCycles]' started.
+Test Case '-[TableConverterMacTests.MenuBarAnimationTimingTests testFinishingIsBoundedWhileDrawingErasingOrBetweenCycles]' passed (2.641 seconds).
+Test Case '-[TableConverterMacTests.MenuBarAnimationTimingTests testFramesContinueDuringMenuTracking]' started.
+Test Case '-[TableConverterMacTests.MenuBarAnimationTimingTests testFramesContinueDuringMenuTracking]' passed (0.132 seconds).
+Test Case '-[TableConverterMacTests.MenuBarAnimationTimingTests testOldFinishingCannotOverwriteANewerState]' started.
+Test Case '-[TableConverterMacTests.MenuBarAnimationTimingTests testOldFinishingCannotOverwriteANewerState]' passed (0.176 seconds).
+Test Suite 'MenuBarAnimationTimingTests' passed at 2026-10-29 20:10:45.659.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 3.331 (3.332) seconds
+Test Suite 'MenuBarIconAnimatorTests' started at 2026-10-29 20:10:45.659.
+Test Case '-[TableConverterMacTests.MenuBarIconAnimatorTests testAllFourStatesUseCenteredTemplateAssetsAtTheirIntendedSize]' started.
+Test Case '-[TableConverterMacTests.MenuBarIconAnimatorTests testAllFourStatesUseCenteredTemplateAssetsAtTheirIntendedSize]' passed (0.014 seconds).
+Test Case '-[TableConverterMacTests.MenuBarIconAnimatorTests testCompletionRevealsStandaloneCheckWithoutThePendingCircle]' started.
+Test Case '-[TableConverterMacTests.MenuBarIconAnimatorTests testCompletionRevealsStandaloneCheckWithoutThePendingCircle]' passed (0.016 seconds).
+Test Case '-[TableConverterMacTests.MenuBarIconAnimatorTests testConversionFramesKeepOutlineAndEqualCellHeights]' started.
+Test Case '-[TableConverterMacTests.MenuBarIconAnimatorTests testConversionFramesKeepOutlineAndEqualCellHeights]' passed (0.008 seconds).
+Test Case '-[TableConverterMacTests.MenuBarIconAnimatorTests testFinishingPreservesTheVisibleLinesAndFillsWithoutErasing]' started.
+Test Case '-[TableConverterMacTests.MenuBarIconAnimatorTests testFinishingPreservesTheVisibleLinesAndFillsWithoutErasing]' passed (0.082 seconds).
+Test Case '-[TableConverterMacTests.MenuBarIconAnimatorTests testGuideUsesTheSameConversionDrawingWithoutStretchingTheTable]' started.
+Test Case '-[TableConverterMacTests.MenuBarIconAnimatorTests testGuideUsesTheSameConversionDrawingWithoutStretchingTheTable]' passed (0.011 seconds).
+Test Suite 'MenuBarIconAnimatorTests' passed at 2026-10-29 20:10:45.791.
+	 Executed 5 tests, with 0 failures (0 unexpected) in 0.132 (0.132) seconds
+Test Suite 'UsageGuidePreferencesTests' started at 2026-10-29 20:10:45.792.
+Test Case '-[TableConverterMacTests.UsageGuidePreferencesTests testGuideIsShownWithoutASavedChoice]' started.
+Test Case '-[TableConverterMacTests.UsageGuidePreferencesTests testGuideIsShownWithoutASavedChoice]' passed (0.002 seconds).
+Test Case '-[TableConverterMacTests.UsageGuidePreferencesTests testHiddenGuideSurvivesReloadAndShortcutChangesAndCanBeReenabled]' started.
+Test Case '-[TableConverterMacTests.UsageGuidePreferencesTests testHiddenGuideSurvivesReloadAndShortcutChangesAndCanBeReenabled]' passed (0.002 seconds).
+Test Case '-[TableConverterMacTests.UsageGuidePreferencesTests testInvalidStoredChoiceKeepsTheGuideAvailable]' started.
+Test Case '-[TableConverterMacTests.UsageGuidePreferencesTests testInvalidStoredChoiceKeepsTheGuideAvailable]' passed (0.002 seconds).
+Test Suite 'UsageGuidePreferencesTests' passed at 2026-10-29 20:10:45.798.
+	 Executed 3 tests, with 0 failures (0 unexpected) in 0.006 (0.006) seconds
+Test Suite 'TableConverterMacTests.xctest' passed at 2026-10-29 20:10:45.798.
+	 Executed 51 tests, with 0 failures (0 unexpected) in 5.428 (5.434) seconds
+Test Suite 'All tests' passed at 2026-10-29 20:10:45.798.
+	 Executed 51 tests, with 0 failures (0 unexpected) in 5.428 (5.436) seconds
+Test Suite 'All tests' started at 2026-10-29 20:10:45.926.
+Test Suite 'TableConverterCoreTests.xctest' started at 2026-10-29 20:10:45.927.
+Test Suite 'DocumentConversionTests' started at 2026-10-29 20:10:45.927.
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testAlignmentIsExplicitAndInheritsCellAlignment]' started.
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testAlignmentIsExplicitAndInheritsCellAlignment]' passed (0.028 seconds).
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testBackgroundSurvivesMalformedHancomDiagonalDeclaration]' started.
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testBackgroundSurvivesMalformedHancomDiagonalDeclaration]' passed (0.002 seconds).
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testBodyBeforeBetweenAndAfterTablesRetainsOrderAndLinks]' started.
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testBodyBeforeBetweenAndAfterTablesRetainsOrderAndLinks]' passed (0.005 seconds).
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testFontClassesUseWindowsReferenceSizesWithoutDiscardingOriginalSize]' started.
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testFontClassesUseWindowsReferenceSizesWithoutDiscardingOriginalSize]' passed (0.003 seconds).
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testHancomCommentWrappedStyleSheetWithNumericClassProvidesDefaultFontSize]' started.
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testHancomCommentWrappedStyleSheetWithNumericClassProvidesDefaultFontSize]' passed (0.002 seconds).
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testMultipleAndDeepInnerTablesKeepTextExactlyOnce]' started.
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testMultipleAndDeepInnerTablesKeepTextExactlyOnce]' passed (0.005 seconds).
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testNestedTableSplitsParentContentAndExpandsSurroundingMerges]' started.
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testNestedTableSplitsParentContentAndExpandsSurroundingMerges]' passed (0.010 seconds).
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testParallelNestedTablesUseCompatibleRowsWithoutDuplicates]' started.
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testParallelNestedTablesUseCompatibleRowsWithoutDuplicates]' passed (0.006 seconds).
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testRGBAndNamedHighlightColorsAreRetained]' started.
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testRGBAndNamedHighlightColorsAreRetained]' passed (0.002 seconds).
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testRowspanningParentWithInnerTablePreservesSiblingCells]' started.
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testRowspanningParentWithInnerTablePreservesSiblingCells]' passed (0.004 seconds).
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testStrikeUnderlineAndItalicArePreservedTogether]' started.
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testStrikeUnderlineAndItalicArePreservedTogether]' passed (0.003 seconds).
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testTextHighlightKeepsNestedFormattingAndDoesNotLeakFromCellOrToAdjacentText]' started.
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testTextHighlightKeepsNestedFormattingAndDoesNotLeakFromCellOrToAdjacentText]' passed (0.003 seconds).
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testTextOutsideParagraphsInsideCellsIsNotDiscarded]' started.
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testTextOutsideParagraphsInsideCellsIsNotDiscarded]' passed (0.002 seconds).
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testUnsafeLinkBecomesTextAndExcessiveGridDoesNotReturnPartialOutput]' started.
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testUnsafeLinkBecomesTextAndExcessiveGridDoesNotReturnPartialOutput]' passed (0.002 seconds).
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testWebImagesRemainAndUnavailableLocalImagesAreReported]' started.
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testWebImagesRemainAndUnavailableLocalImagesAreReported]' passed (0.002 seconds).
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testWholeAnonymizedClipboardRetainsAllTextAndMatchesWindowsNestedGrid]' started.
+Test Case '-[TableConverterCoreTests.DocumentConversionTests testWholeAnonymizedClipboardRetainsAllTextAndMatchesWindowsNestedGrid]' passed (2.203 seconds).
+Test Suite 'DocumentConversionTests' passed at 2026-10-29 20:10:48.211.
+	 Executed 16 tests, with 0 failures (0 unexpected) in 2.282 (2.284) seconds
+Test Suite 'HangulTableConverterTests' started at 2026-10-29 20:10:48.211.
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testAllTablesAndBodyAreConverted]' started.
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testAllTablesAndBodyAreConverted]' passed (0.003 seconds).
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testDirectCellTextAndHeadersPreserveSpacesAndBold]' started.
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testDirectCellTextAndHeadersPreserveSpacesAndBold]' passed (0.003 seconds).
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testExplicitLineBreaksRemainLineBreaks]' started.
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testExplicitLineBreaksRemainLineBreaks]' passed (0.002 seconds).
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testGeneratedIdentifiersAreUnique]' started.
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testGeneratedIdentifiersAreUnique]' passed (0.003 seconds).
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testMergedCellsDoNotInflateTableWidth]' started.
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testMergedCellsDoNotInflateTableWidth]' passed (0.004 seconds).
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testMissingTableAndForeignHTMLAreRejected]' started.
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testMissingTableAndForeignHTMLAreRejected]' passed (0.000 seconds).
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testMixedAndNestedInlineTextIsNeitherLostNorDuplicated]' started.
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testMixedAndNestedInlineTextIsNeitherLostNorDuplicated]' passed (0.002 seconds).
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testNonbreakingSpacesSurviveSourceNewlinesWithoutKeepingIndentation]' started.
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testNonbreakingSpacesSurviveSourceNewlinesWithoutKeepingIndentation]' passed (0.003 seconds).
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testOfficeHTMLWithXMLDeclarationCanBeRead]' started.
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testOfficeHTMLWithXMLDeclarationCanBeRead]' passed (0.001 seconds).
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testOriginalCellWidthsAndInheritedFontSizesArePreserved]' started.
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testOriginalCellWidthsAndInheritedFontSizesArePreserved]' passed (0.003 seconds).
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testOriginalLineSpacingPaddingAndBordersAreRetained]' started.
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testOriginalLineSpacingPaddingAndBordersAreRetained]' passed (0.002 seconds).
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testParagraphWhitespaceIsPreserved]' started.
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testParagraphWhitespaceIsPreserved]' passed (0.002 seconds).
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testRealClipboardFixturesPreservePythonContentAndMerges]' started.
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testRealClipboardFixturesPreservePythonContentAndMerges]' passed (0.222 seconds).
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testSpecialCharactersRemainText]' started.
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testSpecialCharactersRemainText]' passed (0.002 seconds).
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testStyleSheetFontInheritanceAndInlineOverrides]' started.
+Test Case '-[TableConverterCoreTests.HangulTableConverterTests testStyleSheetFontInheritanceAndInlineOverrides]' passed (0.002 seconds).
+Test Suite 'HangulTableConverterTests' passed at 2026-10-29 20:10:48.467.
+	 Executed 15 tests, with 0 failures (0 unexpected) in 0.254 (0.256) seconds
+Test Suite 'NativeHighlightTests' started at 2026-10-29 20:10:48.467.
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testAnonymizedRealClipboardRestoresGreenPinkAndYellowWithoutChangingTextOrCells]' started.
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testAnonymizedRealClipboardRestoresGreenPinkAndYellowWithoutChangingTextOrCells]' passed (0.455 seconds).
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testCompressedMiniStreamsAndUncompressedRegularStreamsProduceSameFormatting]' started.
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testCompressedMiniStreamsAndUncompressedRegularStreamsProduceSameFormatting]' passed (0.476 seconds).
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testDifferentSourceTextDoesNotColorAConvenientRepeatedPhrase]' started.
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testDifferentSourceTextDoesNotColorAConvenientRepeatedPhrase]' passed (0.002 seconds).
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testExtendedRecordLengthsAreReadWithoutTruncatingText]' started.
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testExtendedRecordLengthsAreReadWithoutTruncatingText]' passed (0.012 seconds).
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testGraphicCaptionIsOptionalOnlyWhenTheRemainingWholeTextMatches]' started.
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testGraphicCaptionIsOptionalOnlyWhenTheRemainingWholeTextMatches]' passed (0.005 seconds).
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testHighlightOnOnlyAnInternalSpaceIsPreserved]' started.
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testHighlightOnOnlyAnInternalSpaceIsPreserved]' passed (0.002 seconds).
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testHighlightToleratesHTMLSpacingWithoutLeakingAcrossSeparateRanges]' started.
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testHighlightToleratesHTMLSpacingWithoutLeakingAcrossSeparateRanges]' passed (0.009 seconds).
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testInvalidCompressedStreamAndMiniFatCycleAreRejected]' started.
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testInvalidCompressedStreamAndMiniFatCycleAreRejected]' passed (0.001 seconds).
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testMultipleInlineTablesAreInterleavedWithParentTextInScreenOrder]' started.
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testMultipleInlineTablesAreInterleavedWithParentTextInScreenOrder]' passed (0.004 seconds).
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testNativeOffsetsCountEightUnitControlsAndUTF16SurrogatePairs]' started.
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testNativeOffsetsCountEightUnitControlsAndUTF16SurrogatePairs]' passed (0.002 seconds).
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testNoNativeFormattingKeepsExistingHTMLConversionUsable]' started.
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testNoNativeFormattingKeepsExistingHTMLConversionUsable]' passed (0.002 seconds).
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testOverlappingNativeRangesUseTheLastColorAndOverrideCharacterShading]' started.
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testOverlappingNativeRangesUseTheLastColorAndOverrideCharacterShading]' passed (0.002 seconds).
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testPartialHighlightAcrossNestedFormattingAndNestedTables]' started.
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testPartialHighlightAcrossNestedFormattingAndNestedTables]' passed (0.005 seconds).
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testSplitSurrogateRangeDoesNotMutateHTML]' started.
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testSplitSurrogateRangeDoesNotMutateHTML]' passed (0.000 seconds).
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testTruncatedCyclicAndOutOfBoundsNativeDataFallsBackToOriginalHTML]' started.
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testTruncatedCyclicAndOutOfBoundsNativeDataFallsBackToOriginalHTML]' passed (0.005 seconds).
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testWholeDocumentMatchesRepeatedTextByPositionAcrossMultipleTables]' started.
+Test Case '-[TableConverterCoreTests.NativeHighlightTests testWholeDocumentMatchesRepeatedTextByPositionAcrossMultipleTables]' passed (0.005 seconds).
+Test Suite 'NativeHighlightTests' passed at 2026-10-29 20:10:49.456.
+	 Executed 16 tests, with 0 failures (0 unexpected) in 0.988 (0.989) seconds
+Test Suite 'TableConverterCoreTests.xctest' passed at 2026-10-29 20:10:49.456.
+	 Executed 47 tests, with 0 failures (0 unexpected) in 3.525 (3.530) seconds
+Test Suite 'All tests' passed at 2026-10-29 20:10:49.456.
+	 Executed 47 tests, with 0 failures (0 unexpected) in 3.525 (3.530) seconds
+◇ Test run started.
+↳ Testing Library Version: 2084
+↳ Target Platform: arm64e-apple-macos14.0
+✔ Test run with 0 tests in 0 suites passed after 0.001 seconds.
+◇ Test run started.
+↳ Testing Library Version: 2084
+↳ Target Platform: arm64e-apple-macos14.0
+✔ Test run with 0 tests in 0 suites passed after 0.001 seconds.
