@@ -1,0 +1,218 @@
+{
+  "completed_at": "2026-10-29T22:00:40.482414+09:00",
+  "scope": "Explicitly approved redundant assets, obsolete local ZIP packager and Finder metadata; build/output deletion is recorded separately. App implementation and private Xcode settings were preserved.",
+  "deleted": [
+    {
+      "path": "Assets/IconComposerSVG",
+      "reason": "All 22 files were compared byte-for-byte with retained corresponding files under Assets/IconComposerSVG 2 before deletion; no active references.",
+      "file_count": 22,
+      "bytes": 399111,
+      "deleted_files": [
+        "Assets/IconComposerSVG/00-default/phne-logo.svg",
+        "Assets/IconComposerSVG/00-default/preview.svg",
+        "Assets/IconComposerSVG/00-default/table.svg",
+        "Assets/IconComposerSVG/06-growth-1/phne-logo.svg",
+        "Assets/IconComposerSVG/06-growth-1/preview.svg",
+        "Assets/IconComposerSVG/06-growth-1/table.svg",
+        "Assets/IconComposerSVG/07-growth-2/phne-logo.svg",
+        "Assets/IconComposerSVG/07-growth-2/preview.svg",
+        "Assets/IconComposerSVG/07-growth-2/table.svg",
+        "Assets/IconComposerSVG/08-growth-3/phne-logo.svg",
+        "Assets/IconComposerSVG/08-growth-3/preview.svg",
+        "Assets/IconComposerSVG/08-growth-3/table.svg",
+        "Assets/IconComposerSVG/09-growth-4/phne-logo.svg",
+        "Assets/IconComposerSVG/09-growth-4/preview.svg",
+        "Assets/IconComposerSVG/09-growth-4/table.svg",
+        "Assets/IconComposerSVG/10-phne-only/phne-logo.svg",
+        "Assets/IconComposerSVG/10-phne-only/preview.svg",
+        "Assets/IconComposerSVG/preview.png",
+        "Assets/IconComposerSVG/source/phne-logo.svg",
+        "Assets/IconComposerSVG/source/table.svg",
+        "Assets/IconComposerSVG/stages.json",
+        "Assets/IconComposerSVG/사용안내.txt"
+      ]
+    },
+    {
+      "path": "table_icon.png",
+      "reason": "Unused legacy icon; no source, project, script or current documentation references.",
+      "file_count": 1,
+      "bytes": 176,
+      "deleted_files": [
+        "table_icon.png"
+      ]
+    },
+    {
+      "path": "Assets/menu-bar-icons.zip",
+      "reason": "All 18 archive files were verified byte-identical to retained formal assets before deletion; no unique source.",
+      "file_count": 1,
+      "bytes": 110722,
+      "deleted_files": [
+        "Assets/menu-bar-icons.zip"
+      ]
+    },
+    {
+      "path": "Assets/pyororong-easter-egg-svg.zip",
+      "reason": "All 22 archive files were verified byte-identical to retained formal assets before deletion; no unique source.",
+      "file_count": 1,
+      "bytes": 200071,
+      "deleted_files": [
+        "Assets/pyororong-easter-egg-svg.zip"
+      ]
+    },
+    {
+      "path": ".DS_Store",
+      "reason": "Finder-generated folder display metadata; not a project asset or personal Xcode setting.",
+      "file_count": 1,
+      "bytes": 22532,
+      "deleted_files": [
+        ".DS_Store"
+      ]
+    },
+    {
+      "path": "Tests/.DS_Store",
+      "reason": "Finder-generated folder display metadata; not a project asset or personal Xcode setting.",
+      "file_count": 1,
+      "bytes": 12292,
+      "deleted_files": [
+        "Tests/.DS_Store"
+      ]
+    },
+    {
+      "path": "Sources/.DS_Store",
+      "reason": "Finder-generated folder display metadata; not a project asset or personal Xcode setting.",
+      "file_count": 1,
+      "bytes": 10244,
+      "deleted_files": [
+        "Sources/.DS_Store"
+      ]
+    },
+    {
+      "path": "Assets/.DS_Store",
+      "reason": "Finder-generated folder display metadata; not a project asset or personal Xcode setting.",
+      "file_count": 1,
+      "bytes": 12292,
+      "deleted_files": [
+        "Assets/.DS_Store"
+      ]
+    },
+    {
+      "path": "Assets/AppIcons/.DS_Store",
+      "reason": "Finder-generated folder display metadata; not a project asset or personal Xcode setting.",
+      "file_count": 1,
+      "bytes": 6148,
+      "deleted_files": [
+        "Assets/AppIcons/.DS_Store"
+      ]
+    },
+    {
+      "path": "Assets/IconComposerSVG 2/.DS_Store",
+      "reason": "Finder-generated folder display metadata; not a project asset or personal Xcode setting.",
+      "file_count": 1,
+      "bytes": 18436,
+      "deleted_files": [
+        "Assets/IconComposerSVG 2/.DS_Store"
+      ]
+    },
+    {
+      "path": "Assets/IconComposerSVG 2/07-growth-2/.DS_Store",
+      "reason": "Finder-generated folder display metadata; not a project asset or personal Xcode setting.",
+      "file_count": 1,
+      "bytes": 6148,
+      "deleted_files": [
+        "Assets/IconComposerSVG 2/07-growth-2/.DS_Store"
+      ]
+    },
+    {
+      "path": "Assets/IconComposerSVG 2/10-phne-only/.DS_Store",
+      "reason": "Finder-generated folder display metadata; not a project asset or personal Xcode setting.",
+      "file_count": 1,
+      "bytes": 6148,
+      "deleted_files": [
+        "Assets/IconComposerSVG 2/10-phne-only/.DS_Store"
+      ]
+    },
+    {
+      "path": "Assets/IconComposerSVG 2/06-growth-1/.DS_Store",
+      "reason": "Finder-generated folder display metadata; not a project asset or personal Xcode setting.",
+      "file_count": 1,
+      "bytes": 6148,
+      "deleted_files": [
+        "Assets/IconComposerSVG 2/06-growth-1/.DS_Store"
+      ]
+    },
+    {
+      "path": "Assets/IconComposerSVG 2/09-growth-4/.DS_Store",
+      "reason": "Finder-generated folder display metadata; not a project asset or personal Xcode setting.",
+      "file_count": 1,
+      "bytes": 6148,
+      "deleted_files": [
+        "Assets/IconComposerSVG 2/09-growth-4/.DS_Store"
+      ]
+    },
+    {
+      "path": "Assets/IconComposerSVG 2/08-growth-3/.DS_Store",
+      "reason": "Finder-generated folder display metadata; not a project asset or personal Xcode setting.",
+      "file_count": 1,
+      "bytes": 6148,
+      "deleted_files": [
+        "Assets/IconComposerSVG 2/08-growth-3/.DS_Store"
+      ]
+    },
+    {
+      "path": "배포용 패키지 만들기.sh",
+      "reason": "Obsolete local-development ZIP-only packaging shortcut; formal distribution now uses scripts/prepare-update.sh with DMG, and README is updated to remove its only active reference.",
+      "file_count": 1,
+      "bytes": 480,
+      "deleted_files": [
+        "배포용 패키지 만들기.sh"
+      ]
+    }
+  ],
+  "total_file_count": 37,
+  "total_bytes": 823244,
+  "preserved_icon_composer_directory": "Assets/IconComposerSVG 2",
+  "preserved_tracked_icon_composer_file_count": 36,
+  "preserved_tracked_icon_composer_hashes": {
+    "Assets/IconComposerSVG 2/00-default/phne-logo.svg": "76e8b8ab17f983c24c4b55d9c037966387e241e5f46ea90ec7ae25e0a9966ebd",
+    "Assets/IconComposerSVG 2/00-default/preview.svg": "fbd829bc6fa7ae3b14a82e4aea28b7ff2f108f57867d64f63b0e8f864877eda5",
+    "Assets/IconComposerSVG 2/00-default/table.svg": "d30216419e8cfb082743cb14fd2499b61b93f36205f64ca3d9b9533e0dff57a1",
+    "Assets/IconComposerSVG 2/06-growth-1/6.icon/Assets/phne-logo.svg": "7b75ad2908ed34be9247f48f7d0b5cfff0c1ddb945db103263beec4da357004b",
+    "Assets/IconComposerSVG 2/06-growth-1/6.icon/Assets/table.svg": "606b20c3ab1d9d3bc367c3903374611d9aa22c89cb3c88a6e9175a26814154a3",
+    "Assets/IconComposerSVG 2/06-growth-1/6.icon/icon.json": "e01bebea5e40bf4352018250d6fbb3b7aef3e1fc514fe70bb297ee558fef1939",
+    "Assets/IconComposerSVG 2/06-growth-1/phne-logo.svg": "7b75ad2908ed34be9247f48f7d0b5cfff0c1ddb945db103263beec4da357004b",
+    "Assets/IconComposerSVG 2/06-growth-1/preview.svg": "b82d5c4ef695914843241ebce4a56b779ffa8bc8febd607b4a00e8136e0e7dff",
+    "Assets/IconComposerSVG 2/06-growth-1/table.svg": "606b20c3ab1d9d3bc367c3903374611d9aa22c89cb3c88a6e9175a26814154a3",
+    "Assets/IconComposerSVG 2/07-growth-2/7.icon/Assets/phne-logo 2.svg": "0b926a63464983a504da0836f0594ada85937bbb732f4c37822467645e9406c7",
+    "Assets/IconComposerSVG 2/07-growth-2/7.icon/Assets/table 2.svg": "5b6b82a7cdf69ef0e75d478eb96481810b7c28ffda5ddc25cf9ebfa6bb7d9358",
+    "Assets/IconComposerSVG 2/07-growth-2/7.icon/icon.json": "87caf46ed04abc3e1daf541a71cc8d7f344190ded08baea7bdd195c4c59ab8ba",
+    "Assets/IconComposerSVG 2/07-growth-2/phne-logo.svg": "0b926a63464983a504da0836f0594ada85937bbb732f4c37822467645e9406c7",
+    "Assets/IconComposerSVG 2/07-growth-2/preview.svg": "d0b67c89f2286665d88697f2023d65abae2e5ea11f616512eeee98e93e4c828e",
+    "Assets/IconComposerSVG 2/07-growth-2/table.svg": "5b6b82a7cdf69ef0e75d478eb96481810b7c28ffda5ddc25cf9ebfa6bb7d9358",
+    "Assets/IconComposerSVG 2/08-growth-3/8.icon/Assets/phne-logo.svg": "47d2f09776b92935cb9fb770151794f3122d8158a5832b9698210c17f5738be5",
+    "Assets/IconComposerSVG 2/08-growth-3/8.icon/Assets/table.svg": "96fd43b4812e55d83f08019a7329ddcbb29bd250abe481640e38e22d8581fa9a",
+    "Assets/IconComposerSVG 2/08-growth-3/8.icon/icon.json": "e01bebea5e40bf4352018250d6fbb3b7aef3e1fc514fe70bb297ee558fef1939",
+    "Assets/IconComposerSVG 2/08-growth-3/phne-logo.svg": "47d2f09776b92935cb9fb770151794f3122d8158a5832b9698210c17f5738be5",
+    "Assets/IconComposerSVG 2/08-growth-3/preview.svg": "fe2edb460dc7c220ddc75b5ba0d3b70ccf3005f6f13cfaf1bfc145b669256191",
+    "Assets/IconComposerSVG 2/08-growth-3/table.svg": "96fd43b4812e55d83f08019a7329ddcbb29bd250abe481640e38e22d8581fa9a",
+    "Assets/IconComposerSVG 2/09-growth-4/9.icon/Assets/phne-logo.svg": "a97d3eec3f8170b9a8ceb6d611aa00073ee49f908cec44c426f08c9590b06288",
+    "Assets/IconComposerSVG 2/09-growth-4/9.icon/Assets/table.svg": "73ebab83b52e3494bafca65310e7d156b8325b25bfaf4e94b5507adbef460452",
+    "Assets/IconComposerSVG 2/09-growth-4/9.icon/icon.json": "e01bebea5e40bf4352018250d6fbb3b7aef3e1fc514fe70bb297ee558fef1939",
+    "Assets/IconComposerSVG 2/09-growth-4/phne-logo.svg": "a97d3eec3f8170b9a8ceb6d611aa00073ee49f908cec44c426f08c9590b06288",
+    "Assets/IconComposerSVG 2/09-growth-4/preview.svg": "b042eda0a53b5db67a013220621b28ceb35125c5c08b3fbb11e96b194392594b",
+    "Assets/IconComposerSVG 2/09-growth-4/table.svg": "73ebab83b52e3494bafca65310e7d156b8325b25bfaf4e94b5507adbef460452",
+    "Assets/IconComposerSVG 2/10-phne-only/10.icon/Assets/phne-logo.svg": "ab6f3727a324c6edcec1e55fda90fb58df36d94ce4068089cfdfdb648d5b66ac",
+    "Assets/IconComposerSVG 2/10-phne-only/10.icon/icon.json": "98adeaec0f7967f49c6a15744b6d3e68a6a86b7a5bc4ef07cb659169c49a370e",
+    "Assets/IconComposerSVG 2/10-phne-only/phne-logo.svg": "ab6f3727a324c6edcec1e55fda90fb58df36d94ce4068089cfdfdb648d5b66ac",
+    "Assets/IconComposerSVG 2/10-phne-only/preview.svg": "3ca940ca8005365a909680c487d5e09c8b3e8b654b2fa12d9444055c8af18ae4",
+    "Assets/IconComposerSVG 2/preview.png": "f2e24e7e1d744f00b3e1ac4213110260c0c93f3e8acdd95f22aa76fa460069a4",
+    "Assets/IconComposerSVG 2/source/phne-logo.svg": "89a747a0c34bf07b1783762589905313f3df6af6a5d2dabc2ec005f2431d8963",
+    "Assets/IconComposerSVG 2/source/table.svg": "c0614add437133a416524ef5361e7fd4c9d29b19d4c1d26d1fdd5058606e7603",
+    "Assets/IconComposerSVG 2/stages.json": "a54792d29ccd90c0134daed59a6833b4fe4630af9531e362b1c90aed6787caeb",
+    "Assets/IconComposerSVG 2/사용안내.txt": "77e2c92cccd45c6eca5924a91c7efcad71531e17cc74ac69782d298b5b035689"
+  },
+  "archive_validation_entries": {
+    "Assets/menu-bar-icons.zip": 18,
+    "Assets/pyororong-easter-egg-svg.zip": 22
+  },
+  "verification_note": "The initial post-delete assertion included the explicitly removable .DS_Store metadata. It was corrected by verifying all 36 retained tracked asset files against their Git content; all match. Deleted-file sizes were reconstructed from Git content and the audited pre-deletion inventory."
+}

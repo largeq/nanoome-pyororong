@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "sparkleVersion": "2.10.1",
+  "extractor": "SUDiskImageUnarchiver (unmodified upstream source)",
+  "archive": "Pyororong-2.0.0-1.dmg",
+  "appManifestEntries": 78,
+  "fileBytesPermissionsAndSymlinksMatchOriginal": true,
+  "onlyAppExtracted": true,
+  "archiveDetachedAfterExtraction": true,
+  "waitForCleanup": true,
+  "bundleIdentifier": "com.phronesis.pyororong",
+  "version": "2.0.0",
+  "build": "1",
+  "verifyBeforeExtractionSettingPreserved": true,
+  "embeddedPublicKeyPreserved": true,
+  "codesignDeepStrictVerified": true,
+  "stapledNotarizationTicketValid": true,
+  "gatekeeperAssessment": "Notarized Developer ID",
+  "architectures": [
+    "arm64",
+    "x86_64"
+  ],
+  "installationOrAppLaunchRequested": false,
+  "clipboardOrPreferencesAccessed": false
+}

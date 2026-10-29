@@ -1,0 +1,24 @@
+{
+  "requestedScope": "GitHub release, repository duplicates and local temporary artifacts",
+  "startedAt": "2026-10-29T22:09:10.371937+09:00",
+  "directories": [
+    {
+      "path": ".build",
+      "allocatedBytesReportedByDu": 4157018112,
+      "fileCount": 21528,
+      "deleted": true
+    },
+    {
+      "path": "output",
+      "allocatedBytesReportedByDu": 8474624,
+      "fileCount": 26,
+      "deleted": true
+    }
+  ],
+  "originalNotarizedApplicationPreserved": true,
+  "privateXcodeSettingsPreserved": true,
+  "gitHistoryPreserved": true,
+  "initialRemovalNote": "Initial .build deletion was interrupted by a newly appearing .DS_Store in Release; no application process was using the build path. Retried only the same approved cache directories.",
+  "completedAt": "2026-10-29T22:10:45.883485+09:00",
+  "totalAllocatedBytesReportedByDu": 4165492736
+}

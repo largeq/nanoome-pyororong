@@ -112,9 +112,15 @@ spctl --assess --type execute --verbose=2 "$APP_PATH"
 mkdir -p "$PROJECT_DIR/.build"
 STAGING_DIR="$(mktemp -d "$PROJECT_DIR/.build/update-preparation.XXXXXX")"
 trap 'rm -rf "$STAGING_DIR"' EXIT
-ARCHIVE_NAME="Pyororong-${VERSION}-${BUILD}.zip"
+ARCHIVE_NAME="Pyororong-${VERSION}-${BUILD}.dmg"
 DOWNLOAD_PREFIX="https://github.com/largeq/nanoome-pyororong/releases/download/v${VERSION}/"
-ditto -c -k --sequesterRsrc --keepParent "$APP_PATH" "$STAGING_DIR/$ARCHIVE_NAME"
+PAYLOAD_DIR="$STAGING_DIR/.payload"
+mkdir "$PAYLOAD_DIR"
+ditto "$APP_PATH" "$PAYLOAD_DIR/표로롱.app"
+ln -s /Applications "$PAYLOAD_DIR/응용 프로그램"
+hdiutil create -quiet -srcfolder "$PAYLOAD_DIR" -volname "표로롱 $VERSION" \
+    -fs APFS -format UDZO "$STAGING_DIR/$ARCHIVE_NAME"
+rm -rf "$PAYLOAD_DIR"
 cp "$NOTES_PATH" "$STAGING_DIR/Pyororong-${VERSION}-${BUILD}.md"
 if [ -f "$PREVIOUS_FEED" ]; then cp "$PREVIOUS_FEED" "$STAGING_DIR/appcast.xml"; fi
 "$SPARKLE_TOOLS/generate_appcast" \
@@ -143,6 +149,10 @@ else:
 PY
 )"
 "$SPARKLE_TOOLS/sign_update" --account "$KEY_ACCOUNT" --verify "$STAGING_DIR/$ARCHIVE_NAME" "$SIGNATURE"
+(
+    cd "$STAGING_DIR"
+    shasum -a 256 "$ARCHIVE_NAME" > "$ARCHIVE_NAME.sha256"
+)
 mkdir -p "$(dirname "$OUTPUT_PATH")"
 if [ -e "$OUTPUT_PATH" ]; then
     echo "출력 경로가 이미 존재합니다: $OUTPUT_PATH" >&2

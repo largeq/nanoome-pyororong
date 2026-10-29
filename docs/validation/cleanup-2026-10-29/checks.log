@@ -1,0 +1,82 @@
+
+=== cleanup-package-check-final.log ===
+
+--prepared:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/.
+--prepared:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/Updater.app
+--prepared:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/Autoupdate
+--validated:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/Autoupdate
+--prepared:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Downloader.xpc
+--validated:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/Updater.app
+--prepared:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Installer.xpc
+--validated:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Downloader.xpc
+--validated:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Installer.xpc
+--validated:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/.
+<EXPORTED_APP>: valid on disk
+<EXPORTED_APP>: satisfies its Designated Requirement
+Processing: <EXPORTED_APP>
+The validate action worked!
+<EXPORTED_APP>: accepted
+source=Notarized Developer ID
+hdiutil: WARNING: 'hdiutil attach -mountpoint -nobrowse ...' is deprecated. Please use 'diskutil image attach --mountPoint --mountOptions nobrowse ...' instead.
+Wrote 1 new update, updated 0 existing updates, and removed 0 old updates in appcast.xml
+배포 준비 완료: .build/cleanup-package-check-final
+GitHub Release 태그: v2.0.0
+파일과 appcast는 아직 게시하지 않았습니다.
+
+
+=== cleanup-version-guard.log ===
+
+새 빌드 번호는 이전 배포의 모든 빌드 번호보다 커야 합니다.
+
+
+=== cleanup-dmg-public-key-check.log ===
+
+PASS: Archive Ed25519 signature matches the public key embedded in the exported app.
+
+
+=== cleanup-production-feed.log ===
+
+Isolated cleanup: fixtureExists=false, preferencesNil=false, remainingPreferenceKeys=0
+Production feed check passed; no update installation was requested.
+
+
+=== cleanup-dmg-extraction-checks.log ===
+
+$ actual Sparkle 2.10.1 SUDiskImageUnarchiver
+Sparkle 2.10.1 SUDiskImageUnarchiver completed with waitForCleanup=YES; no app installation or launch requested.
+hdiutil: WARNING: 'hdiutil attach -mountpoint -nobrowse ...' is deprecated. Please use 'diskutil image attach --mountPoint --mountOptions nobrowse ...' instead.
+
+exit=0
+
+$ codesign --verify --deep --strict --verbose=2 <EXTRACTED_APP>
+--prepared:<PROJECT_DIR>/.build/cleanup-dmg-extraction/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/.
+--prepared:<PROJECT_DIR>/.build/cleanup-dmg-extraction/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/Autoupdate
+--validated:<PROJECT_DIR>/.build/cleanup-dmg-extraction/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/Autoupdate
+--prepared:<PROJECT_DIR>/.build/cleanup-dmg-extraction/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Downloader.xpc
+--validated:<PROJECT_DIR>/.build/cleanup-dmg-extraction/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Downloader.xpc
+--prepared:<PROJECT_DIR>/.build/cleanup-dmg-extraction/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/Updater.app
+--validated:<PROJECT_DIR>/.build/cleanup-dmg-extraction/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/Updater.app
+--prepared:<PROJECT_DIR>/.build/cleanup-dmg-extraction/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Installer.xpc
+--validated:<PROJECT_DIR>/.build/cleanup-dmg-extraction/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Installer.xpc
+--validated:<PROJECT_DIR>/.build/cleanup-dmg-extraction/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/.
+<PROJECT_DIR>/.build/cleanup-dmg-extraction/표로롱.app: valid on disk
+<PROJECT_DIR>/.build/cleanup-dmg-extraction/표로롱.app: satisfies its Designated Requirement
+
+exit=0
+
+$ xcrun stapler validate <EXTRACTED_APP>
+Processing: <PROJECT_DIR>/.build/cleanup-dmg-extraction/표로롱.app
+The validate action worked!
+
+exit=0
+
+$ spctl --assess --type execute --verbose=2 <EXTRACTED_APP>
+<PROJECT_DIR>/.build/cleanup-dmg-extraction/표로롱.app: accepted
+source=Notarized Developer ID
+
+exit=0
+
+$ lipo -archs <EXTRACTED_APP>/Contents/MacOS/Pyororong
+x86_64 arm64
+
+exit=0

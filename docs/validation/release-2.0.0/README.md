@@ -2,12 +2,14 @@
 
 2026년 10월 29일(한국 시간), 사용자의 승인으로 **2.0.0(빌드 1)**을 [GitHub Release](https://github.com/largeq/nanoome-pyororong/releases/tag/v2.0.0)에 공개했다. 검증만을 위한 2.0.1은 만들지 않았다.
 
+이 문서는 첫 ZIP 배포와 DMG 추가 당시의 검사 기록이다. 이후 [DMG 단일 배포 정리](../cleanup-2026-10-29/README.md)에서 운영 업데이트도 DMG로 전환하고 아래의 ZIP과 ZIP용 체크섬을 삭제했다.
+
 ## 배포 파일
 
-- 설치 파일: [Pyororong-2.0.0-1.zip](https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1.zip)
+- 당시 설치 파일: `Pyororong-2.0.0-1.zip` (정리 후 삭제)
 - 크기: **19,219,338바이트**
 - SHA-256: `47f6a07e44bda8499040ad78f7bbcf57ebff37c5b6201574050080cd50d57274`
-- 체크섬: [SHA256SUMS](https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/SHA256SUMS)
+- 당시 체크섬: `SHA256SUMS` (정리 후 삭제)
 - 태그: `v2.0.0`, 소스 커밋: `d8d3e4d9a3c97e4fd90781fdb9aa58b4b5b03108`
 - 앱: `표로롱.app`, 실행 파일 `Pyororong`, Bundle ID `com.phronesis.pyororong`
 

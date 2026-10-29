@@ -12,11 +12,11 @@ GitHub 배포를 위한 지원 범위, 완료 기준, 진행 상태는 [배포 �
 
 ## 설치
 
-**2.0.0(빌드 1)**의 [첫 GitHub Release](https://github.com/largeq/nanoome-pyororong/releases/tag/v2.0.0)를 게시했습니다. 배포용 Universal 앱의 Developer ID 서명, Apple 공증과 티켓 스테이플, Gatekeeper 검증을 마쳤고, 공개 DMG·ZIP·체크섬과 운영 업데이트 안내 파일도 확인했습니다. 자세한 결과는 [배포 검증 기록](docs/validation/release-2.0.0/README.md)에 있습니다.
+**2.0.0(빌드 1)**의 [첫 GitHub Release](https://github.com/largeq/nanoome-pyororong/releases/tag/v2.0.0)를 게시했습니다. 배포용 Universal 앱의 Developer ID 서명, Apple 공증과 티켓 스테이플, Gatekeeper 검증을 마쳤고, 공개 DMG·체크섬과 운영 업데이트 안내 파일도 확인했습니다. 자세한 결과는 [배포 검증 기록](docs/validation/release-2.0.0/README.md)에 있습니다.
 
 macOS 12 이상, Apple Silicon·Intel Mac용입니다. [DMG 설치 파일](https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1.dmg)을 내려받아 열고, `표로롱.app`을 **응용 프로그램** 폴더로 끌어다 놓은 뒤 복사된 앱을 실행합니다. 복사가 끝나면 디스크 이미지는 추출해도 됩니다.
 
-[ZIP 설치 파일](https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1.zip)의 압축을 풀어 같은 앱을 복사하는 방법도 사용할 수 있습니다. Python이나 Xcode는 필요하지 않습니다. 주요 기능과 사용 시 참고 사항은 [2.0 릴리스 안내](docs/releases/2.0.0.md)에 있습니다.
+Python이나 Xcode는 필요하지 않습니다. 주요 기능과 사용 시 참고 사항은 [2.0 릴리스 안내](docs/releases/2.0.0.md)에 있습니다.
 
 ## 실행
 
@@ -120,7 +120,7 @@ bash scripts/build-app.sh
 
 `표로롱.command`와 `표로롱 (백그라운드).command`도 위 앱을 실행합니다. 앱이 없으면 먼저 빌드하므로, 이 실행 방식에는 Xcode가 필요합니다. 소스를 수정한 후에는 다시 빌드해야 합니다.
 
-`scripts/build-app.sh`와 `배포용 패키지 만들기.sh`는 **로컬 개발 빌드**를 만듭니다. 서명은 Xcode 설정에 따라 개발용 또는 ad-hoc이며, 이 빌드에서는 hardened runtime을 끕니다. 후자는 `.build/표로롱_v2.0.zip`도 만듭니다. GitHub 배포용은 별도로 Developer ID 서명·Apple 공증을 거친 앱을 사용하며, [업데이트 배포 안내](docs/updates.md)의 절차로 준비합니다.
+`scripts/build-app.sh`는 **로컬 개발 빌드**를 만듭니다. 서명은 Xcode 설정에 따라 개발용 또는 ad-hoc이며, 이 빌드에서는 hardened runtime을 끕니다. GitHub 배포용은 별도로 Developer ID 서명·Apple 공증을 거친 앱을 사용하고, `scripts/prepare-update.sh`로 DMG와 업데이트 안내 파일을 준비합니다. 자세한 절차는 [업데이트 배포 안내](docs/updates.md)에 있습니다.
 
 ## 코드 구조
 
@@ -193,6 +193,6 @@ Ponytail 리뷰의 확인 사항을 수정한 뒤 패키지 검사 **89개**와 
 
 기존 Python 구현은 별도로 보관합니다. 해당 구현의 실행·패키징 스크립트는 Python 버전용이며, 이 저장소에는 현재 Swift 앱을 개발하고 실행하는 파일을 포함합니다.
 
-현재 폴더의 `.command`와 패키지 생성 스크립트는 이 폴더의 Swift 앱을 빌드·실행합니다. 기존 위치에서 만든 Swift 빌드 캐시는 `.build/previous-location/`에 보존하고, 새 위치의 테스트와 앱 빌드는 새 캐시로 검증합니다.
+현재 폴더의 `.command`는 `scripts/run-app.sh`를 통해 이 폴더의 Swift 앱을 실행하며, 앱이 없으면 `scripts/build-app.sh`로 빌드합니다. 프로젝트를 옮길 때에는 기존 위치의 Swift 빌드 캐시를 `.build/previous-location/`에 보존하고 새 캐시로 검사했습니다. 이후 산출물 정리 내역은 [배포 준비 계획](docs/release-plan.md)에 기록합니다.
 
 SwiftSoup의 라이선스는 `THIRD_PARTY_NOTICES.txt`에 포함되어 있습니다.

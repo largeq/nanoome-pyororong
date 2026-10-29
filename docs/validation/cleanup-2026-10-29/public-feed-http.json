@@ -1,0 +1,11 @@
+{
+  "url": "https://raw.githubusercontent.com/largeq/nanoome-pyororong/main/updates/appcast.xml",
+  "httpStatus": 200,
+  "matchesGeneratedDmgFeed": true,
+  "attempts": [
+    {
+      "status": 200,
+      "matches": true
+    }
+  ]
+}

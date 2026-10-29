@@ -2,7 +2,7 @@
 
 ## 첫 배포 상태
 
-2026년 10월 29일 **2.0.0(빌드 1)**의 [첫 GitHub Release](https://github.com/largeq/nanoome-pyororong/releases/tag/v2.0.0)를 게시했다. 배포용 앱은 Apple Silicon·Intel Universal 구조, Developer ID Application 서명, hardened runtime, Apple 공증과 티켓 스테이플, Gatekeeper 검증을 통과했다. 공개 ZIP과 `SHA256SUMS`는 로그인 없이 HTTP 200으로 내려받을 수 있고 원본과 일치한다.
+2026년 10월 29일 **2.0.0(빌드 1)**의 [첫 GitHub Release](https://github.com/largeq/nanoome-pyororong/releases/tag/v2.0.0)를 게시했다. 배포용 앱은 Apple Silicon·Intel Universal 구조, Developer ID Application 서명, hardened runtime, Apple 공증과 티켓 스테이플, Gatekeeper 검증을 통과했다. 공개 DMG와 `Pyororong-2.0.0-1.dmg.sha256`은 로그인 없이 HTTP 200으로 내려받을 수 있고 원본과 일치한다.
 
 운영용 `updates/appcast.xml`을 기본 브랜치 `main`에 게시했다. 공개 주소의 HTTP 200 응답과 생성본 일치를 확인했으며, 실제 앱의 `UpdateController`와 Sparkle이 2.0.0(빌드 1)을 최신 버전으로 판정했다. 자세한 결과와 배포 파일 해시는 [배포 검증 기록](validation/release-2.0.0/README.md)에 있다.
 
@@ -10,9 +10,9 @@
 
 ## 처음 설치할 때
 
-첫 설치의 기본 선택은 [DMG](https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1.dmg)다. 디스크 이미지를 열고 안의 `표로롱.app`을 **응용 프로그램** 폴더로 복사한다. [DMG 체크섬](https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1.dmg.sha256)은 별도 파일로 제공한다. ZIP을 내려받아 압축을 푸는 설치 방법도 유효하며, 두 형식에는 같은 버전의 앱을 담는다.
+설치 파일은 [DMG](https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1.dmg)로 제공한다. 디스크 이미지를 열고 안의 `표로롱.app`을 **응용 프로그램** 폴더로 복사한다. [DMG 체크섬](https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1.dmg.sha256)은 별도 파일로 제공한다.
 
-운영용 `appcast.xml`은 기존 `Pyororong-2.0.0-1.zip`을 계속 사용한다. DMG는 직접 설치를 위한 선택지로 추가하며, 기존 ZIP과 전자서명을 교체하거나 업데이트 안내의 설치 파일 주소를 DMG로 바꾸지 않는다. DMG와 그 안의 앱에 대한 검증 결과는 [배포 검증 기록](validation/release-2.0.0/README.md)에 구분해 기록한다.
+직접 설치와 Sparkle 업데이트는 같은 DMG를 사용한다. 운영용 `appcast.xml`에는 DMG의 주소·크기와 해당 파일의 Ed25519 전자서명을 넣는다. Release에는 DMG와 그 체크섬을 남기며 ZIP과 ZIP용 `SHA256SUMS`는 제공하지 않는다. DMG와 그 안의 앱에 대한 검증 결과는 [배포 검증 기록](validation/release-2.0.0/README.md)에 구분해 기록한다.
 
 ## 앱에서 보이는 동작
 
@@ -67,21 +67,22 @@ bash scripts/prepare-update.sh \
 
 스크립트는 Bundle ID·공개 키·버전·서명·Universal 구조·공증을 검사한다. ad-hoc 앱, 잘못된 키, 증가하지 않은 버전은 출력 파일을 만들기 전에 거부한다. 검사를 통과하면 다음 파일을 만든다.
 
-- `Pyororong-2.1.0-2.zip`: 앱을 포함한 배포 파일. `ditto`로 패키징해 앱 내부의 심볼릭 링크를 보존한다.
+- `Pyororong-2.1.0-2.dmg`: 앱과 응용 프로그램 폴더 링크를 포함한 읽기 전용 배포 디스크 이미지. 앱 내부의 심볼릭 링크를 보존한다.
+- `Pyororong-2.1.0-2.dmg.sha256`: DMG의 SHA-256 체크섬.
 - `appcast.xml`: 변경 사항과 설치 파일의 전자서명을 포함한 안내 파일.
 - `Pyororong-2.1.0-2.md`: 변경 사항 사본. 안내 파일 안에도 내용을 포함하므로 별도 공개 주소는 필요하지 않다.
 
 Sparkle의 `generate_appcast --account com.phronesis.pyororong`이 Keychain의 키를 사용해 서명한다. 개인 키를 파일이나 환경 변수로 내보내지 않는다. 설치 파일 주소는 해당 버전의 Release에 고정하며, 이 예시에서는 다음 주소를 사용한다.
 
 ```text
-https://github.com/largeq/nanoome-pyororong/releases/download/v2.1.0/Pyororong-2.1.0-2.zip
+https://github.com/largeq/nanoome-pyororong/releases/download/v2.1.0/Pyororong-2.1.0-2.dmg
 ```
 
 준비 스크립트는 파일을 생성할 뿐 GitHub에 게시하지 않는다.
 
 ## 게시 순서와 완료 확인
 
-1. GitHub에서 `v2.1.0` 태그의 Release를 만들고 `Pyororong-2.1.0-2.zip`과 변경 사항을 게시한다. 예시 번호는 실제 준비한 앱과 일치하도록 바꾼다.
+1. GitHub에서 `v2.1.0` 태그의 Release를 만들고 `Pyororong-2.1.0-2.dmg`, 해당 `.dmg.sha256`과 변경 사항을 게시한다. 예시 번호는 실제 준비한 앱과 일치하도록 바꾼다.
 2. 로그인이 필요 없는 브라우저에서도 정확한 설치 파일 주소로 다운로드할 수 있는지 확인한다.
 3. 생성된 `appcast.xml`을 저장소의 `updates/appcast.xml`로 복사해 기본 브랜치에 게시한다. 새 파일을 가리키는 안내를 설치 파일보다 먼저 게시하지 않는다. 생성된 안내의 버전·설치 파일 주소·전자서명을 임의로 바꾸거나, 서명한 설치 파일을 다시 수정하지 않는다.
 4. 앱에 설정된 안내 파일 주소가 HTTP 200으로 열리는지 확인한다.
