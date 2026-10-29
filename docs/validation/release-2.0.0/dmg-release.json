@@ -1,0 +1,37 @@
+{
+  "tag": "v2.0.0",
+  "url": "https://github.com/largeq/nanoome-pyororong/releases/tag/v2.0.0",
+  "draft": false,
+  "bodyMatchesCurrentReleaseNotes": true,
+  "existingZipAndChecksumAssetsPreserved": true,
+  "assets": [
+    {
+      "name": "Pyororong-2.0.0-1.dmg",
+      "size": 19195392,
+      "digest": "sha256:3c8f7e4340105cc54008bb45b1007dbb866ac0c788e3e82ed973bbe8893042a4",
+      "browser_download_url": "https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1.dmg",
+      "state": "uploaded"
+    },
+    {
+      "name": "Pyororong-2.0.0-1.dmg.sha256",
+      "size": 88,
+      "digest": "sha256:1cdab79d2dac38649c820fb6c8674b1dabd7e9f049b9360449450b850b997d3b",
+      "browser_download_url": "https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1.dmg.sha256",
+      "state": "uploaded"
+    },
+    {
+      "name": "Pyororong-2.0.0-1.zip",
+      "size": 19219338,
+      "digest": "sha256:47f6a07e44bda8499040ad78f7bbcf57ebff37c5b6201574050080cd50d57274",
+      "browser_download_url": "https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1.zip",
+      "state": "uploaded"
+    },
+    {
+      "name": "SHA256SUMS",
+      "size": 88,
+      "digest": "sha256:d739ba3fb04ddafc6ba6aab7113d3f9ffaf554976548e298ddbcbb0bf666832c",
+      "browser_download_url": "https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/SHA256SUMS",
+      "state": "uploaded"
+    }
+  ]
+}

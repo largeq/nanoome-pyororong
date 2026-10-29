@@ -1,0 +1,55 @@
+$ hdiutil verify .build/dmg/2.0.0/Pyororong-2.0.0-1.dmg
+MBR 체크섬 처리 중…
+                                 MBR: 확인됨 CRC32 $308AAA43
+Primary GPT Header 체크섬 처리 중…
+                  Primary GPT Header: 확인됨 CRC32 $8FBC15E9
+Primary GPT Table 체크섬 처리 중…
+                   Primary GPT Table: 확인됨 CRC32 $C13C6216
+Apple_Free 체크섬 처리 중…
+                          Apple_Free: 확인됨 CRC32 $00000000
+disk image 체크섬 처리 중…
+                          disk image: 확인됨 CRC32 $7EF0EBC9
+Apple_Free 체크섬 처리 중…
+                          Apple_Free: 확인됨 CRC32 $00000000
+Backup GPT Table 체크섬 처리 중…
+                    Backup GPT Table: 확인됨 CRC32 $C13C6216
+Backup GPT Header 체크섬 처리 중…
+                   Backup GPT Header: 확인됨 CRC32 $E6AF642A
+확인됨 CRC32 $90CED0AA
+hdiutil: verify: checksum of ".build/dmg/2.0.0/Pyororong-2.0.0-1.dmg" is VALID
+
+exit=0
+$ codesign --verify --deep --strict --verbose=2 /Volumes/표로롱 2.0/표로롱.app
+--prepared:/Volumes/표로롱 2.0/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/.
+--prepared:/Volumes/표로롱 2.0/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/Autoupdate
+--validated:/Volumes/표로롱 2.0/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/Autoupdate
+--prepared:/Volumes/표로롱 2.0/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/Updater.app
+--validated:/Volumes/표로롱 2.0/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/Updater.app
+--prepared:/Volumes/표로롱 2.0/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Downloader.xpc
+--validated:/Volumes/표로롱 2.0/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Downloader.xpc
+--prepared:/Volumes/표로롱 2.0/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Installer.xpc
+--validated:/Volumes/표로롱 2.0/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Installer.xpc
+--validated:/Volumes/표로롱 2.0/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/.
+/Volumes/표로롱 2.0/표로롱.app: valid on disk
+/Volumes/표로롱 2.0/표로롱.app: satisfies its Designated Requirement
+
+exit=0
+$ xcrun stapler validate /Volumes/표로롱 2.0/표로롱.app
+Processing: /Volumes/표로롱 2.0/표로롱.app
+The validate action worked!
+
+exit=0
+$ spctl --assess --type execute --verbose=2 /Volumes/표로롱 2.0/표로롱.app
+/Volumes/표로롱 2.0/표로롱.app: accepted
+source=Notarized Developer ID
+
+exit=0
+$ lipo -archs /Volumes/표로롱 2.0/표로롱.app/Contents/MacOS/Pyororong
+x86_64 arm64
+
+exit=0
+$ hdiutil detach /Volumes/표로롱 2.0
+"disk6" ejected.
+hdiutil: WARNING: 'hdiutil detach ...' is deprecated. Please use 'diskutil eject ...' instead.
+
+exit=0

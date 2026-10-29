@@ -37,3 +37,18 @@ Xcode에서 내보낸 공증 앱을 수정하거나 다시 서명하지 않고 `
 - [서명·공증·ZIP 보존·공개 키 서명 검증 로그](checks.log)
 
 실제 한글·네이버 붙여넣기는 사용자가 완료했다고 확인했다. 다른 Mac·구형 macOS 실행, VoiceOver와 지속 60fps 실측은 사용자 선택으로 이번 배포 검증에서 제외했다. 이전 공증 버전에서 새 버전으로 교체·재실행하는 검사는 실제 다음 업데이트를 준비할 때 수행한다.
+
+## 같은 버전의 DMG 추가
+
+2026년 10월 29일 사용자의 요청으로 같은 Release에 [Pyororong-2.0.0-1.dmg](https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1.dmg)와 [전용 체크섬](https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1.dmg.sha256)을 추가했다. 크기는 **19,195,392바이트**, SHA-256은 `3c8f7e4340105cc54008bb45b1007dbb866ac0c788e3e82ed973bbe8893042a4`다.
+
+읽기 전용 UDZO 디스크 이미지에 기존 공증된 앱을 `ditto`로 복사하고, `/Applications`를 가리키는 **응용 프로그램** 링크를 넣었다. 앱이나 내부 프레임워크를 다시 서명하거나 수정하지 않았다. 이미 서명·공증·티켓 스테이플을 마친 앱을 DMG로 감싸고 DMG 자체의 서명·공증을 생략하는 [Apple DTS 안내](https://developer.apple.com/forums/thread/741219)를 따랐다. **DMG 컨테이너 자체는 서명·공증하지 않았으며**, 서명·공증·티켓과 Gatekeeper 승인 검사는 내부 앱을 대상으로 수행했다.
+
+디스크 이미지 무결성 검사가 통과했고 읽기 전용으로 마운트해 앱의 파일·심볼릭 링크 78개 항목이 원본과 일치함을 확인했다. 내부 앱의 깊은 서명 검사, 공증 티켓, Gatekeeper 승인과 Intel·Apple Silicon 구성이 모두 통과했다. 검사가 끝나면 마운트를 해제했다.
+
+공개 DMG와 체크섬을 인증 없이 실제 다운로드해 HTTP 200 응답과 로컬 원본의 바이트·해시 일치를 확인했다. 기존 ZIP과 `SHA256SUMS`의 자산 ID·크기·해시는 그대로이며 운영 appcast와 그 ZIP 전자서명도 변경하지 않았다. GitHub Release와 문서의 첫 설치 안내는 DMG 기준으로 갱신했다.
+
+- [DMG 메타데이터](dmg-artifact.json)
+- [무결성·내부 앱 검증 로그](dmg-checks.log)
+- [공개 다운로드 결과](dmg-public-downloads.json)
+- [DMG 추가 후 Release 자산과 기존 파일 보존 확인](dmg-release.json)
