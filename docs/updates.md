@@ -10,9 +10,9 @@
 
 ## 처음 설치할 때
 
-설치 파일은 [r2 DMG](https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1-r2.dmg)로 제공한다. 흰 바탕의 설치창에서 왼쪽 `표로롱.app`을 오른쪽 **응용 프로그램** 폴더로 복사한다. 본문 상단에 별도 브랜드 표시는 두지 않고, **표로롱을 응용 프로그램 폴더로 드래그하세요.**라는 한 줄 안내를 사용한다. [r2 DMG 체크섬](https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1-r2.dmg.sha256)은 별도 파일로 제공한다.
+설치 파일은 [r3 DMG](https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1-r3.dmg)로 제공한다. 흰 바탕의 설치창에서 왼쪽 `표로롱.app`을 오른쪽 **응용 프로그램** 폴더로 복사한다. 본문 상단에 별도 브랜드 표시는 두지 않고, **표로롱을 응용 프로그램 폴더로 드래그하세요.**라는 한 줄 안내를 사용한다. [r3 DMG 체크섬](https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1-r3.dmg.sha256)은 별도 파일로 제공한다.
 
-r2는 설치창 디자인을 바꾼 재포장 번호이며 앱 버전·빌드 번호는 2.0.0(1)로 유지한다. 기존 URL의 서명 대상 바이트를 덮어쓰지 않고 새 파일명으로 구분한다. 새 포장의 검증 범위와 실제 결과는 [설치창 변경 기록](validation/dmg-layout-2026-10-29/README.md)에 별도로 남긴다.
+r3는 설치창의 위쪽 여백과 높이를 줄인 재포장 번호이며 앱 버전·빌드 번호는 2.0.0(1)로 유지한다. 기존 URL의 서명 대상 바이트를 덮어쓰지 않고 새 파일명으로 구분한다. r2 시점의 [설치창 변경 기록](validation/dmg-layout-2026-10-29/README.md)은 보존하고, r3의 검증 범위와 실제 결과는 [설치창 간격 변경 기록](validation/dmg-spacing-2026-10-29/README.md)에 별도로 남긴다.
 
 직접 설치와 Sparkle 업데이트는 같은 DMG를 사용한다. 운영용 `appcast.xml`에는 DMG의 주소·크기와 해당 파일의 Ed25519 전자서명을 넣는다. Release에는 DMG와 그 체크섬을 남기며 ZIP과 ZIP용 `SHA256SUMS`는 제공하지 않는다. DMG와 그 안의 앱에 대한 검증 결과는 [배포 검증 기록](validation/release-2.0.0/README.md)에 구분해 기록한다.
 

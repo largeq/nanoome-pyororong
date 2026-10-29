@@ -1,0 +1,28 @@
+{
+  "finderVerified": true,
+  "windowSize": [
+    768,
+    340
+  ],
+  "previousWindowSize": [
+    768,
+    480
+  ],
+  "contentMovedUpPoints": 100,
+  "windowHeightReductionPoints": 140,
+  "iconLocations": {
+    "표로롱.app": [
+      266,
+      152
+    ],
+    "응용 프로그램": [
+      502,
+      152
+    ]
+  },
+  "iconSize": 96.0,
+  "textSize": 14.0,
+  "backgroundType": 2,
+  "sourceManifestEntriesUnchanged": 137,
+  "instructionAndFilenamesVisibleWithoutClipping": true
+}

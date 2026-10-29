@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Pyororong-2.0.0-1-r3.dmg",
+    "httpStatus": 200,
+    "bytes": 19647512,
+    "sha256": "72e688d75ace55c6127ceb460d0e2b3d0b050b1948798b5f0806ccc751707a34",
+    "matchesLocal": true
+  },
+  {
+    "name": "Pyororong-2.0.0-1-r3.dmg.sha256",
+    "httpStatus": 200,
+    "bytes": 91,
+    "sha256": "a0af1e0527e4e10ea6cbaaedf3fc9e681b1cbe8de2c639b01d5f5d148e924c83",
+    "matchesLocal": true
+  }
+]
