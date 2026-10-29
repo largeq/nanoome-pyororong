@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "sparkleVersion": "2.10.1",
+  "extractor": "SUDiskImageUnarchiver (unmodified upstream source)",
+  "archive": "Pyororong-2.0.0-1-r2.dmg",
+  "archiveBytes": 19647840,
+  "archiveSHA256": "3f12f6d784301bdf173aaa336ed14bfce5bb80c8c3c37cf8e93cb02c8dbf4d61",
+  "appManifestEntries": 137,
+  "fileAndSymlinkEntries": 78,
+  "directoryEntries": 59,
+  "fileBytesPermissionsAndSymlinksMatchOriginal": true,
+  "onlyAppExtracted": true,
+  "hiddenBackgroundAndDSStoreNotExtracted": true,
+  "applicationsLinkNotExtracted": true,
+  "temporaryExtractionMountsRemaining": 0,
+  "preexistingMountCount": 0,
+  "postExtractionMountCount": 0,
+  "waitForCleanup": true,
+  "bundleIdentifier": "com.phronesis.pyororong",
+  "version": "2.0.0",
+  "build": "1",
+  "verifyBeforeExtractionSettingPreserved": true,
+  "embeddedPublicKeyPreserved": true,
+  "codesignDeepStrictVerified": true,
+  "stapledNotarizationTicketValid": true,
+  "gatekeeperAssessment": "Notarized Developer ID",
+  "architectures": [
+    "arm64",
+    "x86_64"
+  ],
+  "installationOrAppLaunchRequested": false,
+  "clipboardOrPreferencesAccessed": false,
+  "initialAttempt": {
+    "status": "failed",
+    "phase": "archiveMount",
+    "cause": "The same r2 image was already mounted twice for Finder layout checks; normal detach resolved resource busy. No extractor or validation condition changed."
+  }
+}

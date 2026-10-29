@@ -1,0 +1,122 @@
+=== image-verify.log ===
+Protective Master Boot Record(MBR : 0) 체크섬 처리 중…
+Protective Master Boot Record(MBR : : 확인됨 CRC32 $B181525E
+GPT Header(Primary GPT Header : 1) 체크섬 처리 중…
+  GPT Header(Primary GPT Header : 1): 확인됨 CRC32 $29485EAF
+GPT Partition Data(Primary GPT Table : 2) 체크섬 처리 중…
+GPT Partition Data(Primary GPT Table: 확인됨 CRC32 $CA2155D7
+(Apple_Free : 3) 체크섬 처리 중…
+                    (Apple_Free : 3): 확인됨 CRC32 $00000000
+disk image(Apple_APFS : 4) 체크섬 처리 중…
+          disk image(Apple_APFS : 4): 확인됨 CRC32 $3B2EC11C
+(Apple_Free : 5) 체크섬 처리 중…
+                    (Apple_Free : 5): 확인됨 CRC32 $00000000
+GPT Partition Data(Backup GPT Table : 6) 체크섬 처리 중…
+GPT Partition Data(Backup GPT Table : 확인됨 CRC32 $CA2155D7
+GPT Header(Backup GPT Header : 7) 체크섬 처리 중…
+   GPT Header(Backup GPT Header : 7): 확인됨 CRC32 $88CD52FE
+확인됨 CRC32 $472AF5DC
+hdiutil: verify: checksum of "<PROJECT_DIR>/.build/dmg-layout/Pyororong-2.0.0-1-r2.dmg" is VALID
+
+=== app-verify.log ===
+--prepared:/Volumes/표로롱 2.0.0/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/.
+--prepared:/Volumes/표로롱 2.0.0/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/Autoupdate
+--validated:/Volumes/표로롱 2.0.0/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/Autoupdate
+--prepared:/Volumes/표로롱 2.0.0/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/Updater.app
+--validated:/Volumes/표로롱 2.0.0/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/Updater.app
+--prepared:/Volumes/표로롱 2.0.0/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Downloader.xpc
+--validated:/Volumes/표로롱 2.0.0/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Downloader.xpc
+--prepared:/Volumes/표로롱 2.0.0/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Installer.xpc
+--validated:/Volumes/표로롱 2.0.0/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Installer.xpc
+--validated:/Volumes/표로롱 2.0.0/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/.
+/Volumes/표로롱 2.0.0/표로롱.app: valid on disk
+/Volumes/표로롱 2.0.0/표로롱.app: satisfies its Designated Requirement
+Processing: /Volumes/표로롱 2.0.0/표로롱.app
+The validate action worked!
+/Volumes/표로롱 2.0.0/표로롱.app: accepted
+source=Notarized Developer ID
+x86_64 arm64
+
+=== public-key-verify.log ===
+PASS: DMG Ed25519 signature matches the public key embedded in the original app.
+
+=== prepare-update-final.log ===
+--prepared:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/.
+--prepared:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/Autoupdate
+--validated:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/Autoupdate
+--prepared:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/Updater.app
+--prepared:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Downloader.xpc
+--validated:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/Updater.app
+--validated:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Downloader.xpc
+--prepared:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Installer.xpc
+--validated:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Installer.xpc
+--validated:<EXPORTED_APP>/Contents/Frameworks/Sparkle.framework/Versions/Current/.
+<EXPORTED_APP>: valid on disk
+<EXPORTED_APP>: satisfies its Designated Requirement
+Processing: <EXPORTED_APP>
+The validate action worked!
+<EXPORTED_APP>: accepted
+source=Notarized Developer ID
+hdiutil: WARNING: 'hdiutil create -volname -size ...' is deprecated. Please use 'diskutil image create from/blank --volumeName -size ...' instead.
+hdiutil: WARNING: 'hdiutil attach -nobrowse -owners ...' is deprecated. Please use 'diskutil image attach --mountOptions nobrowse --mountOptions owners ...' instead.
+hdiutil: WARNING: 'hdiutil convert -format ...' is deprecated. Please use 'diskutil image create from --format ...' instead.
+hdiutil: WARNING: 'hdiutil attach -readonly -nobrowse -mountpoint ...' is deprecated. Please use 'diskutil image attach --readOnly --mountOptions nobrowse --mountPoint ...' instead.
+hdiutil: WARNING: 'hdiutil detach ...' is deprecated. Please use 'diskutil eject ...' instead.
+hdiutil: WARNING: 'hdiutil attach -mountpoint -nobrowse ...' is deprecated. Please use 'diskutil image attach --mountPoint --mountOptions nobrowse ...' instead.
+Wrote 1 new update, updated 0 existing updates, and removed 0 old updates in appcast.xml
+배포 준비 완료: <PROJECT_DIR>/.build/dmg-layout/pipeline-check-final
+GitHub Release 태그: v2.0.0
+파일과 appcast는 아직 게시하지 않았습니다.
+
+=== version-guard.log ===
+새 빌드 번호는 이전 배포의 모든 빌드 번호보다 커야 합니다.
+
+=== extraction-check/checks.log ===
+=== Initial attempt: Finder test mounts caused resource busy; normal detach completed before retry ===
+$ actual Sparkle 2.10.1 SUDiskImageUnarchiver
+hdiutil: WARNING: 'hdiutil attach -mountpoint -nobrowse ...' is deprecated. Please use 'diskutil image attach --mountPoint --mountOptions nobrowse ...' instead.
+hdiutil: attach failed - 리소스 사용 중
+Sparkle extraction failed: Error Domain=SUSparkleErrorDomain Code=3000 "An error occurred while extracting the archive. Please try again later." UserInfo={NSLocalizedDescription=An error occurred while extracting the archive. Please try again later., NSUnderlyingError=0x1009fdd10 {Error Domain=SUSparkleErrorDomain Code=3000 "Extraction failed due to hdiutil returning 1 status: " UserInfo={NSLocalizedDescription=Extraction failed due to hdiutil returning 1 status: }}}
+
+exit=1
+
+=== Final attempt: same upstream extractor and validation conditions ===
+
+$ actual Sparkle 2.10.1 SUDiskImageUnarchiver
+Sparkle 2.10.1 SUDiskImageUnarchiver completed with waitForCleanup=YES. No app installation or launch was requested.
+hdiutil: WARNING: 'hdiutil attach -mountpoint -nobrowse ...' is deprecated. Please use 'diskutil image attach --mountPoint --mountOptions nobrowse ...' instead.
+
+exit=0
+
+$ codesign --verify --deep --strict --verbose=2 <EXTRACTED_APP>
+--prepared:<PROJECT_DIR>/.build/dmg-layout/extraction-check/extracted-final/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/.
+--prepared:<PROJECT_DIR>/.build/dmg-layout/extraction-check/extracted-final/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/Autoupdate
+--validated:<PROJECT_DIR>/.build/dmg-layout/extraction-check/extracted-final/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/Autoupdate
+--prepared:<PROJECT_DIR>/.build/dmg-layout/extraction-check/extracted-final/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/Updater.app
+--validated:<PROJECT_DIR>/.build/dmg-layout/extraction-check/extracted-final/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/Updater.app
+--prepared:<PROJECT_DIR>/.build/dmg-layout/extraction-check/extracted-final/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Downloader.xpc
+--validated:<PROJECT_DIR>/.build/dmg-layout/extraction-check/extracted-final/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Downloader.xpc
+--prepared:<PROJECT_DIR>/.build/dmg-layout/extraction-check/extracted-final/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Installer.xpc
+--validated:<PROJECT_DIR>/.build/dmg-layout/extraction-check/extracted-final/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/XPCServices/Installer.xpc
+--validated:<PROJECT_DIR>/.build/dmg-layout/extraction-check/extracted-final/표로롱.app/Contents/Frameworks/Sparkle.framework/Versions/Current/.
+<PROJECT_DIR>/.build/dmg-layout/extraction-check/extracted-final/표로롱.app: valid on disk
+<PROJECT_DIR>/.build/dmg-layout/extraction-check/extracted-final/표로롱.app: satisfies its Designated Requirement
+
+exit=0
+
+$ xcrun stapler validate <EXTRACTED_APP>
+Processing: <PROJECT_DIR>/.build/dmg-layout/extraction-check/extracted-final/표로롱.app
+The validate action worked!
+
+exit=0
+
+$ spctl --assess --type execute --verbose=2 <EXTRACTED_APP>
+<PROJECT_DIR>/.build/dmg-layout/extraction-check/extracted-final/표로롱.app: accepted
+source=Notarized Developer ID
+
+exit=0
+
+$ lipo -archs <EXTRACTED_APP>/Contents/MacOS/Pyororong
+x86_64 arm64
+
+exit=0

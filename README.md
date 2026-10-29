@@ -12,9 +12,9 @@ GitHub 배포를 위한 지원 범위, 완료 기준, 진행 상태는 [배포 �
 
 ## 설치
 
-**2.0.0(빌드 1)**의 [첫 GitHub Release](https://github.com/largeq/nanoome-pyororong/releases/tag/v2.0.0)를 게시했습니다. 배포용 Universal 앱의 Developer ID 서명, Apple 공증과 티켓 스테이플, Gatekeeper 검증을 마쳤고, 공개 DMG·체크섬과 운영 업데이트 안내 파일도 확인했습니다. 자세한 결과는 [배포 검증 기록](docs/validation/release-2.0.0/README.md)에 있습니다.
+**2.0.0(빌드 1)**의 [첫 GitHub Release](https://github.com/largeq/nanoome-pyororong/releases/tag/v2.0.0)를 게시했습니다. 배포용 Universal 앱의 Developer ID 서명, Apple 공증과 티켓 스테이플, Gatekeeper 검증을 마쳤고, 기존 공개 DMG·체크섬과 운영 업데이트 안내 파일도 확인했습니다. 당시 결과는 [배포 검증 기록](docs/validation/release-2.0.0/README.md), 설치창을 정리한 r2 포장의 확인 범위는 [설치창 변경 기록](docs/validation/dmg-layout-2026-10-29/README.md)에 구분해 기록합니다.
 
-macOS 12 이상, Apple Silicon·Intel Mac용입니다. [DMG 설치 파일](https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1.dmg)을 내려받아 열고, `표로롱.app`을 **응용 프로그램** 폴더로 끌어다 놓은 뒤 복사된 앱을 실행합니다. 복사가 끝나면 디스크 이미지는 추출해도 됩니다.
+macOS 12 이상, Apple Silicon·Intel Mac용입니다. [DMG 설치 파일](https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1-r2.dmg)을 내려받아 열고, 흰 바탕의 설치창에서 왼쪽 `표로롱.app`을 오른쪽 **응용 프로그램** 폴더로 끌어다 놓은 뒤 복사된 앱을 실행합니다. 복사가 끝나면 디스크 이미지는 추출해도 됩니다. 설치창을 정리한 r2 포장 파일이며 앱 버전은 **2.0.0(빌드 1)** 그대로입니다.
 
 Python이나 Xcode는 필요하지 않습니다. 주요 기능과 사용 시 참고 사항은 [2.0 릴리스 안내](docs/releases/2.0.0.md)에 있습니다.
 

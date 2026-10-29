@@ -476,3 +476,9 @@ DMG 체크섬은 `Pyororong-2.0.0-1.dmg.sha256`으로 별도 제공하며, 운�
 로컬 에셋은 실제 사용 중인 `Assets/IconComposerSVG 2`를 보존하고, 그와 바이트가 같은 `Assets/IconComposerSVG` 22개 파일·중복 에셋 ZIP 2개·미사용 `table_icon.png`·Finder 임시 정보 11개를 삭제했다. 로컬 ZIP만 만들던 구형 `배포용 패키지 만들기.sh`도 삭제하고 정식 배포 준비는 `scripts/prepare-update.sh`로 통일했다. 정식 아이콘·이미지 카탈로그·메뉴바 자산·사용법 영상·라이선스와 기존 검사 자료는 유지했다.
 
 사용자가 포함한 `.build/`와 `output/`의 임시 산출물도 삭제했다. 삭제 전 `du` 보고 용량은 약 4.17GB이며, 공증된 원본 앱·개인 Xcode 설정·Git 이력은 보존했다. 최종 스크립트 검사와 DMG 추출·운영 업데이트·삭제 내역은 [정리 검증 기록](validation/cleanup-2026-10-29/README.md)에 남겼다.
+
+### DMG 설치창 정리와 r2 포장
+
+사용자가 승인한 설치창 시안은 흰 바탕에 본문 상단 브랜드 표시 없이 **표로롱을 응용 프로그램 폴더로 드래그하세요.** 한 줄을 안내하고, 앱을 왼쪽·응용 프로그램 폴더를 오른쪽에 배치한다. 현재 설치 안내는 `Pyororong-2.0.0-1-r2.dmg`와 같은 이름의 `.sha256`을 가리키도록 정리한다.
+
+r2는 DMG 재포장 번호이며 내부 앱 버전은 **2.0.0(빌드 1)** 그대로 유지한다. 기존 배포 URL의 서명 대상 바이트를 덮어쓰지 않고 새 파일명으로 구분한다. `scripts/prepare-update.sh`는 공통 `scripts/build-dmg.sh`를 호출하고, `scripts/dmg-settings.py`와 `Assets/DMG`의 정식 배경으로 같은 설치창을 만든다. 제작용 Python 도구의 최초 준비는 [업데이트 배포 안내](updates.md)에 기록하며 앱 사용자에게는 Python이 필요하지 않다. 실제 적용·검증·게시 결과는 [설치창 변경 기록](validation/dmg-layout-2026-10-29/README.md)에 별도로 남기고, 위 배포·정리 시점의 검사 기록은 보존한다.

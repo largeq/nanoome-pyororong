@@ -17,10 +17,12 @@
 
 macOS 12 이상에서 사용할 수 있으며 Apple Silicon·Intel Mac을 함께 지원합니다. Developer ID 서명과 Apple 공증을 마친 앱이며, Python이나 Xcode는 필요하지 않습니다.
 
-1. 이 Release의 `Pyororong-2.0.0-1.dmg`를 내려받아 엽니다.
-2. 열린 창에서 `표로롱.app`을 **응용 프로그램** 폴더로 끌어다 놓고, 복사된 앱을 실행합니다. 복사가 끝나면 디스크 이미지는 추출해도 됩니다.
+1. 이 Release의 `Pyororong-2.0.0-1-r2.dmg`를 내려받아 엽니다.
+2. 흰 바탕의 설치창에서 왼쪽 `표로롱.app`을 오른쪽 **응용 프로그램** 폴더로 끌어다 놓고, 복사된 앱을 실행합니다. 복사가 끝나면 디스크 이미지는 추출해도 됩니다.
 3. 한글에서 표를 복사한 뒤 **⌘⌥⇧P**를 누르거나 메뉴바의 **표 변환하기**를 선택합니다.
 4. 완료 안내가 나오면 네이버 카페·블로그 글쓰기 화면에 **⌘V**로 붙여넣습니다.
+
+r2는 설치창을 정리한 포장 파일이며, 앱 버전은 **2.0.0(빌드 1)** 그대로입니다.
 
 ## 주요 기능
 
@@ -34,7 +36,7 @@ macOS 12 이상에서 사용할 수 있으며 Apple Silicon·Intel Mac을 함께
 
 표 변환은 이 Mac에서 처리하며 문서 내용을 서버로 보내지 않습니다. 한글의 로컬 그림은 별도로 추가해야 하고 대각선 등 일부 서식은 전달되지 않습니다. 확인이 필요한 내용은 변환 결과창에서 안내합니다. 실제 글꼴과 배치는 네이버 편집기와 읽는 사람의 환경에 따라 달라질 수 있습니다.
 ]]></description>
-            <enclosure url="https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1.dmg" length="19195392" type="application/octet-stream" sparkle:edSignature="rCbrXe9BgRrKw790ZSxd9FnPxaod/eVSyFIlmLJJwcCUQqf5WGLSBw2B+YbeIdkJHofBBNI0fsQMVStt/tmNBQ=="/>
+            <enclosure url="https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1-r2.dmg" length="19647840" type="application/octet-stream" sparkle:edSignature="YxOpYSpcr/gB06ILQC1W/l05h1nS/54NFMNf4UMuYzr+u22NMJUMHn0dOGKZYDOEQFQbo4H2FEf686IxrU6wDQ=="/>
         </item>
     </channel>
 </rss>

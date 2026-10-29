@@ -1,0 +1,14 @@
+{
+  "archive": "Pyororong-2.0.0-1-r2.dmg",
+  "version": "2.0.0",
+  "build": "1",
+  "length": 19647840,
+  "sha256": "3f12f6d784301bdf173aaa336ed14bfce5bb80c8c3c37cf8e93cb02c8dbf4d61",
+  "edSignature": "YxOpYSpcr/gB06ILQC1W/l05h1nS/54NFMNf4UMuYzr+u22NMJUMHn0dOGKZYDOEQFQbo4H2FEf686IxrU6wDQ==",
+  "url": "https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1-r2.dmg",
+  "containerSigned": false,
+  "containerNotarized": false,
+  "innerApplicationSignedNotarizedAndStapled": true,
+  "appManifestUnchanged": true,
+  "manifestEntriesIncludingDirectories": 137
+}

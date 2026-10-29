@@ -2,7 +2,7 @@
 
 ## 첫 배포 상태
 
-2026년 10월 29일 **2.0.0(빌드 1)**의 [첫 GitHub Release](https://github.com/largeq/nanoome-pyororong/releases/tag/v2.0.0)를 게시했다. 배포용 앱은 Apple Silicon·Intel Universal 구조, Developer ID Application 서명, hardened runtime, Apple 공증과 티켓 스테이플, Gatekeeper 검증을 통과했다. 공개 DMG와 `Pyororong-2.0.0-1.dmg.sha256`은 로그인 없이 HTTP 200으로 내려받을 수 있고 원본과 일치한다.
+2026년 10월 29일 **2.0.0(빌드 1)**의 [첫 GitHub Release](https://github.com/largeq/nanoome-pyororong/releases/tag/v2.0.0)를 게시했다. 배포용 앱은 Apple Silicon·Intel Universal 구조, Developer ID Application 서명, hardened runtime, Apple 공증과 티켓 스테이플, Gatekeeper 검증을 통과했다. 첫 포장의 DMG와 `Pyororong-2.0.0-1.dmg.sha256`은 로그인 없이 HTTP 200으로 내려받아 원본 일치를 확인했다.
 
 운영용 `updates/appcast.xml`을 기본 브랜치 `main`에 게시했다. 공개 주소의 HTTP 200 응답과 생성본 일치를 확인했으며, 실제 앱의 `UpdateController`와 Sparkle이 2.0.0(빌드 1)을 최신 버전으로 판정했다. 자세한 결과와 배포 파일 해시는 [배포 검증 기록](validation/release-2.0.0/README.md)에 있다.
 
@@ -10,7 +10,9 @@
 
 ## 처음 설치할 때
 
-설치 파일은 [DMG](https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1.dmg)로 제공한다. 디스크 이미지를 열고 안의 `표로롱.app`을 **응용 프로그램** 폴더로 복사한다. [DMG 체크섬](https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1.dmg.sha256)은 별도 파일로 제공한다.
+설치 파일은 [r2 DMG](https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1-r2.dmg)로 제공한다. 흰 바탕의 설치창에서 왼쪽 `표로롱.app`을 오른쪽 **응용 프로그램** 폴더로 복사한다. 본문 상단에 별도 브랜드 표시는 두지 않고, **표로롱을 응용 프로그램 폴더로 드래그하세요.**라는 한 줄 안내를 사용한다. [r2 DMG 체크섬](https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1-r2.dmg.sha256)은 별도 파일로 제공한다.
+
+r2는 설치창 디자인을 바꾼 재포장 번호이며 앱 버전·빌드 번호는 2.0.0(1)로 유지한다. 기존 URL의 서명 대상 바이트를 덮어쓰지 않고 새 파일명으로 구분한다. 새 포장의 검증 범위와 실제 결과는 [설치창 변경 기록](validation/dmg-layout-2026-10-29/README.md)에 별도로 남긴다.
 
 직접 설치와 Sparkle 업데이트는 같은 DMG를 사용한다. 운영용 `appcast.xml`에는 DMG의 주소·크기와 해당 파일의 Ed25519 전자서명을 넣는다. Release에는 DMG와 그 체크섬을 남기며 ZIP과 ZIP용 `SHA256SUMS`는 제공하지 않는다. DMG와 그 안의 앱에 대한 검증 결과는 [배포 검증 기록](validation/release-2.0.0/README.md)에 구분해 기록한다.
 
@@ -40,6 +42,13 @@
 
 ## 배포 파일 준비
 
+DMG 제작용 도구는 프로젝트 루트에서 한 번 준비한다. 이 Python 환경은 개발자의 배포 파일 생성에만 사용하며, 사용자가 표로롱을 설치하거나 실행할 때는 Python이 필요하지 않다.
+
+```sh
+python3 -m venv .build/dmg-tools
+.build/dmg-tools/bin/python -m pip install -r scripts/requirements-dmg.txt
+```
+
 1. 새 버전과 빌드 번호를 정한다. 이 프로젝트의 준비 스크립트는 숫자와 점으로 된 번호를 사용하며, 이전 안내 파일에 있는 모든 버전과 빌드 번호보다 각각 커야 한다. 예를 들어 `2.0.0 (1)` 다음에는 `2.1.0 (2)`를 사용할 수 있다.
 2. Xcode의 **Product → Archive → Distribute App → Direct Distribution** 절차로 배포용 앱을 만든다. 배포용 Developer ID 인증서와 팀을 선택하고 hardened runtime을 유지한다. 명령으로 Archive를 만들 때도 로컬 스크립트의 `ENABLE_HARDENED_RUNTIME=NO`를 사용하지 않는다.
 3. Apple 공증을 완료하고 내보낸 `.app`에 티켓을 스테이플한다. `xcrun stapler validate`와 `spctl --assess --type execute`가 통과하는 앱을 사용한다.
@@ -65,7 +74,7 @@ bash scripts/prepare-update.sh \
   '.build/current-published-appcast.xml'
 ```
 
-스크립트는 Bundle ID·공개 키·버전·서명·Universal 구조·공증을 검사한다. ad-hoc 앱, 잘못된 키, 증가하지 않은 버전은 출력 파일을 만들기 전에 거부한다. 검사를 통과하면 다음 파일을 만든다.
+스크립트는 Bundle ID·공개 키·버전·서명·Universal 구조·공증을 검사한다. ad-hoc 앱, 잘못된 키, 증가하지 않은 버전은 출력 파일을 만들기 전에 거부한다. DMG 생성은 `scripts/build-dmg.sh`와 `scripts/dmg-settings.py`를 공통으로 사용해 흰 바탕·한 줄 안내·왼쪽 앱과 오른쪽 응용 프로그램 폴더 배치를 재현한다. 정식 배경은 `Assets/DMG/background.png`와 `background@2x.png`이며, 개발 중 배경을 수정할 때는 `swift scripts/render-dmg-background.swift Assets/DMG`로 다시 만든다. 검사를 통과하면 다음 파일을 만든다.
 
 - `Pyororong-2.1.0-2.dmg`: 앱과 응용 프로그램 폴더 링크를 포함한 읽기 전용 배포 디스크 이미지. 앱 내부의 심볼릭 링크를 보존한다.
 - `Pyororong-2.1.0-2.dmg.sha256`: DMG의 SHA-256 체크섬.

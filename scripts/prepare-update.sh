@@ -114,13 +114,7 @@ STAGING_DIR="$(mktemp -d "$PROJECT_DIR/.build/update-preparation.XXXXXX")"
 trap 'rm -rf "$STAGING_DIR"' EXIT
 ARCHIVE_NAME="Pyororong-${VERSION}-${BUILD}.dmg"
 DOWNLOAD_PREFIX="https://github.com/largeq/nanoome-pyororong/releases/download/v${VERSION}/"
-PAYLOAD_DIR="$STAGING_DIR/.payload"
-mkdir "$PAYLOAD_DIR"
-ditto "$APP_PATH" "$PAYLOAD_DIR/표로롱.app"
-ln -s /Applications "$PAYLOAD_DIR/응용 프로그램"
-hdiutil create -quiet -srcfolder "$PAYLOAD_DIR" -volname "표로롱 $VERSION" \
-    -fs APFS -format UDZO "$STAGING_DIR/$ARCHIVE_NAME"
-rm -rf "$PAYLOAD_DIR"
+bash "$PROJECT_DIR/scripts/build-dmg.sh" "$APP_PATH" "$STAGING_DIR/$ARCHIVE_NAME"
 cp "$NOTES_PATH" "$STAGING_DIR/Pyororong-${VERSION}-${BUILD}.md"
 if [ -f "$PREVIOUS_FEED" ]; then cp "$PREVIOUS_FEED" "$STAGING_DIR/appcast.xml"; fi
 "$SPARKLE_TOOLS/generate_appcast" \

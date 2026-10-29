@@ -1,0 +1,47 @@
+{
+  "finderVerified": true,
+  "bodyBrandLogoAndHeadingRemoved": true,
+  "instruction": "표로롱을 응용 프로그램 폴더로 드래그하세요.",
+  "window": {
+    "ContainerShowSidebar": false,
+    "PreviewPaneVisibility": false,
+    "ShowPathbar": false,
+    "ShowSidebar": false,
+    "ShowStatusBar": false,
+    "ShowTabView": false,
+    "ShowToolbar": false,
+    "SidebarWidth": 180,
+    "WindowBounds": "{{160, 160}, {768, 480}}"
+  },
+  "icons": {
+    "arrangeBy": "none",
+    "backgroundColorBlue": 1.0,
+    "backgroundColorGreen": 1.0,
+    "backgroundColorRed": 1.0,
+    "backgroundType": 2,
+    "gridOffsetX": 0.0,
+    "gridOffsetY": 0.0,
+    "gridSpacing": 80.0,
+    "iconSize": 96.0,
+    "labelOnBottom": true,
+    "scrollPositionX": 0.0,
+    "scrollPositionY": 0.0,
+    "showIconPreview": false,
+    "showItemInfo": false,
+    "textSize": 14.0,
+    "viewOptionsVersion": 1
+  },
+  "iconLocations": {
+    "표로롱.app": [
+      266,
+      252
+    ],
+    "응용 프로그램": [
+      502,
+      252
+    ]
+  },
+  "backgroundFile": ".background.tiff",
+  "backgroundContainsOnlyInstructionAndArrow": true,
+  "finderChromeFollowsUserPreferences": true
+}
