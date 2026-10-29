@@ -32,3 +32,33 @@ x86_64 arm64
 
 === signature.log ===
 PASS: r4 DMG signature matches the public key in the original application.
+
+=== production probe ===
+{
+  "automaticChecksEnabled" : false,
+  "automaticDownloadsEnabled" : false,
+  "automaticInstallationAllowed" : false,
+  "binaryDownloadOrInstallationRequested" : false,
+  "checkedAtUTC" : "2026-10-29T15:05:17Z",
+  "clipboardPreserved" : true,
+  "exportedBuild" : "1",
+  "exportedVersion" : "2.0.0",
+  "feedURL" : "https:\/\/raw.githubusercontent.com\/largeq\/nanoome-pyororong\/main\/updates\/appcast.xml",
+  "hasUpdate" : false,
+  "isolatedPreferencesRemoved" : true,
+  "latestArchiveFormat" : "dmg",
+  "latestArchiveURL" : "https:\/\/github.com\/largeq\/nanoome-pyororong\/releases\/download\/v2.0.0\/Pyororong-2.0.0-1-r4.dmg",
+  "latestBuild" : "1",
+  "latestVersion" : "2.0.0",
+  "noUpdateReason" : 1,
+  "probeMethod" : "checkForUpdateInformation",
+  "productionPreferencesPreserved" : true,
+  "remainingIsolatedPreferenceKeyCount" : 0,
+  "sparkleErrorCode" : 1001,
+  "sparkleErrorDomain" : "SUSparkleErrorDomain",
+  "status" : "passed",
+  "temporaryHostBundleRemoved" : true
+}
+
+Cleanup wrapper: initial 12-second window ended before four stable samples; actual production probe exited 0. Initial cleanup record preserved in cleanup-initial-stabilization-timeout.json.
+Read-only follow-up: four consecutive empty UUID preference/host samples completed in 2.045 seconds (same 12-second bound); probe process count 0. No production request repeated.

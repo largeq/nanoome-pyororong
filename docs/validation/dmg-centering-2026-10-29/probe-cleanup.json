@@ -1,0 +1,47 @@
+{
+  "preferencePersistenceSettledAfterProcessExit": true,
+  "remainingProbeProcesses": 0,
+  "remainingUUIDHostBundles": 0,
+  "remainingUUIDPreferenceFiles": 0,
+  "removedEmptyUUIDPreferenceFiles": 1,
+  "nonemptyUUIDPreferenceFilesObserved": 0,
+  "preexistingUUIDPreferenceFilesUntouched": 0,
+  "productionPreferenceFileBytesPreserved": true,
+  "processExitCode": 0,
+  "clipboardPreserved": true,
+  "productionPreferencesPreserved": true,
+  "status": "passed",
+  "stabilizationSamples": [
+    {
+      "sample": 1,
+      "elapsedSeconds": 0.515,
+      "remainingUUIDPreferenceFiles": 0,
+      "remainingUUIDHostBundles": 0
+    },
+    {
+      "sample": 2,
+      "elapsedSeconds": 1.025,
+      "remainingUUIDPreferenceFiles": 0,
+      "remainingUUIDHostBundles": 0
+    },
+    {
+      "sample": 3,
+      "elapsedSeconds": 1.535,
+      "remainingUUIDPreferenceFiles": 0,
+      "remainingUUIDHostBundles": 0
+    },
+    {
+      "sample": 4,
+      "elapsedSeconds": 2.045,
+      "remainingUUIDPreferenceFiles": 0,
+      "remainingUUIDHostBundles": 0
+    }
+  ],
+  "initialStabilizationAttempt": "Bounded follow-up window ended before four stable samples; empty UUID plist cleanup and the actual production probe had already passed. Four additional post-exit samples confirmed no remaining preferences or host bundles without repeating the production request.",
+  "stabilizationWindowSeconds": 12,
+  "requiredConsecutiveStableSamples": 4,
+  "stabilizationElapsedSeconds": 2.045,
+  "initialWrapperStatus": "failed-stabilization-window",
+  "followUpReadOnlyVerificationStatus": "passed",
+  "productionProbeReexecuted": false
+}

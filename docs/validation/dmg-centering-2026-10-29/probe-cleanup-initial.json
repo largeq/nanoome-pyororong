@@ -1,0 +1,14 @@
+{
+  "preferencePersistenceSettledAfterProcessExit": false,
+  "remainingProbeProcesses": 0,
+  "remainingUUIDHostBundles": 0,
+  "remainingUUIDPreferenceFiles": 0,
+  "removedEmptyUUIDPreferenceFiles": 1,
+  "nonemptyUUIDPreferenceFilesObserved": 0,
+  "preexistingUUIDPreferenceFilesUntouched": 0,
+  "productionPreferenceFileBytesPreserved": true,
+  "processExitCode": 0,
+  "clipboardPreserved": true,
+  "productionPreferencesPreserved": true,
+  "status": "failed"
+}
