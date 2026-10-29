@@ -1,279 +1,409 @@
 // !$*UTF8*$!
 {
-    archiveVersion = 1;
-    classes = {};
-    objectVersion = 60;
-    objects = {
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
 
 /* Begin PBXBuildFile section */
-        A10000000000000000000001 /* PyororongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000001; };
-        A10000000000000000000002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000002; };
-        A10000000000000000000003 /* ConversionNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003; };
-        A10000000000000000000004 /* Pyororong.icon in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000005; };
-        A1000000000000000000001D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001D; };
-        A10000000000000000000005 /* THIRD_PARTY_NOTICES.txt in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000006; };
-        A10000000000000000000006 /* TableConverterCore in Frameworks */ = {isa = PBXBuildFile; productRef = A90000000000000000000001; };
-        A10000000000000000000007 /* TableConverterMac in Frameworks */ = {isa = PBXBuildFile; productRef = A90000000000000000000002; };
-        A10000000000000000000008 /* table-idle.png in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000008; };
-        A10000000000000000000009 /* table-idle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000009; };
-        A1000000000000000000000A /* table-convert-ready.png in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000A; };
-        A1000000000000000000000B /* table-convert-ready@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000B; };
-        A1000000000000000000000C /* table-paste-ready.png in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000C; };
-        A1000000000000000000000D /* table-paste-ready@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000D; };
-        A1000000000000000000000E /* ShortcutSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000E; };
-        A1000000000000000000000F /* table-error.png in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000F; };
-        A10000000000000000000010 /* table-error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000010; };
-        A10000000000000000000011 /* table-paste-ready-base.png in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000011; };
-        A10000000000000000000012 /* table-paste-ready-base@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000012; };
-        A10000000000000000000013 /* table-paste-ready-mark.png in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000013; };
-        A10000000000000000000014 /* table-paste-ready-mark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000014; };
-        A10000000000000000000015 /* UsageGuideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000015; };
-        A10000000000000000000016 /* UsageGuideVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000016; };
-        A10000000000000000000017 /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000017; };
-        A10000000000000000000018 /* table-idle-master.png in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000018; };
-        A10000000000000000000019 /* table-convert-ready-master.png in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000019; };
-        A1000000000000000000001A /* table-paste-ready-master.png in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001A; };
-        A1000000000000000000001B /* table-error-master.png in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001B; };
-        A1000000000000000000001C /* SupportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001C; };
-        A1000000000000000000001E /* UpdateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001E; };
-        A1000000000000000000001F /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = A90000000000000000000005; };
-        A10000000000000000000020 /* usage-guide.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000020; };
+		A10000000000000000000001 /* PyororongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000001 /* PyororongApp.swift */; };
+		A10000000000000000000002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000002 /* AppDelegate.swift */; };
+		A10000000000000000000003 /* ConversionNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* ConversionNotifier.swift */; };
+		A10000000000000000000004 /* Assets/AppIcons/Pyororong.icon in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000005 /* Assets/AppIcons/Pyororong.icon */; };
+		A10000000000000000000005 /* THIRD_PARTY_NOTICES.txt in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000006 /* THIRD_PARTY_NOTICES.txt */; };
+		A10000000000000000000006 /* TableConverterCore in Frameworks */ = {isa = PBXBuildFile; productRef = A90000000000000000000001 /* TableConverterCore */; };
+		A10000000000000000000007 /* TableConverterMac in Frameworks */ = {isa = PBXBuildFile; productRef = A90000000000000000000002 /* TableConverterMac */; };
+		A10000000000000000000008 /* table-idle.png in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000008 /* table-idle.png */; };
+		A10000000000000000000009 /* table-idle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000009 /* table-idle@2x.png */; };
+		A1000000000000000000000A /* table-convert-ready.png in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000A /* table-convert-ready.png */; };
+		A1000000000000000000000B /* table-convert-ready@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000B /* table-convert-ready@2x.png */; };
+		A1000000000000000000000C /* table-paste-ready.png in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000C /* table-paste-ready.png */; };
+		A1000000000000000000000D /* table-paste-ready@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000D /* table-paste-ready@2x.png */; };
+		A1000000000000000000000E /* ShortcutSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000E /* ShortcutSettingsController.swift */; };
+		A1000000000000000000000F /* table-error.png in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000F /* table-error.png */; };
+		A10000000000000000000010 /* table-error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000010 /* table-error@2x.png */; };
+		A10000000000000000000011 /* table-paste-ready-base.png in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000011 /* table-paste-ready-base.png */; };
+		A10000000000000000000012 /* table-paste-ready-base@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000012 /* table-paste-ready-base@2x.png */; };
+		A10000000000000000000013 /* table-paste-ready-mark.png in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000013 /* table-paste-ready-mark.png */; };
+		A10000000000000000000014 /* table-paste-ready-mark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000014 /* table-paste-ready-mark@2x.png */; };
+		A10000000000000000000015 /* UsageGuideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000015 /* UsageGuideController.swift */; };
+		A10000000000000000000016 /* UsageGuideVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000016 /* UsageGuideVideoView.swift */; };
+		A10000000000000000000017 /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000017 /* AboutController.swift */; };
+		A10000000000000000000018 /* table-idle-master.png in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000018 /* table-idle-master.png */; };
+		A10000000000000000000019 /* table-convert-ready-master.png in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000019 /* table-convert-ready-master.png */; };
+		A1000000000000000000001A /* table-paste-ready-master.png in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001A /* table-paste-ready-master.png */; };
+		A1000000000000000000001B /* table-error-master.png in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001B /* table-error-master.png */; };
+		A1000000000000000000001C /* SupportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001C /* SupportController.swift */; };
+		A1000000000000000000001D /* Assets/Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001D /* Assets/Images.xcassets */; };
+		A1000000000000000000001E /* UpdateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001E /* UpdateController.swift */; };
+		A1000000000000000000001F /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = A90000000000000000000005 /* Sparkle */; };
+		A10000000000000000000020 /* Assets/UsageGuide/usage-guide.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000020 /* Assets/UsageGuide/usage-guide.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-        A20000000000000000000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PyororongApp.swift; sourceTree = "<group>"; };
-        A20000000000000000000002 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-        A20000000000000000000003 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionNotifier.swift; sourceTree = "<group>"; };
-        A20000000000000000000004 = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-        A20000000000000000000005 = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = Assets/AppIcons/Pyororong.icon; sourceTree = "<group>"; };
-        A2000000000000000000001D = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets/Images.xcassets; sourceTree = "<group>"; };
-        A20000000000000000000006 = {isa = PBXFileReference; lastKnownFileType = text; path = THIRD_PARTY_NOTICES.txt; sourceTree = "<group>"; };
-        A20000000000000000000007 = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "표로롱.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-        A20000000000000000000008 = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-idle.png"; sourceTree = "<group>"; };
-        A20000000000000000000009 = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-idle@2x.png"; sourceTree = "<group>"; };
-        A2000000000000000000000A = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-convert-ready.png"; sourceTree = "<group>"; };
-        A2000000000000000000000B = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-convert-ready@2x.png"; sourceTree = "<group>"; };
-        A2000000000000000000000C = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-paste-ready.png"; sourceTree = "<group>"; };
-        A2000000000000000000000D = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-paste-ready@2x.png"; sourceTree = "<group>"; };
-        A2000000000000000000000E = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutSettingsController.swift; sourceTree = "<group>"; };
-        A2000000000000000000000F = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-error.png"; sourceTree = "<group>"; };
-        A20000000000000000000010 = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-error@2x.png"; sourceTree = "<group>"; };
-        A20000000000000000000011 = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-paste-ready-base.png"; sourceTree = "<group>"; };
-        A20000000000000000000012 = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-paste-ready-base@2x.png"; sourceTree = "<group>"; };
-        A20000000000000000000013 = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-paste-ready-mark.png"; sourceTree = "<group>"; };
-        A20000000000000000000014 = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-paste-ready-mark@2x.png"; sourceTree = "<group>"; };
-        A20000000000000000000015 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageGuideController.swift; sourceTree = "<group>"; };
-        A20000000000000000000016 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageGuideVideoView.swift; sourceTree = "<group>"; };
-        A20000000000000000000017 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
-        A2000000000000000000001C = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportController.swift; sourceTree = "<group>"; };
-        A20000000000000000000018 = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-idle-master.png"; sourceTree = "<group>"; };
-        A20000000000000000000019 = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-convert-ready-master.png"; sourceTree = "<group>"; };
-        A2000000000000000000001A = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-paste-ready-master.png"; sourceTree = "<group>"; };
-        A2000000000000000000001B = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-error-master.png"; sourceTree = "<group>"; };
-        A2000000000000000000001E = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateController.swift; sourceTree = "<group>"; };
-        A20000000000000000000020 = {isa = PBXFileReference; lastKnownFileType = file; path = Assets/UsageGuide/usage-guide.mp4; sourceTree = "<group>"; };
+		A20000000000000000000001 /* PyororongApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PyororongApp.swift; sourceTree = "<group>"; };
+		A20000000000000000000002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A20000000000000000000003 /* ConversionNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionNotifier.swift; sourceTree = "<group>"; };
+		A20000000000000000000004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20000000000000000000005 /* Assets/AppIcons/Pyororong.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = Assets/AppIcons/Pyororong.icon; sourceTree = "<group>"; };
+		A20000000000000000000006 /* THIRD_PARTY_NOTICES.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = THIRD_PARTY_NOTICES.txt; sourceTree = "<group>"; };
+		A20000000000000000000007 /* 표로롱.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "표로롱.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20000000000000000000008 /* table-idle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-idle.png"; sourceTree = "<group>"; };
+		A20000000000000000000009 /* table-idle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-idle@2x.png"; sourceTree = "<group>"; };
+		A2000000000000000000000A /* table-convert-ready.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-convert-ready.png"; sourceTree = "<group>"; };
+		A2000000000000000000000B /* table-convert-ready@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-convert-ready@2x.png"; sourceTree = "<group>"; };
+		A2000000000000000000000C /* table-paste-ready.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-paste-ready.png"; sourceTree = "<group>"; };
+		A2000000000000000000000D /* table-paste-ready@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-paste-ready@2x.png"; sourceTree = "<group>"; };
+		A2000000000000000000000E /* ShortcutSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutSettingsController.swift; sourceTree = "<group>"; };
+		A2000000000000000000000F /* table-error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-error.png"; sourceTree = "<group>"; };
+		A20000000000000000000010 /* table-error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-error@2x.png"; sourceTree = "<group>"; };
+		A20000000000000000000011 /* table-paste-ready-base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-paste-ready-base.png"; sourceTree = "<group>"; };
+		A20000000000000000000012 /* table-paste-ready-base@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-paste-ready-base@2x.png"; sourceTree = "<group>"; };
+		A20000000000000000000013 /* table-paste-ready-mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-paste-ready-mark.png"; sourceTree = "<group>"; };
+		A20000000000000000000014 /* table-paste-ready-mark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-paste-ready-mark@2x.png"; sourceTree = "<group>"; };
+		A20000000000000000000015 /* UsageGuideController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageGuideController.swift; sourceTree = "<group>"; };
+		A20000000000000000000016 /* UsageGuideVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageGuideVideoView.swift; sourceTree = "<group>"; };
+		A20000000000000000000017 /* AboutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
+		A20000000000000000000018 /* table-idle-master.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-idle-master.png"; sourceTree = "<group>"; };
+		A20000000000000000000019 /* table-convert-ready-master.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-convert-ready-master.png"; sourceTree = "<group>"; };
+		A2000000000000000000001A /* table-paste-ready-master.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-paste-ready-master.png"; sourceTree = "<group>"; };
+		A2000000000000000000001B /* table-error-master.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-error-master.png"; sourceTree = "<group>"; };
+		A2000000000000000000001C /* SupportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportController.swift; sourceTree = "<group>"; };
+		A2000000000000000000001D /* Assets/Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets/Images.xcassets; sourceTree = "<group>"; };
+		A2000000000000000000001E /* UpdateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateController.swift; sourceTree = "<group>"; };
+		A20000000000000000000020 /* Assets/UsageGuide/usage-guide.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Assets/UsageGuide/usage-guide.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-        A30000000000000000000001 = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (A10000000000000000000006, A10000000000000000000007, A1000000000000000000001F);
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		A30000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000006 /* TableConverterCore in Frameworks */,
+				A10000000000000000000007 /* TableConverterMac in Frameworks */,
+				A1000000000000000000001F /* Sparkle in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-        A40000000000000000000001 = {
-            isa = PBXGroup;
-            children = (A40000000000000000000002, A40000000000000000000003, A40000000000000000000004);
-            sourceTree = "<group>";
-        };
-        A40000000000000000000002 = {
-            isa = PBXGroup;
-            children = (A20000000000000000000001, A20000000000000000000002, A20000000000000000000003, A20000000000000000000004, A2000000000000000000000E, A20000000000000000000015, A20000000000000000000016, A20000000000000000000017, A2000000000000000000001C, A2000000000000000000001E);
-            path = App;
-            sourceTree = "<group>";
-        };
-        A40000000000000000000003 = {
-            isa = PBXGroup;
-            children = (A20000000000000000000005, A2000000000000000000001D, A20000000000000000000006, A20000000000000000000020, A40000000000000000000005);
-            name = Resources;
-            sourceTree = "<group>";
-        };
-        A40000000000000000000004 = {
-            isa = PBXGroup;
-            children = (A20000000000000000000007);
-            name = Products;
-            sourceTree = "<group>";
-        };
-        A40000000000000000000005 = {
-            isa = PBXGroup;
-            children = (A20000000000000000000008, A20000000000000000000009, A2000000000000000000000A, A2000000000000000000000B, A2000000000000000000000C, A2000000000000000000000D, A2000000000000000000000F, A20000000000000000000010, A20000000000000000000011, A20000000000000000000012, A20000000000000000000013, A20000000000000000000014, A20000000000000000000018, A20000000000000000000019, A2000000000000000000001A, A2000000000000000000001B);
-            path = Assets/MenuBarIcons;
-            sourceTree = "<group>";
-        };
+		A40000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				A40000000000000000000002 /* App */,
+				A40000000000000000000003 /* Resources */,
+				A40000000000000000000004 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A40000000000000000000002 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000001 /* PyororongApp.swift */,
+				A20000000000000000000002 /* AppDelegate.swift */,
+				A20000000000000000000003 /* ConversionNotifier.swift */,
+				A20000000000000000000004 /* Info.plist */,
+				A2000000000000000000000E /* ShortcutSettingsController.swift */,
+				A20000000000000000000015 /* UsageGuideController.swift */,
+				A20000000000000000000016 /* UsageGuideVideoView.swift */,
+				A20000000000000000000017 /* AboutController.swift */,
+				A2000000000000000000001C /* SupportController.swift */,
+				A2000000000000000000001E /* UpdateController.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000003 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000005 /* Assets/AppIcons/Pyororong.icon */,
+				A2000000000000000000001D /* Assets/Images.xcassets */,
+				A20000000000000000000006 /* THIRD_PARTY_NOTICES.txt */,
+				A20000000000000000000020 /* Assets/UsageGuide/usage-guide.mp4 */,
+				A40000000000000000000005 /* Assets/MenuBarIcons */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000004 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000007 /* 표로롱.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000005 /* Assets/MenuBarIcons */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000008 /* table-idle.png */,
+				A20000000000000000000009 /* table-idle@2x.png */,
+				A2000000000000000000000A /* table-convert-ready.png */,
+				A2000000000000000000000B /* table-convert-ready@2x.png */,
+				A2000000000000000000000C /* table-paste-ready.png */,
+				A2000000000000000000000D /* table-paste-ready@2x.png */,
+				A2000000000000000000000F /* table-error.png */,
+				A20000000000000000000010 /* table-error@2x.png */,
+				A20000000000000000000011 /* table-paste-ready-base.png */,
+				A20000000000000000000012 /* table-paste-ready-base@2x.png */,
+				A20000000000000000000013 /* table-paste-ready-mark.png */,
+				A20000000000000000000014 /* table-paste-ready-mark@2x.png */,
+				A20000000000000000000018 /* table-idle-master.png */,
+				A20000000000000000000019 /* table-convert-ready-master.png */,
+				A2000000000000000000001A /* table-paste-ready-master.png */,
+				A2000000000000000000001B /* table-error-master.png */,
+			);
+			path = Assets/MenuBarIcons;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-        A50000000000000000000001 = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = A80000000000000000000002;
-            buildPhases = (A30000000000000000000002, A30000000000000000000001, A30000000000000000000003);
-            buildRules = ();
-            dependencies = ();
-            name = Pyororong;
-            packageProductDependencies = (A90000000000000000000001, A90000000000000000000002, A90000000000000000000005);
-            productName = "표로롱";
-            productReference = A20000000000000000000007;
-            productType = "com.apple.product-type.application";
-        };
+		A50000000000000000000001 /* Pyororong */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A80000000000000000000002 /* Build configuration list for PBXNativeTarget "Pyororong" */;
+			buildPhases = (
+				A30000000000000000000002 /* Sources */,
+				A30000000000000000000001 /* Frameworks */,
+				A30000000000000000000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pyororong;
+			packageProductDependencies = (
+				A90000000000000000000001 /* TableConverterCore */,
+				A90000000000000000000002 /* TableConverterMac */,
+				A90000000000000000000005 /* Sparkle */,
+			);
+			productName = "표로롱";
+			productReference = A20000000000000000000007 /* 표로롱.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-        A60000000000000000000001 = {
-            isa = PBXProject;
-            attributes = {BuildIndependentTargetsInParallel = 1; LastUpgradeCheck = 2710; };
-            buildConfigurationList = A80000000000000000000001;
-            compatibilityVersion = "Xcode 15.0";
-            developmentRegion = ko;
-            hasScannedForEncodings = 0;
-            knownRegions = (ko, en, Base);
-            mainGroup = A40000000000000000000001;
-            packageReferences = (A90000000000000000000003, A90000000000000000000004);
-            productRefGroup = A40000000000000000000004;
-            projectDirPath = "";
-            projectRoot = "";
-            targets = (A50000000000000000000001);
-        };
+		A60000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 2710;
+			};
+			buildConfigurationList = A80000000000000000000001 /* Build configuration list for PBXProject "Pyororong" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = ko;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				ko,
+				en,
+				Base,
+			);
+			mainGroup = A40000000000000000000001;
+			packageReferences = (
+				A90000000000000000000003 /* XCLocalSwiftPackageReference "." */,
+				A90000000000000000000004 /* XCRemoteSwiftPackageReference "Sparkle" */,
+			);
+			productRefGroup = A40000000000000000000004 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A50000000000000000000001 /* Pyororong */,
+			);
+		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-        A30000000000000000000003 = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (A10000000000000000000004, A1000000000000000000001D, A10000000000000000000005, A10000000000000000000008, A10000000000000000000009, A1000000000000000000000A, A1000000000000000000000B, A1000000000000000000000C, A1000000000000000000000D, A1000000000000000000000F, A10000000000000000000010, A10000000000000000000011, A10000000000000000000012, A10000000000000000000013, A10000000000000000000014, A10000000000000000000018, A10000000000000000000019, A1000000000000000000001A, A1000000000000000000001B, A10000000000000000000020);
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		A30000000000000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000004 /* Assets/AppIcons/Pyororong.icon in Resources */,
+				A1000000000000000000001D /* Assets/Images.xcassets in Resources */,
+				A10000000000000000000005 /* THIRD_PARTY_NOTICES.txt in Resources */,
+				A10000000000000000000008 /* table-idle.png in Resources */,
+				A10000000000000000000009 /* table-idle@2x.png in Resources */,
+				A1000000000000000000000A /* table-convert-ready.png in Resources */,
+				A1000000000000000000000B /* table-convert-ready@2x.png in Resources */,
+				A1000000000000000000000C /* table-paste-ready.png in Resources */,
+				A1000000000000000000000D /* table-paste-ready@2x.png in Resources */,
+				A1000000000000000000000F /* table-error.png in Resources */,
+				A10000000000000000000010 /* table-error@2x.png in Resources */,
+				A10000000000000000000011 /* table-paste-ready-base.png in Resources */,
+				A10000000000000000000012 /* table-paste-ready-base@2x.png in Resources */,
+				A10000000000000000000013 /* table-paste-ready-mark.png in Resources */,
+				A10000000000000000000014 /* table-paste-ready-mark@2x.png in Resources */,
+				A10000000000000000000018 /* table-idle-master.png in Resources */,
+				A10000000000000000000019 /* table-convert-ready-master.png in Resources */,
+				A1000000000000000000001A /* table-paste-ready-master.png in Resources */,
+				A1000000000000000000001B /* table-error-master.png in Resources */,
+				A10000000000000000000020 /* Assets/UsageGuide/usage-guide.mp4 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-        A30000000000000000000002 = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (A10000000000000000000001, A10000000000000000000002, A10000000000000000000003, A1000000000000000000000E, A10000000000000000000015, A10000000000000000000016, A10000000000000000000017, A1000000000000000000001C, A1000000000000000000001E);
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		A30000000000000000000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000001 /* PyororongApp.swift in Sources */,
+				A10000000000000000000002 /* AppDelegate.swift in Sources */,
+				A10000000000000000000003 /* ConversionNotifier.swift in Sources */,
+				A1000000000000000000000E /* ShortcutSettingsController.swift in Sources */,
+				A10000000000000000000015 /* UsageGuideController.swift in Sources */,
+				A10000000000000000000016 /* UsageGuideVideoView.swift in Sources */,
+				A10000000000000000000017 /* AboutController.swift in Sources */,
+				A1000000000000000000001C /* SupportController.swift in Sources */,
+				A1000000000000000000001E /* UpdateController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-        A70000000000000000000001 = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                CLANG_ENABLE_MODULES = YES;
-                DEBUG_INFORMATION_FORMAT = dwarf;
-                ENABLE_TESTABILITY = YES;
-                GCC_OPTIMIZATION_LEVEL = 0;
-                MACOSX_DEPLOYMENT_TARGET = 12.0;
-                ONLY_ACTIVE_ARCH = YES;
-                SDKROOT = macosx;
-                SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-                SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-                SWIFT_VERSION = 6.0;
-            };
-            name = Debug;
-        };
-        A70000000000000000000002 = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                CLANG_ENABLE_MODULES = YES;
-                DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-                MACOSX_DEPLOYMENT_TARGET = 12.0;
-                SDKROOT = macosx;
-                SWIFT_COMPILATION_MODE = wholemodule;
-                SWIFT_OPTIMIZATION_LEVEL = "-O";
-                SWIFT_VERSION = 6.0;
-            };
-            name = Release;
-        };
-        A70000000000000000000003 = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = Pyororong;
-                CODE_SIGN_IDENTITY = "-";
-                CODE_SIGN_STYLE = Manual;
-                COMBINE_HIDPI_IMAGES = YES;
-                CURRENT_PROJECT_VERSION = 1;
-                ENABLE_APP_SANDBOX = NO;
-                ENABLE_HARDENED_RUNTIME = YES;
-                EXECUTABLE_NAME = Pyororong;
-                GENERATE_INFOPLIST_FILE = NO;
-                INFOPLIST_FILE = App/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/../Frameworks");
-                MARKETING_VERSION = 2.0.0;
-                PRODUCT_BUNDLE_IDENTIFIER = com.phronesis.pyororong;
-                PRODUCT_MODULE_NAME = Pyororong;
-                PRODUCT_NAME = "표로롱";
-                SWIFT_EMIT_LOC_STRINGS = YES;
-            };
-            name = Debug;
-        };
-        A70000000000000000000004 = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = Pyororong;
-                CODE_SIGN_IDENTITY = "-";
-                CODE_SIGN_STYLE = Manual;
-                COMBINE_HIDPI_IMAGES = YES;
-                CURRENT_PROJECT_VERSION = 1;
-                ENABLE_APP_SANDBOX = NO;
-                ENABLE_HARDENED_RUNTIME = YES;
-                EXECUTABLE_NAME = Pyororong;
-                GENERATE_INFOPLIST_FILE = NO;
-                INFOPLIST_FILE = App/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/../Frameworks");
-                MARKETING_VERSION = 2.0.0;
-                PRODUCT_BUNDLE_IDENTIFIER = com.phronesis.pyororong;
-                PRODUCT_MODULE_NAME = Pyororong;
-                PRODUCT_NAME = "표로롱";
-                SWIFT_EMIT_LOC_STRINGS = YES;
-            };
-            name = Release;
-        };
+		A70000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		A70000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		A70000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = Pyororong;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				EXECUTABLE_NAME = Pyororong;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 2.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phronesis.pyororong;
+				PRODUCT_MODULE_NAME = Pyororong;
+				PRODUCT_NAME = "표로롱";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		A70000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = Pyororong;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TTUPQ94VL8;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				EXECUTABLE_NAME = Pyororong;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 2.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phronesis.pyororong;
+				PRODUCT_MODULE_NAME = Pyororong;
+				PRODUCT_NAME = "표로롱";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-        A80000000000000000000001 = {
-            isa = XCConfigurationList;
-            buildConfigurations = (A70000000000000000000001, A70000000000000000000002);
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        A80000000000000000000002 = {
-            isa = XCConfigurationList;
-            buildConfigurations = (A70000000000000000000003, A70000000000000000000004);
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
+		A80000000000000000000001 /* Build configuration list for PBXProject "Pyororong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70000000000000000000001 /* Debug */,
+				A70000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A80000000000000000000002 /* Build configuration list for PBXNativeTarget "Pyororong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70000000000000000000003 /* Debug */,
+				A70000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-        A90000000000000000000003 = {isa = XCLocalSwiftPackageReference; relativePath = .; };
+		A90000000000000000000003 /* XCLocalSwiftPackageReference "." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = .;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-        A90000000000000000000004 = {
-            isa = XCRemoteSwiftPackageReference;
-            repositoryURL = "https://github.com/sparkle-project/Sparkle";
-            requirement = {kind = exactVersion; version = 2.10.1; };
-        };
+		A90000000000000000000004 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = exactVersion;
+				version = 2.10.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-        A90000000000000000000001 = {isa = XCSwiftPackageProductDependency; package = A90000000000000000000003; productName = TableConverterCore; };
-        A90000000000000000000002 = {isa = XCSwiftPackageProductDependency; package = A90000000000000000000003; productName = TableConverterMac; };
-        A90000000000000000000005 = {isa = XCSwiftPackageProductDependency; package = A90000000000000000000004; productName = Sparkle; };
+		A90000000000000000000001 /* TableConverterCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A90000000000000000000003 /* XCLocalSwiftPackageReference "." */;
+			productName = TableConverterCore;
+		};
+		A90000000000000000000002 /* TableConverterMac */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A90000000000000000000003 /* XCLocalSwiftPackageReference "." */;
+			productName = TableConverterMac;
+		};
+		A90000000000000000000005 /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A90000000000000000000004 /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
 /* End XCSwiftPackageProductDependency section */
-    };
-    rootObject = A60000000000000000000001;
+	};
+	rootObject = A60000000000000000000001 /* Project object */;
 }
