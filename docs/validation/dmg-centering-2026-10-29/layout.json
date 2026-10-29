@@ -1,0 +1,23 @@
+{
+  "windowSize": [
+    768,
+    480
+  ],
+  "originalWindowSizeRestored": true,
+  "iconLocations": {
+    "표로롱.app": [
+      266,
+      203
+    ],
+    "응용 프로그램": [
+      502,
+      203
+    ]
+  },
+  "iconSize": 96.0,
+  "textSize": 14.0,
+  "backgroundType": 2,
+  "shiftFromOriginalR2Points": 49,
+  "centeringIncludesInstructionAndFilenames": true,
+  "completedCopyManifestEntriesUnchanged": 137
+}

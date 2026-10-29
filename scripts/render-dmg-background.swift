@@ -8,7 +8,7 @@ guard CommandLine.arguments.count == 2 else {
 // Finder draws the two real file icons over this background at the positions in dmg-settings.py.
 let outputDirectory = URL(fileURLWithPath: CommandLine.arguments[1], isDirectory: true)
 try FileManager.default.createDirectory(at: outputDirectory, withIntermediateDirectories: true)
-let canvas = NSSize(width: 768, height: 340)
+let canvas = NSSize(width: 768, height: 480)
 let instruction = "표로롱을 응용 프로그램 폴더로 드래그하세요."
 let paragraph = NSMutableParagraphStyle()
 paragraph.alignment = .center
@@ -40,9 +40,9 @@ for scale in [1, 2] {
     context.cgContext.scaleBy(x: CGFloat(scale), y: CGFloat(scale))
     NSColor.white.setFill()
     NSRect(origin: .zero, size: canvas).fill()
-    (instruction as NSString).draw(in: NSRect(x: 0, y: 271, width: 768, height: 24),
+    (instruction as NSString).draw(in: NSRect(x: 0, y: 360, width: 768, height: 24),
                                   withAttributes: attributes)
-    arrow.draw(in: NSRect(x: 365, y: 170, width: 38, height: 36))
+    arrow.draw(in: NSRect(x: 365, y: 259, width: 38, height: 36))
     NSGraphicsContext.restoreGraphicsState()
     guard let png = bitmap.representation(using: .png, properties: [:]) else {
         fatalError("설치 안내 배경을 PNG로 저장할 수 없습니다.")

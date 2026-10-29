@@ -1,0 +1,82 @@
+{
+  "acceptanceRule" : "Both actual margins equal exactly 214 pixels, difference 0; both edges moved up exactly 98 pixels from r2",
+  "actualBottomMarginPoints" : 107,
+  "actualR4" : {
+    "antialiasingDiagnosticRGB200" : {
+      "bottomInclusive" : 688,
+      "bottomMarginPixels" : 214,
+      "marginDifferencePixels" : -1,
+      "top" : 333,
+      "topMarginPixels" : 213
+    },
+    "bodyYInclusive" : [
+      120,
+      902
+    ],
+    "foregroundRGB160" : {
+      "bottomInclusive" : 688,
+      "bottomMarginPixels" : 214,
+      "marginDifferencePixels" : 0,
+      "top" : 334,
+      "topMarginPixels" : 214
+    },
+    "imagePixels" : [
+      1536,
+      960
+    ],
+    "sha256" : "e07ff1bb61ff947dfc53f6632d1388975b7b83c31531da55fc382eeb4bed43aa",
+    "source" : "docs\/validation\/dmg-centering-2026-10-29\/finder.jpg"
+  },
+  "actualTopMarginPoints" : 107,
+  "antialiasingRule" : "RGB <= 200 is diagnostic only and never affects the RGB <= 160 acceptance result",
+  "baselineR2" : {
+    "antialiasingDiagnosticRGB200" : {
+      "bottomInclusive" : 786,
+      "bottomMarginPixels" : 116,
+      "marginDifferencePixels" : 195,
+      "top" : 431,
+      "topMarginPixels" : 311
+    },
+    "bodyYInclusive" : [
+      120,
+      902
+    ],
+    "foregroundRGB160" : {
+      "bottomInclusive" : 786,
+      "bottomMarginPixels" : 116,
+      "marginDifferencePixels" : 196,
+      "top" : 432,
+      "topMarginPixels" : 312
+    },
+    "imagePixels" : [
+      1536,
+      960
+    ],
+    "sha256" : "2869fc83607cc5ee7b9d6d48ae970471978fad21377e7a0b3b4d4fea87e211be",
+    "source" : "docs\/validation\/dmg-layout-2026-10-29\/finder.jpg"
+  },
+  "bodyRule" : "Longest run of rows with at least 98\/100 column pixels having every RGB channel >= 250",
+  "checks" : {
+    "bothContentEdgesMovedUp98Pixels" : true,
+    "bothMarginsExactly214Pixels" : true,
+    "bothOriginalWindowSizes1536x960" : true,
+    "sameBody120Through902Inclusive" : true,
+    "zeroMarginDifference" : true
+  },
+  "contentXHalfOpen" : [
+    200,
+    1300
+  ],
+  "coordinateOrigin" : "top-left; top sharing control and title\/tab area confirm y increases downward",
+  "foregroundRule" : "At least 3 content-region pixels in a row with minimum RGB channel <= 160",
+  "imagesModified" : false,
+  "measuredAtUTC" : "2026-10-29T15:00:22Z",
+  "pixelScale" : 2,
+  "status" : "passed",
+  "upwardShiftPixels" : 98,
+  "upwardShiftPoints" : 49,
+  "whiteColumnXHalfOpen" : [
+    1200,
+    1300
+  ]
+}
