@@ -135,19 +135,27 @@ final class ShortcutSettingsController: NSWindowController, NSWindowDelegate {
         "Command(⌘), Control(⌃), Option(⌥), Shift(⇧)는 다른 키와 함께 누르는 키입니다.\n\n이 중 2개 이상을 누른 채, P처럼 영문자가 적힌 키 하나를 누르세요. Command 또는 Control은 꼭 포함하세요.\n\n예: Command + Shift를 누른 채 P")
     private let feedback = NSStackView()
     private let saveButton = ShortcutSettingsButton(title: "저장", target: nil, action: nil)
+    private let automaticChecks = ShortcutSettingsButton(checkboxWithTitle: "자동으로 업데이트 확인", target: nil, action: nil)
     private let content = NSStackView()
     private let onApply: (ShortcutPreferences) throws -> Void
+    private let automaticallyChecksForUpdates: () -> Bool
+    private let onApplyUpdatePreference: (Bool) -> Void
     private var savedPreferences = ShortcutPreferences()
+    private var savedAutomaticChecks = true
 
     private var pendingPreferences: ShortcutPreferences {
         ShortcutPreferences(isEnabled: enabled.state == .on, shortcut: recorder.shortcut)
     }
 
-    init(onApply: @escaping (ShortcutPreferences) throws -> Void, onRecordingChanged: @escaping (Bool) -> Void) {
+    init(onApply: @escaping (ShortcutPreferences) throws -> Void, onRecordingChanged: @escaping (Bool) -> Void,
+         automaticallyChecksForUpdates: @escaping () -> Bool = { true },
+         onApplyUpdatePreference: @escaping (Bool) -> Void = { _ in }) {
         self.onApply = onApply
+        self.automaticallyChecksForUpdates = automaticallyChecksForUpdates
+        self.onApplyUpdatePreference = onApplyUpdatePreference
         let window = ShortcutRecordingWindow(contentRect: NSRect(x: 0, y: 0, width: 440, height: 220),
                               styleMask: [.titled, .closable], backing: .buffered, defer: false)
-        window.title = "단축키 설정"
+        window.title = "설정"
         window.isReleasedWhenClosed = false
         super.init(window: window)
         window.delegate = self
@@ -160,6 +168,9 @@ final class ShortcutSettingsController: NSWindowController, NSWindowDelegate {
         recorder.onValidationError = { [weak self] message in self?.showError(message, explainInput: true) }
         enabled.target = self
         enabled.action = #selector(updateEnabled)
+        automaticChecks.target = self
+        automaticChecks.action = #selector(updateEnabled)
+        automaticChecks.setAccessibilityHelp("앱이 실행 중일 때 하루 간격으로 새 버전을 확인합니다. 설치는 직접 선택합니다.")
         errorLabel.textColor = .systemRed
         errorLabel.font = .systemFont(ofSize: NSFont.smallSystemFontSize)
         for label in [helpLabel, inputGuidance] {
@@ -203,7 +214,29 @@ final class ShortcutSettingsController: NSWindowController, NSWindowDelegate {
         let actions = NSStackView(views: [separator, buttons])
         configure(actions)
         actions.spacing = 16
-        for view in [enableGroup, row, actions] { content.addArrangedSubview(view) }
+        let shortcutHeading = NSTextField(labelWithString: "단축키")
+        let updateHeading = NSTextField(labelWithString: "업데이트")
+        for heading in [shortcutHeading, updateHeading] {
+            heading.font = .systemFont(ofSize: NSFont.systemFontSize, weight: .semibold)
+        }
+        let shortcutSection = NSStackView(views: [shortcutHeading, enableGroup, row])
+        configure(shortcutSection)
+        shortcutSection.spacing = 12
+        let updateExplanation = NSTextField(wrappingLabelWithString: "앱이 실행 중일 때 하루 간격으로 새 버전을 확인합니다.")
+        updateExplanation.font = .systemFont(ofSize: NSFont.smallSystemFontSize)
+        updateExplanation.textColor = .secondaryLabelColor
+        updateExplanation.preferredMaxLayoutWidth = 380
+        let updateGroup = NSView()
+        for view in [automaticChecks, updateExplanation] {
+            view.translatesAutoresizingMaskIntoConstraints = false
+            updateGroup.addSubview(view)
+        }
+        let updateSeparator = NSBox()
+        updateSeparator.boxType = .separator
+        let updateSection = NSStackView(views: [updateSeparator, updateHeading, updateGroup])
+        configure(updateSection)
+        updateSection.spacing = 12
+        for view in [shortcutSection, updateSection, actions] { content.addArrangedSubview(view) }
         content.spacing = 20
         content.translatesAutoresizingMaskIntoConstraints = false
         window.contentView?.addSubview(content)
@@ -213,6 +246,7 @@ final class ShortcutSettingsController: NSWindowController, NSWindowDelegate {
                 content.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
                 content.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
                 content.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
+                shortcutSection.widthAnchor.constraint(equalTo: content.widthAnchor),
                 enableGroup.widthAnchor.constraint(equalTo: content.widthAnchor),
                 enabled.leadingAnchor.constraint(equalTo: enableGroup.leadingAnchor),
                 enabled.topAnchor.constraint(equalTo: enableGroup.topAnchor),
@@ -234,6 +268,15 @@ final class ShortcutSettingsController: NSWindowController, NSWindowDelegate {
                 feedback.widthAnchor.constraint(equalTo: field.widthAnchor),
                 errorLabel.widthAnchor.constraint(equalTo: feedback.widthAnchor),
                 inputGuidance.widthAnchor.constraint(equalTo: feedback.widthAnchor),
+                updateSection.widthAnchor.constraint(equalTo: content.widthAnchor),
+                updateSeparator.widthAnchor.constraint(equalTo: updateSection.widthAnchor),
+                updateGroup.widthAnchor.constraint(equalTo: updateSection.widthAnchor),
+                automaticChecks.leadingAnchor.constraint(equalTo: updateGroup.leadingAnchor),
+                automaticChecks.topAnchor.constraint(equalTo: updateGroup.topAnchor),
+                updateExplanation.leadingAnchor.constraint(equalTo: updateGroup.leadingAnchor, constant: 20),
+                updateExplanation.trailingAnchor.constraint(equalTo: updateGroup.trailingAnchor),
+                updateExplanation.topAnchor.constraint(equalTo: automaticChecks.bottomAnchor, constant: 5),
+                updateExplanation.bottomAnchor.constraint(equalTo: updateGroup.bottomAnchor),
                 actions.widthAnchor.constraint(equalTo: content.widthAnchor),
                 separator.widthAnchor.constraint(equalTo: actions.widthAnchor),
                 buttons.widthAnchor.constraint(equalTo: actions.widthAnchor)
@@ -241,7 +284,7 @@ final class ShortcutSettingsController: NSWindowController, NSWindowDelegate {
         }
         for label in [helpLabel, errorLabel, inputGuidance] { label.preferredMaxLayoutWidth = 292 }
         recorder.setAccessibilityTitleUIElement(shortcutLabel)
-        let keyViews: [NSView] = [enabled, recorder, reset, cancel, saveButton]
+        let keyViews: [NSView] = [enabled, recorder, automaticChecks, reset, cancel, saveButton]
         window.autorecalculatesKeyViewLoop = false
         for (index, view) in keyViews.enumerated() { view.nextKeyView = keyViews[(index + 1) % keyViews.count] }
         window.initialFirstResponder = enabled
@@ -268,6 +311,8 @@ final class ShortcutSettingsController: NSWindowController, NSWindowDelegate {
 
     private func populate(_ preferences: ShortcutPreferences) {
         savedPreferences = preferences
+        savedAutomaticChecks = automaticallyChecksForUpdates()
+        automaticChecks.state = savedAutomaticChecks ? .on : .off
         enabled.state = preferences.isEnabled ? .on : .off
         recorder.setShortcut(preferences.shortcut)
         updateEnabled()
@@ -289,8 +334,11 @@ final class ShortcutSettingsController: NSWindowController, NSWindowDelegate {
         recorder.cancelRecording()
         let preferences = pendingPreferences
         do {
-            try onApply(preferences)
+            if preferences != savedPreferences { try onApply(preferences) }
+            let checksEnabled = automaticChecks.state == .on
+            if checksEnabled != savedAutomaticChecks { onApplyUpdatePreference(checksEnabled) }
             savedPreferences = preferences
+            savedAutomaticChecks = checksEnabled
             close()
         } catch {
             showError(error.localizedDescription)
@@ -325,7 +373,8 @@ final class ShortcutSettingsController: NSWindowController, NSWindowDelegate {
         shortcutLabel.textColor = isEnabled ? .labelColor : .disabledControlTextColor
         helpLabel.stringValue = isEnabled ? "클릭한 뒤 사용할 단축키를 누르세요." : "메뉴의 ‘표 변환하기’는 계속 사용할 수 있습니다."
         helpLabel.isHidden = recorder.isRecording
-        saveButton.isEnabled = !recorder.isRecording && feedback.isHidden && pendingPreferences != savedPreferences
+        saveButton.isEnabled = !recorder.isRecording && feedback.isHidden
+            && (pendingPreferences != savedPreferences || (automaticChecks.state == .on) != savedAutomaticChecks)
         resizeToFit()
     }
 

@@ -104,12 +104,6 @@ final class SupportController: NSObject {
         github.target = self
         github.toolTip = "GitHub 로그인이 필요하며, 문의 내용과 첨부파일은 공개됩니다."
         menu.addItem(github)
-        menu.addItem(.separator())
-        let copy = NSMenuItem(title: "문의 이메일 주소 복사", action: #selector(copyEmailAddress(_:)), keyEquivalent: "")
-        copy.target = self
-        copy.isEnabled = emailAddress != nil
-        copy.toolTip = email.isEnabled ? "웹메일에서 문의할 때 사용할 수 있습니다." : email.toolTip
-        menu.addItem(copy)
         return menu
     }
 
@@ -124,11 +118,6 @@ final class SupportController: NSObject {
         let url = githubURL
         open(url, errorTitle: "GitHub 페이지를 열 수 없습니다", errorMessage: "주소를 복사해 브라우저에서 열어 주세요.",
              copyTitle: "GitHub 주소 복사", copyText: url.absoluteString)
-    }
-
-    @objc private func copyEmailAddress(_ sender: Any?) {
-        guard let emailAddress else { return }
-        copy(emailAddress)
     }
 
     private func copy(_ text: String) {

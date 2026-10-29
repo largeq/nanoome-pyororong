@@ -14,6 +14,14 @@
     <key>LSMinimumSystemVersion</key><string>$(MACOSX_DEPLOYMENT_TARGET)</string>
     <key>LSUIElement</key><true/>
     <key>NSPrincipalClass</key><string>NSApplication</string>
+    <key>SUFeedURL</key><string>https://raw.githubusercontent.com/largeq/nanoome-pyororong/main/updates/appcast.xml</string>
+    <key>SUPublicEDKey</key><string>v7FXJBR6IMejDRG1LarAn3LDq8SaobxnGpmg2TLAZgs=</string>
+    <key>SUEnableAutomaticChecks</key><true/>
+    <key>SUScheduledCheckInterval</key><integer>86400</integer>
+    <key>SUAutomaticallyUpdate</key><false/>
+    <key>SUAllowsAutomaticUpdates</key><false/>
+    <key>SUVerifyUpdateBeforeExtraction</key><true/>
+    <key>SUEnableSystemProfiling</key><false/>
     <key>PyororongSupportEmail</key><string>anglers-jazzier-9z@icloud.com</string>
 </dict>
 </plist>

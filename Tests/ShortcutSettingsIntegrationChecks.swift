@@ -8,7 +8,7 @@ private final class ShortcutChecksDelegate: NSObject, NSApplicationDelegate {
         Task { @MainActor in
             do {
                 try await ShortcutSettingsIntegrationChecks.run()
-                print("Shortcut settings integration checks passed: recording, validation, conflict recovery, save/cancel, disabled restore, keyboard, mouse tracking, layout, and appearances.")
+                print("Settings integration checks passed: automatic update checking preferences, recording, validation, conflict recovery, save/cancel, disabled restore, keyboard, mouse tracking, layout, and appearances.")
                 NSApp.terminate(nil)
             } catch {
                 fputs("Shortcut settings check failed: \(error)\n", stderr)
@@ -44,13 +44,20 @@ struct ShortcutSettingsIntegrationChecks {
         var applyCount = 0
         var failRegistration = false
         var recordingChanges: [Bool] = []
+        let automaticChecksKey = "TestAutomaticUpdateChecks"
+        var updateApplyCount = 0
         // Exercise the real controller without registering shortcuts or touching the user's preferences.
         let controller = ShortcutSettingsController(onApply: { value in
             if failRegistration { throw ShortcutRegistrationError.registration(OSStatus(eventHotKeyExistsErr)) }
             value.save(to: defaults)
             saved = value
             applyCount += 1
-        }, onRecordingChanged: { recordingChanges.append($0) })
+        }, onRecordingChanged: { recordingChanges.append($0) }, automaticallyChecksForUpdates: {
+            defaults.object(forKey: automaticChecksKey) == nil || defaults.bool(forKey: automaticChecksKey)
+        }, onApplyUpdatePreference: { value in
+            defaults.set(value, forKey: automaticChecksKey)
+            updateApplyCount += 1
+        })
         defer { controller.close() }
         let window = controller.window as! ShortcutRecordingWindow
         let recorder: ShortcutRecorderButton = try property("recorder", controller)
@@ -60,18 +67,54 @@ struct ShortcutSettingsIntegrationChecks {
         let error: NSTextField = try property("errorLabel", controller)
         let guidance: NSTextField = try property("inputGuidance", controller)
         let save: NSButton = try property("saveButton", controller)
+        let automaticChecks: NSButton = try property("automaticChecks", controller)
         let buttons = descendants(window.contentView!).compactMap { $0 as? NSButton }
         let cancel = buttons.first { $0.title == "취소" }!
         let reset = buttons.first { $0.title == "기본 단축키로 복원" }!
 
         controller.show(preferences: saved)
         try await makeKey(window)
-        try require(window.title == "단축키 설정" && !save.isEnabled, "Window title or initial Save state is incorrect")
+        try require(window.title == "설정" && !save.isEnabled && automaticChecks.state == .on,
+                    "Settings must initially enable automatic checking without unsaved changes")
         try require(recorder.shortcut == original && !help.isHidden && guidance.isHiddenOrHasHiddenAncestor,
                     "The current shortcut must appear without conditions")
         try await inspect(window, save: save, name: "default-light", directory: directory)
         let normalHeight = window.frame.height
-        try require(normalHeight < 280, "The default window must stay compact")
+        try require(normalHeight < 440, "Shortcut and update settings must fit in a compact window")
+
+        automaticChecks.performClick(nil)
+        try require(save.isEnabled && defaults.object(forKey: automaticChecksKey) == nil,
+                    "Changing automatic checking must wait for Save")
+        controller.show(preferences: saved)
+        try require(automaticChecks.state == .off, "Reopening visible settings must preserve pending update choices")
+        cancel.performClick(nil)
+        controller.show(preferences: saved)
+        try await makeKey(window)
+        try require(automaticChecks.state == .on && !save.isEnabled && updateApplyCount == 0,
+                    "Cancel must discard automatic checking changes")
+
+        automaticChecks.performClick(nil)
+        failRegistration = true
+        save.performClick(nil)
+        try require(!window.isVisible && !defaults.bool(forKey: automaticChecksKey)
+                    && updateApplyCount == 1 && applyCount == 0,
+                    "Saving only update preferences must not re-register an unchanged shortcut")
+        failRegistration = false
+        controller.show(preferences: saved)
+        try await makeKey(window)
+        try require(automaticChecks.state == .off && !save.isEnabled, "Saved update preferences must survive reopening")
+        automaticChecks.performClick(nil)
+        window.performClose(nil)
+        controller.show(preferences: saved)
+        try await makeKey(window)
+        try require(automaticChecks.state == .off && updateApplyCount == 1,
+                    "Closing settings must discard pending automatic checking changes")
+        automaticChecks.performClick(nil)
+        save.performClick(nil)
+        try require(defaults.bool(forKey: automaticChecksKey) && updateApplyCount == 2,
+                    "Automatic checking must be possible to enable again")
+        controller.show(preferences: saved)
+        try await makeKey(window)
 
         await click(reset, in: window)
         try require(recorder.shortcut == .default, "A mouse click must actually invoke Restore")
@@ -125,16 +168,20 @@ struct ShortcutSettingsIntegrationChecks {
 
         recorder.performClick(nil)
         sendKey(window, UInt16(kVK_ANSI_M), [.control, .shift])
+        automaticChecks.performClick(nil)
         failRegistration = true
         save.performClick(nil)
         try require(window.isVisible && !error.isHiddenOrHasHiddenAncestor && guidance.isHiddenOrHasHiddenAncestor
-                    && !save.isEnabled && saved.shortcut == original, "A conflict must preserve saved values and show only its own message")
+                    && !save.isEnabled && saved.shortcut == original && defaults.bool(forKey: automaticChecksKey)
+                    && updateApplyCount == 2,
+                    "A conflict must preserve both saved shortcut and update preferences")
         try await inspect(window, save: save, name: "conflict-light", directory: directory)
         failRegistration = false
         recorder.performClick(nil)
         sendKey(window, UInt16(kVK_ANSI_M), [.control, .shift])
         save.performClick(nil)
-        try require(!window.isVisible && saved.shortcut == replacement && applyCount == 1,
+        try require(!window.isVisible && saved.shortcut == replacement && applyCount == 1
+                    && !defaults.bool(forKey: automaticChecksKey) && updateApplyCount == 3,
                     "Correcting a conflict must allow an explicit Save")
 
         controller.show(preferences: saved)
@@ -170,14 +217,16 @@ struct ShortcutSettingsIntegrationChecks {
         try await makeKey(window)
         recorder.performClick(nil)
         sendKey(window, UInt16(kVK_Tab), [], "\t")
-        try require(!recorder.isRecording && window.firstResponder === reset,
+        try require(!recorder.isRecording && window.firstResponder === automaticChecks,
                     "Tab must cancel input and move focus to the next control")
+        sendKey(window, UInt16(kVK_Tab), [], "\t")
+        try require(window.firstResponder === reset, "The automatic checking checkbox must participate in keyboard navigation")
         try await inspect(window, save: save, name: "keyboard-focused-light", directory: directory)
         await click(reset, in: window)
         try require(window.firstResponder === window,
                     "A mouse click must clear focus previously left on Restore by keyboard navigation")
         try await inspect(window, save: save, name: "mouse-after-keyboard-light", directory: directory)
-        window.makeFirstResponder(reset)
+        window.makeFirstResponder(automaticChecks)
         sendKey(window, UInt16(kVK_Tab), .shift, "\u{19}")
         try require(window.firstResponder === recorder, "Shift-Tab must preserve reverse keyboard navigation")
         await click(recorder, in: window)
@@ -187,6 +236,8 @@ struct ShortcutSettingsIntegrationChecks {
         await click(reset, in: window)
         try require(!recorder.isRecording && window.firstResponder === window,
                     "Switching from keyboard to mouse must clear the previous button focus")
+        // performClick bypasses native activation; establish focus before testing its loss.
+        try await makeKey(window)
         recorder.performClick(nil)
         let other = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 100, height: 100),
                              styleMask: [.titled, .closable], backing: .buffered, defer: false)
@@ -235,12 +286,13 @@ struct ShortcutSettingsIntegrationChecks {
     }
 
     @MainActor private static func makeKey(_ window: NSWindow) async throws {
+        NSApp.activate(ignoringOtherApps: true)
         window.makeKeyAndOrderFront(nil)
         for _ in 0..<50 {
-            if window.isKeyWindow { return }
+            if NSApp.isActive && window.isKeyWindow { return }
             try await Task.sleep(nanoseconds: 20_000_000)
         }
-        try require(window.isKeyWindow, "Test window did not become key")
+        try require(NSApp.isActive && window.isKeyWindow, "Test app and window did not become active")
     }
 
     @MainActor private static func click(_ button: NSButton, in window: NSWindow) async {

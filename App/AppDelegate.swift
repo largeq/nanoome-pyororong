@@ -16,6 +16,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     private let converter: ClipboardTableConverter
     private let shortcutDefaults: UserDefaults
     private let supportController: SupportController
+    private let updates: UpdateChecking
+    private var updateMenuItems: [NSMenuItem] = []
     private let notifier = ConversionNotifier()
     private var statusMenuItem: NSMenuItem?
     private var convertMenuItem: NSMenuItem?
@@ -23,7 +25,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     private var shortcutSettings: ShortcutSettingsController?
     private var usageGuide: UsageGuideController?
     private var about: AboutController?
-    private var isConverting = false
+    private var isConverting = false {
+        didSet { updates.isConverting = isConverting }
+    }
     private var conversionTask: Task<Void, Never>?
     private lazy var shortcut = GlobalConversionShortcut { [weak self] in
         guard let self, self.shortcutSettings?.window?.isKeyWindow != true else { return }
@@ -31,10 +35,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     }
 
     init(converter: ClipboardTableConverter? = nil, shortcutDefaults: UserDefaults = .standard,
-         supportController: SupportController? = nil) {
+         supportController: SupportController? = nil, updates: UpdateChecking? = nil) {
         self.converter = converter ?? ClipboardTableConverter()
         self.shortcutDefaults = shortcutDefaults
         self.supportController = supportController ?? SupportController()
+        self.updates = updates ?? UpdateController()
         self.shortcutPreferences = ShortcutPreferences.load(from: shortcutDefaults)
         super.init()
     }
@@ -60,7 +65,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         convertMenuItem = convert
         menu.addItem(convert)
         menu.addItem(.separator())
-        let settings = NSMenuItem(title: "단축키 설정…", action: #selector(showShortcutSettings), keyEquivalent: ",")
+        let settings = NSMenuItem(title: "설정…", action: #selector(showShortcutSettings), keyEquivalent: ",")
         settings.keyEquivalentModifierMask = .command
         settings.target = self
         menu.addItem(settings)
@@ -69,6 +74,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         guide.target = self
         menu.addItem(guide)
         menu.addItem(supportController.makeMenuItem())
+        let checkUpdates = NSMenuItem(title: "업데이트 확인…", action: #selector(checkForUpdates), keyEquivalent: "")
+        checkUpdates.target = self
+        menu.addItem(checkUpdates)
         let about = NSMenuItem(title: "표로롱에 관하여", action: #selector(showAbout), keyEquivalent: "")
         about.target = self
         menu.addItem(about)
@@ -78,9 +86,16 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         menu.addItem(quit)
         // The app menu also routes standard shortcuts while a utility window is active.
         let applicationMenu = NSMenu(title: "표로롱")
-        for item in [about, .separator(), settings, .separator(), quit] {
-            applicationMenu.addItem(item.copy() as! NSMenuItem)
+        for item in [checkUpdates, about, .separator(), settings, .separator(), quit] {
+            let copy = item.copy() as! NSMenuItem
+            applicationMenu.addItem(copy)
+            if item === checkUpdates { updateMenuItems.append(copy) }
         }
+        applicationMenu.autoenablesItems = false
+        updateMenuItems.append(checkUpdates)
+        updates.onStateChange = { [weak self] in self?.updateUpdateMenu() }
+        updates.start()
+        updateUpdateMenu()
         let applicationMenuItem = NSMenuItem()
         applicationMenuItem.submenu = applicationMenu
         let mainMenu = NSMenu()
@@ -104,7 +119,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             try applyShortcut(shortcutPreferences)
         } catch {
             updateShortcutMenu()
-            notifier.show(title: "단축키를 사용할 수 없습니다", message: error.localizedDescription + "\n메뉴의 ‘단축키 설정…’에서 변경할 수 있습니다.", isError: true)
+            notifier.show(title: "단축키를 사용할 수 없습니다", message: error.localizedDescription + "\n메뉴의 ‘설정…’에서 변경할 수 있습니다.", isError: true)
         }
         Task { await refreshClipboardState() }
 
@@ -335,9 +350,26 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
                         self.notifier.show(title: "단축키를 사용할 수 없습니다", message: error.localizedDescription, isError: true)
                     }
                 }
+            }, automaticallyChecksForUpdates: { [weak self] in
+                self?.updates.automaticallyChecksForUpdates ?? true
+            }, onApplyUpdatePreference: { [weak self] enabled in
+                self?.updates.automaticallyChecksForUpdates = enabled
             })
         }
         shortcutSettings?.show(preferences: shortcutPreferences)
+    }
+
+    private func updateUpdateMenu() {
+        let title = updates.hasUpdate ? "업데이트 확인… (새 버전 있음)" : "업데이트 확인…"
+        for item in updateMenuItems {
+            if item.title != title { item.title = title }
+            if item.isEnabled != updates.canCheckForUpdates { item.isEnabled = updates.canCheckForUpdates }
+        }
+    }
+
+    @objc private func checkForUpdates() {
+        notifier.dismiss()
+        updates.checkForUpdates()
     }
 
     @objc private func showUsageGuide() {
@@ -352,7 +384,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
     @objc private func showAbout() {
         notifier.dismiss()
-        if about == nil { about = AboutController(support: supportController) }
+        if about == nil { about = AboutController() }
         about?.show()
     }
 }

@@ -3,12 +3,39 @@ import TableConverterCore
 import TableConverterMac
 
 @MainActor
+private final class MenuUpdateChecks: UpdateChecking {
+    var automaticallyChecksForUpdates = true {
+        didSet { savedAutomaticChoices.append(automaticallyChecksForUpdates) }
+    }
+    var isAvailable = true { didSet { onStateChange?() } }
+    var hasUpdate = false { didSet { onStateChange?() } }
+    var isConverting = false {
+        didSet {
+            guard isConverting != oldValue else { return }
+            conversionStates.append(isConverting)
+            onStateChange?()
+        }
+    }
+    var canCheckForUpdates: Bool { isAvailable && !isConverting }
+    var onStateChange: (() -> Void)?
+    private(set) var startCount = 0
+    private(set) var checkCount = 0
+    private(set) var savedAutomaticChoices: [Bool] = []
+    private(set) var conversionStates: [Bool] = []
+
+    func start() { startCount += 1; onStateChange?() }
+    func checkForUpdates() {
+        if canCheckForUpdates { checkCount += 1 }
+    }
+}
+
+@MainActor
 private final class MenuChecksDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         Task { @MainActor in
             do {
                 try await MenuIntegrationChecks.run()
-                print("Menu integration checks passed: native left/right clicks, accessibility activation, transient menu cleanup, reentry protection, noninteractive status header, stable updates, clipboard states, action routing, grouping, Command-comma, and clicks during/after utility windows.")
+                print("Menu integration checks passed: update checking commands and settings, conversion protection, native left/right clicks, accessibility activation, transient menu cleanup, reentry protection, noninteractive status header, stable updates, clipboard states, action routing, grouping, Command-comma, and clicks during/after utility windows.")
                 NSApp.terminate(nil)
             } catch {
                 fputs("Menu integration check failed: \(error)\n", stderr)
@@ -43,7 +70,8 @@ struct MenuIntegrationChecks {
         var supportURLs: [URL] = []
         let support = SupportController(emailAddress: "support@example.com", pasteboard: pasteboard,
                                         openURL: { supportURLs.append($0); return true })
-        let delegate = AppDelegate(converter: converter, shortcutDefaults: defaults, supportController: support)
+        let updates = MenuUpdateChecks()
+        let delegate = AppDelegate(converter: converter, shortcutDefaults: defaults, supportController: support, updates: updates)
         let oldMainMenu = NSApp.mainMenu
         delegate.applicationDidFinishLaunching(Notification(name: NSApplication.didFinishLaunchingNotification))
         defer {
@@ -62,9 +90,36 @@ struct MenuIntegrationChecks {
         let primary = menu.items[2]
         let notifier: ConversionNotifier = try property("notifier", of: delegate)
         try require(menu.items.map { $0.isSeparatorItem ? "|" : $0.title } == [
-            "변환할 표가 있습니다", "|", "표 변환하기", "|", "단축키 설정…", "|",
-            "사용법 보기", "피드백 및 지원", "표로롱에 관하여", "|", "표로롱 종료"
+            "변환할 표가 있습니다", "|", "표 변환하기", "|", "설정…", "|",
+            "사용법 보기", "피드백 및 지원", "업데이트 확인…", "표로롱에 관하여", "|", "표로롱 종료"
         ], "Menu commands must be grouped by task")
+        let applicationMenu = NSApp.mainMenu!.items[0].submenu!
+        try require(applicationMenu.items.map { $0.isSeparatorItem ? "|" : $0.title } == [
+            "업데이트 확인…", "표로롱에 관하여", "|", "설정…", "|", "표로롱 종료"
+        ], "The application menu must also place update checking immediately before About")
+        let updateCommand = menu.items[8]
+        let applicationUpdateCommand = applicationMenu.items[0]
+        try require(updates.startCount == 1 && updateCommand.isEnabled && applicationUpdateCommand.isEnabled,
+                    "Launching must start update checking and enable both manual commands")
+        menu.performActionForItem(at: 8)
+        applicationMenu.performActionForItem(at: 0)
+        try require(updates.checkCount == 2, "Both menu commands must route to the injected updater")
+        updates.isAvailable = false
+        try require(!updateCommand.isEnabled && !applicationUpdateCommand.isEnabled,
+                    "Updater availability changes must disable both menus without reopening them")
+        menu.performActionForItem(at: 8)
+        applicationMenu.performActionForItem(at: 0)
+        try require(updates.checkCount == 2, "Unavailable update checks must not start another request")
+        updates.isAvailable = true
+        updates.hasUpdate = true
+        try require(updateCommand.isEnabled && applicationUpdateCommand.isEnabled
+                    && updateCommand.title == "업데이트 확인… (새 버전 있음)"
+                    && applicationUpdateCommand.title == updateCommand.title
+                    && menu.items[9].title == "표로롱에 관하여" && applicationMenu.items[1].title == "표로롱에 관하여",
+                    "A discovered update must appear in both menus while preserving its position immediately before About")
+        updates.hasUpdate = false
+        try require(updateCommand.title == "업데이트 확인…" && applicationUpdateCommand.title == updateCommand.title,
+                    "Clearing an update notification must restore the ordinary command titles")
         try require(!menu.items[0].isEnabled && menu.items[0].action == nil, "The state explanation must not be actionable")
         if #available(macOS 14.0, *) {
             try require(menu.items[0].isSectionHeader, "Status text must use a noninteractive native section header")
@@ -107,14 +162,21 @@ struct MenuIntegrationChecks {
         menu.performActionForItem(at: 2)
         try require(!primary.isEnabled && primary.title == "변환 중…" && menu.items[0].title == "표를 변환하고 있습니다…",
                     "Running conversion must explain the busy state and prevent another execution")
+        try require(updates.isConverting && !updateCommand.isEnabled && !applicationUpdateCommand.isEnabled,
+                    "Conversion must tell the updater to protect the current operation and disable manual checks")
         let conversionTask: Task<Void, Never> = try property("conversionTask", of: delegate)
         menu.performActionForItem(at: 2)
         try require(!primary.isEnabled, "Another invocation must not enable a running conversion")
         for rightClick in [false, true] {
-            try await trackStatusButton(statusItem, menu: menu, rightClick: rightClick, expectedState: "표를 변환하고 있습니다…")
+            // The shorter finishing animation can complete while AppKit settles the menu.
+            try await trackStatusButton(statusItem, menu: menu, rightClick: rightClick,
+                                        expectedState: "표를 변환하고 있습니다…", allowedNextState: "변환 완료")
         }
         await conversionTask.value
         try await wait { primary.title == "변환 결과 보기" && primary.isEnabled }
+        try require(!updates.isConverting && updateCommand.isEnabled && applicationUpdateCommand.isEnabled
+                    && updates.conversionStates.suffix(2) == [true, false],
+                    "Completing conversion must release updater protection and restore both commands")
         try require(converter.isReadyToPaste && menu.items[0].title == "변환 완료",
                     "A completed conversion must offer its current result")
         try require(primary.keyEquivalent.isEmpty, "The result command must not claim the conversion shortcut")
@@ -183,19 +245,38 @@ struct MenuIntegrationChecks {
         try require(menu.items[0].title == "변환할 표가 있습니다", "A new valid copy must clear the failed menu state")
 
         let settingsCommand = menu.items[4]
-        try require(settingsCommand.keyEquivalent == "," && settingsCommand.keyEquivalentModifierMask == .command,
+        try require(settingsCommand.title == "설정…" && settingsCommand.keyEquivalent == "," && settingsCommand.keyEquivalentModifierMask == .command,
                     "Settings must expose the standard Command-comma shortcut")
         let event = NSEvent.keyEvent(with: .keyDown, location: .zero, modifierFlags: .command, timestamp: 0,
                                     windowNumber: 0, context: nil, characters: ",", charactersIgnoringModifiers: ",",
                                     isARepeat: false, keyCode: 43)!
         try require(NSApp.mainMenu?.performKeyEquivalent(with: event) == true, "Command-comma must route through the application menu")
         let settings: ShortcutSettingsController = try property("shortcutSettings", of: delegate)
-        try require(settings.window?.isVisible == true, "Command-comma must open the shortcut settings window")
+        try require(settings.window?.isVisible == true && settings.window?.title == "설정",
+                    "Command-comma must open the combined Settings window")
+        let automaticChecks: NSButton = try property("automaticChecks", of: settings)
+        let saveSettings: NSButton = try property("saveButton", of: settings)
+        try require(automaticChecks.state == .on && !saveSettings.isEnabled,
+                    "Settings must reflect automatic update checking enabled by default")
+        let savedShortcut = ShortcutPreferences.load(from: defaults)
+        automaticChecks.performClick(nil)
+        try require(updates.automaticallyChecksForUpdates && saveSettings.isEnabled,
+                    "A pending automatic checking choice must wait for Save")
+        saveSettings.performClick(nil)
+        try require(settings.window?.isVisible == false && !updates.automaticallyChecksForUpdates
+                    && updates.savedAutomaticChoices == [false] && ShortcutPreferences.load(from: defaults) == savedShortcut,
+                    "Saving only update settings must bind to the real updater without changing shortcut preferences")
+        try require(NSApp.mainMenu?.performKeyEquivalent(with: event) == true && automaticChecks.state == .off,
+                    "Reopening Settings must reflect the updater's saved automatic checking choice")
+        try require(updateCommand.isEnabled && applicationUpdateCommand.isEnabled,
+                    "Turning off automatic checking must leave manual checking available")
+        menu.performActionForItem(at: 8)
+        try require(updates.checkCount == 3, "Manual checking must still route while automatic checking is off")
         settings.close()
         for rightClick in [false, true] {
             try await trackStatusButton(statusItem, menu: menu, rightClick: rightClick, expectedState: "변환할 표가 있습니다")
         }
-        for (index, propertyName) in [(6, "usageGuide"), (4, "shortcutSettings"), (8, "about")] {
+        for (index, propertyName) in [(6, "usageGuide"), (4, "shortcutSettings"), (9, "about")] {
             menu.performActionForItem(at: index)
             let controller: NSWindowController = try property(propertyName, of: delegate)
             try await wait { controller.window?.isVisible == true && controller.window?.isKeyWindow == true }
@@ -215,9 +296,12 @@ struct MenuIntegrationChecks {
 
     @MainActor
     private static func trackStatusButton(_ statusItem: NSStatusItem, menu: NSMenu, rightClick: Bool, expectedState: String,
+                                         allowedNextState: String? = nil,
                                          accessibilityPress: Bool = false,
                                          context: String = "clipboard state",
                                          beforeOpening: @escaping @MainActor @Sendable () -> Void = {}) async throws {
+        // Let AppKit settle the previous menu/panel tracking before the next distinct click.
+        try await Task.sleep(nanoseconds: 60_000_000)
         let result = await withCheckedContinuation { continuation in
             let openMenu: @MainActor @Sendable () -> Void = {
                 // Call the native status button in this test app; do not post events to the desktop.
@@ -243,7 +327,8 @@ struct MenuIntegrationChecks {
                     if let highlighted = menu.highlightedItem, !highlighted.isEnabled {
                         highlightedDisabledItem = true
                     }
-                    if (observedState == expectedState && Date() >= earliestClose) || Date() >= deadline {
+                    if ((observedState == expectedState || observedState == allowedNextState) && Date() >= earliestClose)
+                        || Date() >= deadline {
                         menu.cancelTracking()
                     }
                 }
@@ -277,7 +362,8 @@ struct MenuIntegrationChecks {
         }
         let route = "\(accessibilityPress ? "accessibility" : (rightClick ? "right" : "left")) / \(context) / \(expectedState)"
         try require(result.0 == 1, "Each activation must open exactly one menu (\(route)); openings: \(result.0)")
-        try require(result.1 == expectedState, "Menu state did not settle while tracking (\(route)); observed: \(result.1)")
+        try require(result.1 == expectedState || result.1 == allowedNextState,
+                    "Menu state did not settle while tracking (\(route)); observed: \(result.1)")
         try require(!result.2, "Disabled rows must not become highlighted while tracking (\(route))")
         if #available(macOS 27.0, *) {
             try require(statusItem.menu == nil, "Closing must detach the menu so the next click reaches the action")
