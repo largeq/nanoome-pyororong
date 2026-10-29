@@ -33,6 +33,29 @@ final class MenuBarIconAnimatorTests: XCTestCase {
     }
 
     @MainActor
+    func testFinishingPreservesTheVisibleLinesAndFillsWithoutErasing() throws {
+        let renderer = MenuBarIconRenderer()
+        let full = alphaValues(try bitmap(renderer.conversion(phase: 0.38)))
+        for phase in [0.0, 0.1, 0.38, 0.49, 0.75, 0.98] {
+            let original = alphaValues(try bitmap(renderer.conversion(phase: phase)))
+            let start = alphaValues(try bitmap(renderer.conversion(phase: phase, finishingProgress: 0)))
+            XCTAssertEqual(start, original, "Finishing must begin from the visible frame")
+            var previous = start
+            for progress in [0.25, 0.5, 0.75, 1.0] {
+                let image = renderer.conversion(phase: phase, finishingProgress: progress)
+                XCTAssertTrue(image.isTemplate)
+                let pixels = alphaValues(try bitmap(image))
+                for index in pixels.indices {
+                    XCTAssertGreaterThanOrEqual(pixels[index] + 0.01, previous[index],
+                                               "Visible rules must fill in, never disappear")
+                }
+                previous = pixels
+            }
+            XCTAssertEqual(previous, full, "Every phase must finish as the same complete table")
+        }
+    }
+
+    @MainActor
     func testCompletionRevealsStandaloneCheckWithoutThePendingCircle() throws {
         let renderer = try assetRenderer()
         let start = try bitmap(renderer.completion(progress: 0))

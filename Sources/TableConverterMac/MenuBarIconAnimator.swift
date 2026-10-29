@@ -11,11 +11,11 @@ public final class MenuBarIconAnimator {
     private var startedAt: TimeInterval = 0
     private var lastFrame: Int?
     private var conversionFrames: [NSImage] = []
+    private var finishingFrames: [NSImage] = []
     private var completionFrames: [NSImage] = []
-    private var finishDrawingAt: TimeInterval?
     private var generation = 0
 
-    private enum Animation { case converting, completed }
+    private enum Animation { case converting, finishing, completed }
     private static let completionDuration: TimeInterval = 0.42
 
     public init(button: NSStatusBarButton) {
@@ -28,7 +28,8 @@ public final class MenuBarIconAnimator {
         if state == .readyToPaste, animateCompletion,
            !NSWorkspace.shared.accessibilityDisplayShouldReduceMotion {
             if completionFrames.isEmpty {
-                completionFrames = (0...15).map { renderer.completion(progress: Double($0) / 15) }
+                let count = Int(ceil(Self.completionDuration / MenuBarAnimationTiming.frameInterval))
+                completionFrames = (0...count).map { renderer.completion(progress: Double($0) / Double(count)) }
             }
             start(.completed)
         } else {
@@ -43,7 +44,8 @@ public final class MenuBarIconAnimator {
             return
         }
         if conversionFrames.isEmpty {
-            conversionFrames = (0..<60).map { renderer.conversion(phase: Double($0) / 60) }
+            let count = Int((MenuBarAnimationTiming.conversionDuration / MenuBarAnimationTiming.frameInterval).rounded())
+            conversionFrames = (0..<count).map { renderer.conversion(phase: Double($0) / Double(count)) }
         }
         start(.converting)
     }
@@ -51,17 +53,25 @@ public final class MenuBarIconAnimator {
     /// Complete the visible drawing before handing off to the success check.
     public func finishDrawingTable() async throws {
         guard animation == .converting else { return }
-        let token = generation
-        let elapsed = ProcessInfo.processInfo.systemUptime - startedAt
-        let finishAt = MenuBarAnimationTiming.completedTableTime(after: elapsed)
-        finishDrawingAt = finishAt
-        let remaining = finishAt - elapsed
-        if remaining > 0 {
-            try await Task.sleep(nanoseconds: UInt64(remaining * 1_000_000_000))
-        }
         try Task.checkCancellation()
-        guard token == generation else { throw CancellationError() }
-        holdCompletedTable()
+        let token = generation
+        // Continue from the frame on screen instead of waiting for another drawing cycle.
+        let phase = Double(lastFrame ?? 0) / Double(conversionFrames.count)
+        let duration = MenuBarAnimationTiming.finishingDuration
+        let count = Int(ceil(duration / MenuBarAnimationTiming.frameInterval))
+        finishingFrames = (0...count).map {
+            renderer.conversion(phase: phase, finishingProgress: Double($0) / Double(count))
+        }
+        start(.finishing)
+        do {
+            try await Task.sleep(nanoseconds: UInt64(duration * 1_000_000_000))
+            try Task.checkCancellation()
+            guard token == generation else { throw CancellationError() }
+            holdCompletedTable()
+        } catch {
+            if token == generation { stop() }
+            throw error
+        }
     }
 
     public func stop() {
@@ -70,18 +80,23 @@ public final class MenuBarIconAnimator {
         timer = nil
         animation = nil
         lastFrame = nil
-        finishDrawingAt = nil
+        finishingFrames = []
     }
 
     private func start(_ animation: Animation) {
+        timer?.invalidate()
+        timer = nil
+        lastFrame = nil
         self.animation = animation
         startedAt = ProcessInfo.processInfo.systemUptime
         tick()
         guard self.animation != nil else { return }
-        let timer = Timer(timeInterval: 1 / 30, repeats: true) { [weak self] _ in
-            Task { @MainActor [weak self] in self?.tick() }
+        let interval = MenuBarAnimationTiming.frameInterval
+        let timer = Timer(timeInterval: interval, repeats: true) { [weak self] _ in
+            // This timer is installed only on the main run loop.
+            MainActor.assumeIsolated { self?.tick() }
         }
-        timer.tolerance = 1 / 240
+        timer.tolerance = interval / 10
         RunLoop.main.add(timer, forMode: .common)
         self.timer = timer
     }
@@ -89,7 +104,7 @@ public final class MenuBarIconAnimator {
     private func tick() {
         guard let animation else { return }
         if NSWorkspace.shared.accessibilityDisplayShouldReduceMotion {
-            if animation == .converting {
+            if animation != .completed {
                 holdCompletedTable()
             } else {
                 stop()
@@ -102,14 +117,18 @@ public final class MenuBarIconAnimator {
         let index: Int
         switch animation {
         case .converting:
-            if let finishDrawingAt, elapsed >= finishDrawingAt {
-                holdCompletedTable()
-                return
-            }
             frames = conversionFrames
             let duration = MenuBarAnimationTiming.conversionDuration
             let phase = elapsed.truncatingRemainder(dividingBy: duration) / duration
             index = min(Int(phase * Double(frames.count)), frames.count - 1)
+        case .finishing:
+            let duration = MenuBarAnimationTiming.finishingDuration
+            guard elapsed < duration else {
+                holdCompletedTable()
+                return
+            }
+            frames = finishingFrames
+            index = min(Int(elapsed / duration * Double(frames.count)), frames.count - 1)
         case .completed:
             guard elapsed < Self.completionDuration else {
                 stop()
@@ -128,7 +147,6 @@ public final class MenuBarIconAnimator {
         timer?.invalidate()
         timer = nil
         animation = nil
-        finishDrawingAt = nil
         lastFrame = nil
         button?.image = renderer.conversion(phase: 0.38)
     }
@@ -176,13 +194,18 @@ public struct MenuBarIconRenderer {
         }
     }
 
-    func conversion(phase: Double) -> NSImage {
+    func conversion(phase: Double, finishingProgress: Double = 0) -> NSImage {
         Self.rasterize {
-            Self.drawConversion(phase: phase, in: NSRect(origin: .zero, size: Self.size), color: .black)
+            Self.drawConversion(phase: phase, in: NSRect(origin: .zero, size: Self.size), color: .black,
+                                finishingProgress: finishingProgress)
         }
     }
 
     public static func drawConversion(phase: Double, in rect: NSRect, color: NSColor) {
+        drawConversion(phase: phase, in: rect, color: color, finishingProgress: 0)
+    }
+
+    private static func drawConversion(phase: Double, in rect: NSRect, color: NSColor, finishingProgress: Double) {
         NSGraphicsContext.saveGraphicsState()
         defer { NSGraphicsContext.restoreGraphicsState() }
         let scale = min(rect.width / size.width, rect.height / size.height)
@@ -203,11 +226,11 @@ public struct MenuBarIconRenderer {
         let inner = outer.insetBy(dx: stroke, dy: stroke)
         let rowHeight = (inner.height - stroke * 2) / 3
         for (delay, y) in [(0.0, inner.maxY - rowHeight - stroke), (0.1, inner.minY + rowHeight)] {
-            let segment = segment(at: phase, delay: delay)
+            let segment = segment(at: phase, delay: delay, finishingProgress: finishingProgress)
             NSRect(x: inner.minX + inner.width * segment.lowerBound, y: y,
                    width: inner.width * (segment.upperBound - segment.lowerBound), height: stroke).fill()
         }
-        let segment = segment(at: phase, delay: 0.2)
+        let segment = segment(at: phase, delay: 0.2, finishingProgress: finishingProgress)
         NSRect(x: inner.midX - stroke / 2, y: inner.maxY - inner.height * segment.upperBound,
                width: stroke, height: inner.height * (segment.upperBound - segment.lowerBound)).fill()
     }
@@ -228,12 +251,17 @@ public struct MenuBarIconRenderer {
         }
     }
 
-    private static func segment(at phase: Double, delay: Double) -> ClosedRange<CGFloat> {
+    private static func segment(at phase: Double, delay: Double, finishingProgress: Double) -> ClosedRange<CGFloat> {
         let local = (phase - delay + 1).truncatingRemainder(dividingBy: 1)
-        if local < 0.14 { return 0...CGFloat(ease(local / 0.14)) }
-        if local < 0.47 { return 0...1 }
-        if local < 0.72 { return CGFloat(ease((local - 0.47) / 0.25))...1 }
-        return 0...0
+        let visible: ClosedRange<CGFloat>
+        if local < 0.14 { visible = 0...CGFloat(ease(local / 0.14)) }
+        else if local < 0.47 { visible = 0...1 }
+        else if local < 0.72 { visible = CGFloat(ease((local - 0.47) / 0.25))...1 }
+        else { visible = 0...0 }
+        let progress = CGFloat(ease(finishingProgress))
+        let lower = visible.lowerBound * (1 - progress)
+        let upper = visible.upperBound + (1 - visible.upperBound) * progress
+        return lower...upper
     }
 
     private static func ease(_ value: Double) -> Double {
