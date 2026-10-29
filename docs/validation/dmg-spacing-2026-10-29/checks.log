@@ -32,3 +32,8 @@ x86_64 arm64
 
 === signature.log ===
 PASS: r3 DMG signature matches the public key in the preserved application.
+
+=== production probe ===
+Production Sparkle probe passed; result: <PROJECT_DIR>/.build/dmg-spacing/production-probe/production-feed.json
+Post-exit UserDefaults persistence settled; confirmed empty UUID preference file removed.
+{"preferencePersistenceSettledAfterProcessExit": true, "remainingProbeProcesses": 0, "remainingUUIDHostBundles": 0, "remainingUUIDPreferenceFiles": 0, "removedEmptyUUIDPreferenceFiles": 1}

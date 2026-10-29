@@ -1,0 +1,16 @@
+{
+  "deletedCache": ".build",
+  "allocatedBytesReportedByDu": 266072064,
+  "cacheRemoved": true,
+  "removedPreviousLocalArtifacts": [
+    "output/releases/Pyororong-2.0.0-1-r2.dmg",
+    "output/releases/Pyororong-2.0.0-1-r2.dmg.sha256"
+  ],
+  "preservedUnexpectedLocalArtifacts": [],
+  "preservedFinalArtifacts": [
+    "output/releases/Pyororong-2.0.0-1-r3.dmg",
+    "output/releases/Pyororong-2.0.0-1-r3.dmg.sha256"
+  ],
+  "originalNotarizedAppPreserved": true,
+  "completedAt": "2026-10-29T23:45:41.006824+09:00"
+}

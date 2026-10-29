@@ -1,0 +1,6 @@
+{
+  "httpStatus": 200,
+  "url": "https://raw.githubusercontent.com/largeq/nanoome-pyororong/main/updates/appcast.xml",
+  "matchesCommittedFeed": true,
+  "archiveURL": "https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1-r3.dmg"
+}

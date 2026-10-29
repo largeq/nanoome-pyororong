@@ -7,7 +7,10 @@
 - 실제 Finder에서 새 DMG를 직접 열어 상단 여백 감소, 안내·파일명 잘림 없음과 전체 배치를 확인했다. [실제 화면](finder.jpg), [창 설정](layout.json).
 - 기존 생성기의 완성본 검증에서 내부 앱 137개 항목의 바이트·권한·심볼릭 링크가 원본과 일치했다. DMG 무결성, 내부 앱 서명·공증 티켓·Gatekeeper·Universal 검사도 통과했다.
 - 새 DMG 전자서명을 앱에 내장된 공개 키로 검증했다. 앱 원본, 공개 키, 버전·빌드 번호는 변경하지 않았다. 외부 DMG 자체를 별도로 Apple 공증한 것은 아니다.
+- r3 DMG와 체크섬의 비로그인 다운로드가 로컬 파일과 일치했다. 운영 feed도 커밋과 일치했으며 실제 `UpdateController`·Sparkle 조회가 정확한 r3 URL과 최신 2.0.0(빌드 1), 오류 `1001`·이유 `1`을 확인했다. 자동 다운로드·설치는 요청하지 않았다.
 
-자료: [파일 정보·전자서명](artifact.json), [공개 다운로드](public-downloads.json), [실행 로그](checks.log).
+자료: [파일 정보·전자서명](artifact.json), [공개 다운로드](public-downloads.json), [실행 로그](checks.log), [운영 feed](public-feed.json), [실제 운영 조회](production-feed.json), [조회용 환경 정리](probe-cleanup.json), [Release 교체 결과](publication.json), [로컬 정리](local-cleanup.json).
 
-변경 범위는 DMG 배경과 창·아이콘 좌표다. 앱 구현을 수정하거나 전체 Swift/AppKit 검사를 다시 실행하지 않았다. 실제 다음 버전 교체·재실행과 다른 Mac 실행도 이번 여백 조정의 검사 범위에는 포함하지 않았다. 운영 반영과 마지막 조회 결과는 완료 후 추가한다.
+운영 조회 뒤 UUID 설정 파일의 비동기 저장이 끝나지 않아 외부 정리를 한 번 중단했다. 저장 완료 후 해당 도메인이 0키임을 확인하고 빈 시험용 plist 한 개만 삭제했다. 시험 프로세스·UUID 호스트·설정 파일은 최종적으로 모두 0개이며 프로덕션 설정과 클립보드는 보존됐다.
+
+검증 뒤 Release의 r2 DMG와 전용 체크섬을 정리했다. 새 DMG와 체크섬은 로컬 `output/releases/`에 남기고 작업 캐시는 삭제했다. 변경 범위는 DMG 배경과 창·아이콘 좌표다. 앱 구현을 수정하거나 전체 Swift/AppKit 검사를 다시 실행하지 않았다. 실제 다음 버전 교체·재실행과 다른 Mac 실행도 이번 여백 조정의 검사 범위에는 포함하지 않았다.

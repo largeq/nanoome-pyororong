@@ -1,0 +1,26 @@
+{
+  "release": "https://github.com/largeq/nanoome-pyororong/releases/tag/v2.0.0",
+  "remainingAssets": [
+    {
+      "name": "Pyororong-2.0.0-1-r3.dmg",
+      "id": 688856303,
+      "size": 19647512,
+      "digest": "sha256:72e688d75ace55c6127ceb460d0e2b3d0b050b1948798b5f0806ccc751707a34",
+      "browser_download_url": "https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1-r3.dmg"
+    },
+    {
+      "name": "Pyororong-2.0.0-1-r3.dmg.sha256",
+      "id": 688856302,
+      "size": 91,
+      "digest": "sha256:a0af1e0527e4e10ea6cbaaedf3fc9e681b1cbe8de2c639b01d5f5d148e924c83",
+      "browser_download_url": "https://github.com/largeq/nanoome-pyororong/releases/download/v2.0.0/Pyororong-2.0.0-1-r3.dmg.sha256"
+    }
+  ],
+  "deletedAfterProductionProbe": [
+    "Pyororong-2.0.0-1-r2.dmg",
+    "Pyororong-2.0.0-1-r2.dmg.sha256"
+  ],
+  "releaseNotesMatch": true,
+  "feedSourceCommit": "263ba2d20d3cca51ce887c9fb8bcb24d966c4128",
+  "applicationVersionUnchanged": "2.0.0 (1)"
+}
