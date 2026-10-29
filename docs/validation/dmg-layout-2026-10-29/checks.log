@@ -120,3 +120,6 @@ $ lipo -archs <EXTRACTED_APP>/Contents/MacOS/Pyororong
 x86_64 arm64
 
 exit=0
+
+=== production-feed-probe ===
+Production Sparkle probe passed; result: <PROJECT_DIR>/.build/dmg-layout/production-probe/production-feed.json

@@ -1,0 +1,14 @@
+{
+  "deletedDirectory": ".build",
+  "allocatedBytesReportedByDu": 631279616,
+  "fileCount": 2998,
+  "deleted": true,
+  "preservedFinalArtifacts": [
+    "output/releases/Pyororong-2.0.0-1-r2.dmg",
+    "output/releases/Pyororong-2.0.0-1-r2.dmg.sha256"
+  ],
+  "originalNotarizedAppPreserved": true,
+  "privateXcodeSettingsAndGitHistoryPreserved": true,
+  "removalRetries": [],
+  "completedAt": "2026-10-29T23:31:28.663084+09:00"
+}
